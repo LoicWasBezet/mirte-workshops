@@ -14,10 +14,12 @@ Ontwerpcyclus
 
 stap 1: probleem analyseren en beschrijven
 stap 2: programma van eisen opstellen
+
 * prestatiecriteria
 * functionele eisen
 * randvoorwaarden
 * specificaties
+
 stap 3: (deel)uitwerkingen bedenken
 
 1. stap 4: concepten maken voor het ontwerp 
