@@ -68,19 +68,28 @@ een driehoek te bekijken. Hierbij is de schuine zijde de robotarm, en de hoek tu
 en horizontale zijde de hoek die bij de armpositie hoort. 
 (**TODO: een herinnering van wat cos en sin ookalweer zijn**).
 Nu kunnen we berekenen dat de lengte van de bovenarm langs de x- en y-as gelijk is aan:
+
 .. math::
+
     x_{1}=\cos(\alpha) * L_{1} 
     y_{1}=\sin(\alpha) * L_{1} 
+
 Dezelfde berekening kunnen we doen voor de onderarm:
+
 .. math::
+
     x_{2}=\cos(\beta) * L_{2} 
     y_{2}=\sin(\beta) * L_{2} 
+
 Nu hoeven we alleen stap 3 nog te doen. Zoals je in de figuur ziet is de x-coördinaat van 
-de end-effector gelijk aan :math:'x_{1}+x_{2}'. De y-coördinaat is gelijk aan :math:'y_{1}+y_{2}'.
+de end-effector gelijk aan :math:`x_{1}+x_{2}`. De y-coördinaat is gelijk aan :math:`y_{1}+y_{2}`.
 Nu hebben we de coördinaten van de end-effector!
+
 .. math::
+
     x=\cos(\alpha) * L_{1} + \cos(\beta) * L_{2} 
-    y=\sin(\alpha) * L_{1} + \sin(\beta) * L_{2} 
+    y=\sin(\alpha) * L_{1} + \sin(\beta) * L_{2}
+     
 Deze formule geldt voor alle hoeken alpha en beta, ook als ze groter zijn dan 90°. 
 Een soortgelijke berekening kan gedaan worden voor armen die bestaan uit een andere hoeveelheid
 onderdelen.
