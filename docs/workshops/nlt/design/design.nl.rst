@@ -8,6 +8,59 @@ arm
 delta robot (pick and place)
 stewart-platform (6 DOF platform)
 
+In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen, 
+zullen we eerst even kijken naar veelgebruikte robotsystemen.  
+
+We gaan kijken naar "mobile manipulators". Deze robots kunnen 2 dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
+De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
+actie uit gaan voeren. Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Vaak worden **wielen** gebruikt.
+Wielen zijn erg geschikt voor vlakke ondergronden. Het is erg makkelijk om een systeem te maken dat rechtdoor kan rijden. 
+Het moeilijke zit echter in de bochten. 
+
+In de bochten zijn er twee problemen: er is een *snelheidsverschil* tussen de wielen en de wielen moeten 
+allemaal net *niet dezelfde richting* op rollen. Bij een bocht zitten de helft
+van de wielen in de binnenbocht, en de andere helft in de buitenbocht. Zoals je waarschijnlijk wel weet is een binnenbocht altijd
+korter dan de buitenbocht. Dit betekent dat wanneer een karretje een bocht maakt, de ene helft van de wielen meer afstand moet 
+afleggen dan de ander. Dit veroorzaakt dus een *snelheidsverschil*. Dit verschil kan echter niet bestaan als de wielen direct aan 
+elkaar gekoppeld zitten via een draaiende as. In dat geval gaat er een wiel moeten slippen. 
+Je moet dan dus een manier hebben om het ene wiel sneller te laten draaien dan het andere. Vaak wordt hier een
+**differentieel** voor gebruikt. Dit is een mechanisme dat bestaat uit een aantal tandwielen. Met een differentieel kan je 2 wielen 
+tegelijk aandrijven, ook als ze een onderling snelheidsverschil hebben. (**TODO afbeeldingen erin verwerken van o.a. differentieel en ackermann**).
+Vervolgens hebben we een tweede probleem: Aangezien sommige wielen in de binnenbocht zitten en andere in de buitenbocht, 
+legt niet elk wiel dezelfde cirkelbaan af in een bocht. Het resultaat is dat een wiel in de binnenbocht sterker met bijsturen 
+dan een wiel in de buitenbocht. Om dit makkelijk te laten gebeuren wordt **Ackermann-sturing** gebruikt. Dit *stangenmechanisme*
+Zorgt ervoor dat de draaiassen van alle wielen door 1 snijpunt gaan. Dat punt is dan precies het punt waar de auto omheen 
+rijdt.
+
+.. admonition:: info
+   :class: margin
+
+   Leer meer over speciale wielen voor robots: :doc:`wieltypes <types_of_wheels>`
+
+In plaats van wielen worden ook soms **rupsbanden** gebruikt. Deze zijn erg geschikt als de ondergrond wat ruiger is. 
+Om een bocht te maken laat je de ene rupsband expres harder draaien dan de ander. Hierdoor gaat de robot draaien. 
+Je kan met rupsbanden niet een bocht maken zonder dat een stuk van de rupsband slipt. Het voordeel is echter dat 
+rupsbanden veel meer grip hebben, dus kunnen ze zwaardere ladingen aan. 
+
+Een robot hoeft echter niet per se op de grond te blijven. Je hebt ook robots die de lucht in of onder water kunnen gaan. 
+Om de lucht in te gaan wordt vaak een **drone** gebruikt. Een drone verplaatst zich door middel van een aantal propellers die samen de drone kunnen laten 
+stijgen, dalen, draaien en verplaatsen. De propellers zitten allemaal met armen vast aan een centraal lichaam. Een drone is erg nuttig als de ondergrond 
+slecht begaanbaar is. Een drone heeft over het algemeen minimaal 4 propellers. Er bestaan ook veel varianten met 6 of zelfs 8 propellers. Als een robot onderwater 
+werkt worden ook vaak propellers gebruikt als voortstuwing. Meestal heeft de robot minstens 6 propellers, allemaal in verschillende richtingen. 
+Hiermee kan de robot elke denkbare beweging onderwater uitvoeren.
+
+
+
+
+Mobile manipulator
+
+mobile mode - manipulator - end-effector
+
+mobile mode: Auto - drone - onderzeeer - met poten
+
+VERDIEPING:
+Flexibele wielen: wielen met wielen erin zoals MIRTE MASTER
+Omniwielen (Mecanum)
 
 ontwerpen met de toepassing en gebruiker in gedachten
 ------------------------------------------------------------
