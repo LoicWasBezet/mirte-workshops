@@ -3,20 +3,25 @@ Ontwerpen
 
 
 Veelgebruikte robotsystemen
------------------------------
+===============================
 
 .. admonition:: info
    :class: margin
 
-   Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Wielen overzicht <types_of_wheels>`
+   Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Wielenoverzicht <types_of_wheels>`.
 
 
 In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen, 
-zullen we eerst even kijken naar veelgebruikte robotsystemen.  
-
-We gaan kijken naar "mobile manipulators". Deze robots kunnen 2 dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
+zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten "mobile manipulators". 
+Deze robots kunnen hoofdzakelijk twee dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
 De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
-actie uit gaan voeren. Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken; vaak worden **wielen** gebruikt.
+actie uit gaan voeren. 
+
+
+Hoe robots zich voortbewegen
+----------------------------------
+
+Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken; vaak worden **wielen** gebruikt.
 Wielen zijn erg geschikt voor vlakke ondergronden. Hierbij is het relatief makkelijk om een robot te maken dat rechtdoor kan rijden. 
 Het moeilijke zit echter in de bochten. 
 
@@ -43,35 +48,32 @@ rupsbanden veel meer grip hebben, dus kunnen ze zwaardere ladingen aan.
 Een robot hoeft echter niet per se op de grond te blijven. Je hebt ook robots die de lucht in of onder water kunnen gaan. 
 Om de lucht in te gaan wordt vaak een **drone** gebruikt. Een drone verplaatst zich door middel van een aantal propellers die samen de drone kunnen laten 
 stijgen, dalen, draaien en verplaatsen. De propellers zitten allemaal met armen vast aan een centraal lichaam. Een drone is erg nuttig als de ondergrond 
-slecht begaanbaar is. Een drone heeft over het algemeen minimaal 4 propellers. Er bestaan ook veel varianten met 6 of zelfs 8 propellers. Als een robot onderwater 
+slecht begaanbaar is. Een drone heeft over het algemeen minimaal 4 propellers. Er bestaan ook veel varianten met 6 of zelfs 8 propellers. Bij een drone hoef je 
+niet de propellers steeds van richting te laten veranderen zoals bij de wielen van een auto. De drone verplaatst zich door enkel de 
+draaisnelheden van zijn propellers individueel te veranderen. Als een robot onderwater 
 werkt worden ook vaak propellers gebruikt als voortstuwing. Meestal heeft de robot minstens 6 propellers, allemaal in verschillende richtingen. 
-Hiermee kan de robot elke denkbare beweging onderwater uitvoeren.
+Hiermee kan de robot elke denkbare beweging onderwater uitvoeren. 
 
 
-
+Hoe robots hun omgeving kunnen manipuleren
+--------------------------------------------
 
 Mobile manipulator
 
 mobile mode - manipulator - end-effector
-
-mobile mode: Auto - drone - onderzeeer - met poten
-
-VERDIEPING:
-Flexibele wielen: wielen met wielen erin zoals MIRTE MASTER
-Omniwielen (Mecanum)
 
 arm
 delta robot (pick and place)
 stewart-platform (6 DOF platform)
 
 ontwerpen met de toepassing en gebruiker in gedachten
-------------------------------------------------------------
+==========================================================
 
 Een ontwerp begint altijd met een probleem dat we op willen lossen. 
 
 
 Ontwerpcyclus
---------------------------
+==========================================================
 Een ontwerp maken is geen simpele opgave. Je kan niet in één keer een ontwerp op papier tekenen dat 
 zomaar zal werken en aan alle eisen voldoet; je moet een proces volgen. In deze paragraaf (**TODO is dit een paragraaf?**)
 gaan we kijken naar een veelgebruikte methode voor ontwerpen. Dit is geen lineair proces, maar een cyclus. Je maakt namelijk vaak
@@ -146,7 +148,7 @@ asd
 
 
 Kinematica van een robotsubsysteem
---------------------------------------
+==========================================================
 
 Bij het ontwerpen van een robot ga je op een gegeven moment de subsystemen van de robot moeten 
 gaan uitwerken. Hier komen vaak berekeningen bij kijken. 
