@@ -4,21 +4,24 @@ Ontwerpen
 
 Veelgebruikte robotsystemen
 -----------------------------
-arm
-delta robot (pick and place)
-stewart-platform (6 DOF platform)
+
+.. admonition:: info
+   :class: margin
+
+   Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Wielen overzicht <types_of_wheels>`
+
 
 In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen, 
 zullen we eerst even kijken naar veelgebruikte robotsystemen.  
 
 We gaan kijken naar "mobile manipulators". Deze robots kunnen 2 dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
 De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
-actie uit gaan voeren. Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Vaak worden **wielen** gebruikt.
-Wielen zijn erg geschikt voor vlakke ondergronden. Het is erg makkelijk om een systeem te maken dat rechtdoor kan rijden. 
+actie uit gaan voeren. Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken; vaak worden **wielen** gebruikt.
+Wielen zijn erg geschikt voor vlakke ondergronden. Hierbij is het relatief makkelijk om een robot te maken dat rechtdoor kan rijden. 
 Het moeilijke zit echter in de bochten. 
 
-In de bochten zijn er twee problemen: er is een *snelheidsverschil* tussen de wielen en de wielen moeten 
-allemaal net *niet dezelfde richting* op rollen. Bij een bocht zitten de helft
+In de bochten zijn er namelijk twee problemen: er is een *snelheidsverschil* tussen de wielen en de wielen moeten 
+allemaal *net niet dezelfde richting* op rollen. Bij een bocht zitten de helft
 van de wielen in de binnenbocht, en de andere helft in de buitenbocht. Zoals je waarschijnlijk wel weet is een binnenbocht altijd
 korter dan de buitenbocht. Dit betekent dat wanneer een karretje een bocht maakt, de ene helft van de wielen meer afstand moet 
 afleggen dan de ander. Dit veroorzaakt dus een *snelheidsverschil*. Dit verschil kan echter niet bestaan als de wielen direct aan 
@@ -31,11 +34,6 @@ legt niet elk wiel dezelfde cirkelbaan af in een bocht. Het resultaat is dat een
 dan een wiel in de buitenbocht. Om dit makkelijk te laten gebeuren wordt **Ackermann-sturing** gebruikt. Dit *stangenmechanisme*
 Zorgt ervoor dat de draaiassen van alle wielen door 1 snijpunt gaan. Dat punt is dan precies het punt waar de auto omheen 
 rijdt.
-
-.. admonition:: info
-   :class: margin
-
-   Leer meer over speciale wielen voor robots: :doc:`wieltypes <types_of_wheels>`
 
 In plaats van wielen worden ook soms **rupsbanden** gebruikt. Deze zijn erg geschikt als de ondergrond wat ruiger is. 
 Om een bocht te maken laat je de ene rupsband expres harder draaien dan de ander. Hierdoor gaat de robot draaien. 
@@ -61,6 +59,10 @@ mobile mode: Auto - drone - onderzeeer - met poten
 VERDIEPING:
 Flexibele wielen: wielen met wielen erin zoals MIRTE MASTER
 Omniwielen (Mecanum)
+
+arm
+delta robot (pick and place)
+stewart-platform (6 DOF platform)
 
 ontwerpen met de toepassing en gebruiker in gedachten
 ------------------------------------------------------------

@@ -1,6 +1,7 @@
 wieltypes
 ------------------
 
+
 Veel robots gebruiken wielen om voort te bewegen. Echter zijn deze wielen vaak een stuk interessanter dan de wielen die 
 je in het dagelijks leven tegenkomt bij auto's en fietsen. In deze extra module kijken we naar een aantal van deze wielen.
 
@@ -13,7 +14,7 @@ blijft. Een auto moet daarvoor steeds een beetje naar voren en naar achteren rij
 .. figure:: https://www.servomagazine.com/uploads/main/SV_0419_Jafari_Figure03.jpg
     :alt: Omni-wheel
     :width: 300
-    :align: right
+    :align: center
 
     Een omni-wheel (TODO COPYRIGHT referentie)
 
@@ -27,7 +28,7 @@ het voertuig eromheen niet veel anders is dan bij normale wielen.
 .. figure:: https://cdn11.bigcommerce.com/s-yo2n39m6g3/images/stencil/608x608/products/1987/4296/Mecanum-wheel-80mm-97mm-omnidirectional-wheel-Universal.jpg_640x640__26206.1597049581.jpg?c=2
     :alt: Mecanum-wheel
     :width: 300
-    :align: right
+    :align: center
 
     Een Mecanum wheel (TODO COPYRIGHT referentie)
 
@@ -40,7 +41,7 @@ scherps in de wielen prikt. De wielen zijn dus erg geschikt voor het terrein van
 .. figure:: https://i0.wp.com/media.globalnews.ca/videostatic/335/575/wirewheel_thumb.jpg?w=1040&quality=70&strip=all
     :alt: NASA Spring tire wheel
     :width: 300
-    :align: right
+    :align: center
 
     NASA Spring-Tire wheel  (TODO COPYRIGHT referentie)
 
