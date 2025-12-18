@@ -1,4 +1,4 @@
-wieltypes
+Welke soorten robotwielen zijn er?
 =============
 
 
@@ -11,21 +11,21 @@ je in het dagelijks leven tegenkomt bij auto's en fietsen. In deze extra module 
     :width: 300
     :align: center
 
-    Een omni-wheel (TODO COPYRIGHT referentie)
+    Een omni-wheel (COPYRIGHT?)
 
 
 **Omni-wheels** zijn wielen die tangentieel langs het oppervlakte extra rollers hebben. Dit zie je in figuur 1 (**TODO afbeeldingen bij elk
 wieltype zetten**). Door de rollers kunnen deze wielen loodrecht op hun rijrichting alsnog bewegen, wat bij normale wielen 
 helemaal niet de bedoeling is. Door 3 van deze wielen om je robot te plaatsen zoals in figuur 2 kan de robot bewegen in elke richting en draaien  
 door enkel de 3 wielen aan te drijven. Ook kan je 4 of meer omni-wielen in een soortgelijke cirkel plaatsen. Een auto met normale wielen kan bijvoorbeeld niet een rondje draaien terwijl hij op zijn plek 
-blijft. Een auto moet daarvoor steeds een beetje naar voren en naar achteren rijden. Met omni-wheels is dat dus niet nodig.
+blijft omdat het een grote draaicirkel heeft. Een auto moet steeds een beetje naar voren en naar achteren rijden om op zijn plek te keren. Met omni-wheels kan je gewoon op je plek blijven terwijl je draait.
 
 .. figure:: https://cdn11.bigcommerce.com/s-yo2n39m6g3/images/stencil/608x608/products/1987/4296/Mecanum-wheel-80mm-97mm-omnidirectional-wheel-Universal.jpg_640x640__26206.1597049581.jpg?c=2
     :alt: Mecanum-wheel
     :width: 300
     :align: center
 
-    Een Mecanum wheel (TODO COPYRIGHT referentie)
+    Een Mecanum wheel (COPYRIGHT?)
 
 **Mecanum wheels** zijn ook wielen met rollers. Bij deze wielen zitten de rollers echter op een hoek van 45°. Mecanum wielen zitten 
 in principe op dezelfde plek als dat normale wielen zitten bij bijvoorbeeld een auto of heftruck. Door elk wiel een bepaalde kant op 
@@ -39,7 +39,7 @@ het voertuig eromheen niet veel anders is dan bij normale wielen.
     :width: 300
     :align: center
 
-    NASA Spring-Tire wheel  (TODO COPYRIGHT referentie)
+    NASA Spring-Tire wheel (COPYRIGHT?)
 
 **Spring-tire wheels** zijn de volgende generatie ruimtewielen die NASA aan het ontwikkelen is voor de Mars-rovers. Dit zijn 
 wielen waar geen lucht in zit en die licht vervormbaar zijn. De banden zijn gemaakt van een metaal dat zijn vorm "onthoudt". 
