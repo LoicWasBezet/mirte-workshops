@@ -234,10 +234,15 @@ bepaald voorwerp op te pakken. Als je weet hoe de armen moeten bewegen kan je no
 altijd de arm die beweging laten doen. Daarvoor moeten we namelijk eerst weten hoeveel kracht 
 de motoren moeten leveren om de arm de beweging te laten doen. Hiervoor gebruiken we kinetica. 
 
+.. image:: _media/RobotarmV4.svg
+   :width: 400px
+   :alt: Description of the SVG
+   :align: center
+   
 Sommigen van jullie zullen bij natuurkunde al zowel kinematica als kinetica hebben gehad. 
 Wij gaan nu leren hoe we kinematica kunnen toepassen op een robotarm. De robotarm
 waar we naar gaan kijken bestaat uit een bovenarm, een onderarm en een end-effector (een hand).
-De arm is te zien in de figuur hiernaast **(TODO: FIGUUR ERIN ZETTEN)**.
+De arm is te zien in de figuur hiernaast.
 De vraag die we willen beantwoorden luidt als volgt: Als we de stand van de boven- en onderarm
 kennen, wat is dan de positie van de end-effector? Aangezien we enkel kinematica gaan 
 bekijken, hoeven we ons geen zorgen te maken over de krachten die op de arm werken.
