@@ -12,7 +12,7 @@ Veelgebruikte robotsystemen
 
 
 In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen, 
-zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten "mobile manipulators". 
+zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten *mobile manipulators*. 
 Deze robots kunnen hoofdzakelijk twee dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
 De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
 actie uit gaan voeren.
@@ -23,7 +23,7 @@ actie uit gaan voeren.
 
 Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Afhankelijk van de omgeving waar een robot zich in gaat bevinden 
 wordt een beweegmethode gekozen voor een robot. Je kan immers moeilijk dezelfde beweegmethode gebruiken op de vlakke grond van een warenhuis en de ruige grond in een bos. 
-Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden **wielen** gebruikt.
+Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden wielen gebruikt.
 Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Hierbij is het relatief makkelijk om een robot te maken dat rechtdoor kan rijden, maar het moeilijke zit in de bochten. 
 
 .. figure:: https://www.tec-science.com/wp-content/uploads/2021/03/en-differential-gear-from-to-05-pinion-bevel-gears.jpg
@@ -33,14 +33,14 @@ Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Hierbij is het relat
 
     **Figuur 1: Een differentieel** (COPYRIGHT?)
 
-In de bochten zijn er namelijk twee problemen: er is een *snelheidsverschil* tussen de wielen, en de wielen moeten 
-allemaal *net niet dezelfde richting* op rollen. Bij een bocht zitten de helft
+In de bochten zijn er namelijk twee problemen: er is een snelheidsverschil tussen de wielen, en de wielen moeten 
+allemaal net niet dezelfde richting op rollen. Bij een bocht zitten de helft
 van de wielen in de binnenbocht, en de andere helft in de buitenbocht. Zoals je waarschijnlijk wel weet is een binnenbocht altijd
 korter dan de buitenbocht. Dit betekent dat wanneer een karretje een bocht maakt, de ene helft van de wielen meer afstand moet 
-afleggen dan de ander. Dit veroorzaakt dus een *snelheidsverschil*. Dit verschil kan echter niet bestaan als de wielen direct aan 
+afleggen dan de ander. Dit veroorzaakt dus een snelheidsverschil. Dit verschil kan echter niet bestaan als de wielen direct aan 
 elkaar gekoppeld zitten via een draaiende as. In dat geval gaat er een wiel moeten slippen. 
 Je moet dan dus een manier hebben om het ene wiel sneller te laten draaien dan het andere. Vaak wordt hier een
-**differentieel** voor gebruikt. Dit is een mechanisme dat bestaat uit een aantal tandwielen, zoals je kan zien in figuur 1. Met een differentieel kan je 2 wielen 
+*differentieel* voor gebruikt. Dit is een mechanisme dat bestaat uit een aantal tandwielen, zoals je kan zien in figuur 1. Met een differentieel kan je 2 wielen 
 tegelijk aandrijven, ook als ze een onderling snelheidsverschil hebben.
 
 
@@ -54,12 +54,12 @@ tegelijk aandrijven, ook als ze een onderling snelheidsverschil hebben.
 
 Vervolgens hebben we een tweede probleem: Aangezien sommige wielen in de binnenbocht zitten en andere in de buitenbocht, 
 legt niet elk wiel dezelfde cirkelbaan af in een bocht. Het resultaat is dat een wiel in de binnenbocht sterker met bijsturen 
-dan een wiel in de buitenbocht. Om dit makkelijk te laten gebeuren wordt **Ackermann-sturing** gebruikt. Dit *stangenmechanisme* draait de 
+dan een wiel in de buitenbocht. Om dit makkelijk te laten gebeuren wordt *Ackermann-sturing* gebruikt. Dit stangenmechanisme draait de 
 wielen precies zo dat de bocht perfect gemaakt kan worden. Effectief zorgt het ervoor dat de draaiassen van alle wielen door 1 snijpunt gaan. 
 Dat punt is dan precies het punt waar de auto omheen rijdt. Dit kan je zien in figuur 2.
 
 
-In plaats van wielen worden ook soms **rupsbanden** gebruikt. Deze zijn erg geschikt als de ondergrond wat ruiger is. 
+In plaats van wielen worden ook soms rupsbanden gebruikt. Deze zijn erg geschikt als de ondergrond wat ruiger is. 
 Om een bocht te maken laat je de ene rupsband expres harder draaien dan de ander. Hierdoor gaat de robot draaien. 
 Je kan met rupsbanden niet een bocht maken zonder dat een stuk van de rupsband slipt. Het voordeel is echter dat 
 rupsbanden veel meer grip hebben, dus kunnen ze zwaardere ladingen aan. 
@@ -72,7 +72,7 @@ rupsbanden veel meer grip hebben, dus kunnen ze zwaardere ladingen aan.
     **Figuur 3: Een drone** (COPYRIGHT?)
 
 Een robot hoeft echter niet per se op de grond te blijven. Je hebt ook robots die de lucht in of onder water kunnen gaan. 
-Om de lucht in te gaan wordt vaak een **drone** gebruikt. Een drone verplaatst zich door middel van een aantal propellers die samen de drone kunnen laten 
+Om de lucht in te gaan wordt vaak een drone gebruikt. Een drone verplaatst zich door middel van een aantal propellers die samen de drone kunnen laten 
 stijgen, dalen, draaien en verplaatsen. Zoals je kan zien in figuur 3, zitten de propellers allemaal met armen vast aan een centraal lichaam. Een drone is erg nuttig als de ondergrond 
 slecht begaanbaar is. Een drone heeft over het algemeen minimaal 4 propellers. Er bestaan ook veel varianten met 6 of zelfs 8 propellers. Bij een drone hoef je 
 niet de propellers steeds van richting te laten veranderen zoals bij de wielen van een auto. De drone verplaatst zich door enkel de 
@@ -94,10 +94,14 @@ Hiermee kan de robot elke denkbare beweging onderwater uitvoeren.
 Een *mobile-manipulator* moet objecten om hem heen kunnen bewegen. Er zijn veel manieren om dit te doen. 
 In de praktijk hebben de meeste robots een bepaalde vorm van een arm. Een belangrijk concept bij deze *manipulators* 
 zijn vrijheidsgraden, in het engels ook wel Degrees Of Freedom (DOF) genoemd. De vrijheidsgraden van een mechanisme 
-zeggen iets over hoe vrij het mechanisme is om te bewegen. Er zijn 6 vrijheidsgraden: 3 voor beweging en 3 voor roteren. 
-In figuur 4 kan je deze zien. Als de grijper van de arm een van de bewegingen uit de figuur kan doen heeft het die vrijheidsgraad. Hierbij 
-tellen 2 bewegingsrichtingen die op een lijn staan als 1 beweging (bijvoorbeeld naar voren en naar achteren).
-met 6 DOF kan de grijper dus elke beweging maken die je kan bedenken, terwijl je met 1 DOF bijvoorbeeld alleen naar voren of naar achteren zou kunnen 
+zeggen iets over hoe vrij het mechanisme is om te bewegen. De exacte definitie is dat het aantal vrijheidsgraden gelijk is aan 
+het aantal parameters die je nodig hebt om een systeem te beschrijven. Als je bijvoorbeeld de positie van een deur wil beschrijven, heb je maar 1 parameter nodig: 
+De hoek tussen de deur en de muur. Door de scharnieren kan de deur namelijk maar beperkt bewegen. Hij kan niet zomaar een meter omhoog gaan bijvoorbeeld. Voor een vrijbewegend rigide object zijn er zijn 6 vrijheidsgraden: 
+3 voor positie en 3 voor oriëntatie. Het kan qua positie van boven naar beneden bewegen, van achter naar voren en van links naar rechts. Om de vrijheidsgraden van rotatie 
+te begrijpen kan je je eigen hoofd gebruiken. Je kan namelijk op 3 manieren je hoofd draaien: je kan naar boven/beneden draaien, naar links/rechts draaien en je kan je hoofd schuinhouden!
+In figuur 4 kan je de vrijheidsgraden zien. Als de grijper van de arm een van de bewegingen uit de figuur kan doen heeft het die vrijheidsgraad. Hierbij 
+tellen 2 bewegingsrichtingen die op een lijn staan als 1 beweging/vrijheidsgraad (bijvoorbeeld naar voren en naar achteren).
+met 6 vrijheidsgraden kan de grijper dus elke beweging maken die je kan bedenken, terwijl je met 1 vrijheidsgraad bijvoorbeeld alleen naar voren of naar achteren zou kunnen 
 met de grijper. Met deze kennis kunnen we gaan kijken naar een aantal soorten robotarmen.
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/0/09/SCARA_robot_2R.png
@@ -108,10 +112,10 @@ met de grijper. Met deze kennis kunnen we gaan kijken naar een aantal soorten ro
 
     **Figuur 4: Een SCARA** (COPYRIGHT?)
 
-Een **SCARA** (Selective Compliance Assembly Robot Arm) is een arm die wordt gebruikt voor zogeheten *pick and place* bewegingen. Het kan op een punt 
+Een *SCARA* (Selective Compliance Assembly Robot Arm) is een arm die wordt gebruikt voor zogeheten *pick and place* bewegingen. Het kan op een punt 
 een object oppakken en het weer op een andere plek neerleggen. Het bestaat uit een onder- en bovenarm en een rondraaiende staaf die het object onderaan vasthoudt (zie figuur 4). 
 De staaf kan omhoog en omlaag bewegen om het object op te tillen. De onderarm, boverarm en staaf kunnen alle 3 draaien en de staaf kan op en neer bewegen, dus heeft deze arm 
-4DOF. De 2 grote voordelen van een SCARA zijn de snelheid waarmee het beweegt en de stijfheid die het heeft tegen krachten die omhoog en omlaag duwen tegen de grijper. Dit maakt 
+4 vrijheidsgraden. De 2 grote voordelen van een SCARA zijn de snelheid waarmee het beweegt en de stijfheid die het heeft tegen krachten die omhoog en omlaag duwen tegen de grijper. Dit maakt 
 een SCARA erg geschikt voor het in elkaar zetten van onderdelen.
 
 .. figure:: https://www.promation.be/storage/images/web/20221020-153409-1673348274.jpg
@@ -122,9 +126,9 @@ een SCARA erg geschikt voor het in elkaar zetten van onderdelen.
 
     **Figuur 4: Een deltarobot** (COPYRIGHT?)
 
-Een **deltarobot** is ook een *pick and place* robot, maar dan met 3 armen. De 3 armen worden bewogen door 3 motoren die bovenop zitten. Elke motor beweegt alleen maar een arm een 
+Een deltarobot is ook een *pick and place* robot, maar dan met 3 armen. De 3 armen worden bewogen door 3 motoren die bovenop zitten. Elke motor beweegt alleen maar een arm een 
 stukje omhoog of omlaag. Dit is genoeg om de grijper heen en weer te laten bewegen. Door alle 3 de armen tegelijk omhoog of omlaag te doen kan een object opgetild worden. 
-We hebben dan 3 bewegingsrichtingen en 0 rotatierichtingen; een deltarobot heeft dus 3 DOF. 
+We hebben dan 3 bewegingsrichtingen en 0 rotatierichtingen; een deltarobot heeft dus 3 vrijheidsgraden. 
 Omdat de armen en grijper zelf vrij licht zijn, kan het heel snel heen en weer bewegen. Echter kan een deltarobot meestal niet hele zware objecten aan. 
 Een deltarobot wordt vaak gebruikt om kleine dingen in een verpakking te stoppen.
 
@@ -138,11 +142,11 @@ TODO: HIER MOET NOG MEER BIJ, MISSCHIEN EEN STEWART PLATFORM OF MENSACHTIGE ARME
 
     **Figuur 5: Een flexibele grijper** (COPYRIGHT?)
 
-Al deze armen grijpen op een bepaalde manier objecten vast. Dit doen ze met een **end-effector** (een soort hand). Je hebt allerlei soorten *end-effectors*. 
+Al deze armen grijpen op een bepaalde manier objecten vast. Dit doen ze met een *end-effector* (een soort hand). Je hebt allerlei soorten *end-effectors*. 
 Een simpele versie is een grijper die twee "vingers" naar elkaar toe kan bewegen om iets te grijpen. Een populaire variant hierop is een grijper met 
 flexibele vingers die vanzelf om het object heen buigen. Dit is te zien in figuur 5. Sommige end-effectors creeëren een vacuum waarmee ze het object 
 op kunnen tillen. Ook gebruiken sommige robots een magneet als end-effector. Je hebt ook grijpers die de onderkant van de pootjes van een gekko nabootsen, 
-waardoor ze enorm goede grip hebben. Dit is een goed voorbeeld van **Bio-inspired design**, waarbij ontwerpideeën uit de natuur worden gehaald.
+waardoor ze enorm goede grip hebben. Dit is een goed voorbeeld van *Bio-inspired design*, waarbij ontwerpideeën uit de natuur worden gehaald.
 
 ontwerpen met de toepassing en gebruiker in gedachten
 --------------------------------------------------------
@@ -192,23 +196,8 @@ Als je nog niet tevreden bent met het ontwerp, kan je gewoon weer naar stap 1 ga
 weer helemaal naar stap 1 te gaan. Misschien heb je bijvoorbeeld ergens een foute berekening gedaan. 
 Dan kan je teruggaan naar stap 5. Als er geen verbeteringen meer zijn die je wilt maken, is het ontwerp af!
 
-**TODO dit lijstje gaat weg**
 
-1. probleem analyseren en beschrijven
-asd
-2. programma van eisen opstellen
-
-    * prestatiecriteria
-    * functionele eisen
-    * randvoorwaarden
-    * specificaties
-3. (deel)uitwerkingen bedenken
-4. concepten maken voor het ontwerp
-5. ontwerp realiseren
-6. ontwerp testen en evalueren
-7. itereren 
-
-**Ook weg**
+**moet weg**
 
 *Prestatiecriteria* zijn eisen waarbij een bepaalde eigenschap *zo goed mogelijk* moet zijn. 
 Denk bijvoorbeeld aan "De robot moet zo snel mogelijk een voorwerp kunnen verplaatsen". *Functionele eisen* gaan 
@@ -227,8 +216,8 @@ Kinematica van een robotsubsysteem
 Bij het ontwerpen van een robot ga je op een gegeven moment de subsystemen van de robot moeten 
 gaan uitwerken. Hier komen vaak berekeningen bij kijken. 
 In de natuurkunde bestaat beweging uit 2 delen: kinematica en kinetica. Kinematica 
-kijkt naar **hoe** een object beweegt, zonder te kijken *waarom* het beweegt. 
-Kinetica kijkt juist naar **waarom** een object beweegt. 
+kijkt naar hoe een object beweegt, zonder te kijken waarom het beweegt. 
+Kinetica kijkt juist naar waarom een object beweegt. 
 Kinematica gebruik je bijvoorbeeld als je wil weten hoe een robotarm moet bewegen om een 
 bepaald voorwerp op te pakken. Als je weet hoe de armen moeten bewegen kan je nog niet
 altijd de arm die beweging laten doen. Daarvoor moeten we namelijk eerst weten hoeveel kracht 
@@ -241,10 +230,10 @@ de motoren moeten leveren om de arm de beweging te laten doen. Hiervoor gebruike
    
 Sommigen van jullie zullen bij natuurkunde al zowel kinematica als kinetica hebben gehad. 
 Wij gaan nu leren hoe we kinematica kunnen toepassen op een robotarm. De robotarm
-waar we naar gaan kijken bestaat uit een bovenarm, een onderarm en een end-effector (een hand).
+waar we naar gaan kijken bestaat uit een bovenarm, een onderarm en een *end-effector* (een hand).
 De arm is te zien in de figuur hiernaast.
 De vraag die we willen beantwoorden luidt als volgt: Als we de stand van de boven- en onderarm
-kennen, wat is dan de positie van de end-effector? Aangezien we enkel kinematica gaan 
+kennen, wat is dan de positie van de *end-effector*? Aangezien we enkel kinematica gaan 
 bekijken, hoeven we ons geen zorgen te maken over de krachten die op de arm werken.
 We krijgen dan eigenlijk gewoon een geometrieprobleem die we met alleen wiskundekennis
 al kunnen oplossen. 
@@ -253,11 +242,11 @@ De lengtes van de robotarm staan over het algemeen vast. Dat betekent dat
 de enige variabele die we nodig hebben om de positie van een onderdeel van de arm te 
 beschrijven de hoek is tussen de richting van het onderdeel en een andere gekozen vaste richting. 
 De richting die we hiervoor kiezen is langs de positieve x-as. Dit maakt de berekening een stukje makkelijker. 
-We willen de x en y coördinaten van de end-effector uitrekenen. Hierbij kiezen we dat het 
+We willen de x en y coördinaten van de *end-effector* uitrekenen. Hierbij kiezen we dat het 
 beginpunt van de robotarm op de oorsprong (0,0) zit. De berekening bestaat uit 3 stappen:
 
 1. Bereken de positie van het scharnier tussen de boven- en onderarm ten opzichte van de oorsprong.
-2. Bereken de positie van de end-effector ten opzichte van het bovengenoemde scharnier.
+2. Bereken de positie van de *end-effector* ten opzichte van het bovengenoemde scharnier.
 3. Tel de x en y waardes van beide relatieve posities bij elkaar op. 
 
 We kunnen de positie van het scharnier t.o.v. de oorsprong bereken door de zijdes van
