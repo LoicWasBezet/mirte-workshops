@@ -96,7 +96,7 @@ In de praktijk hebben de meeste robots een bepaalde vorm van een arm. Een belang
 zijn vrijheidsgraden, in het engels ook wel Degrees Of Freedom (DOF) genoemd. De vrijheidsgraden van een mechanisme 
 zeggen iets over hoe vrij het mechanisme is om te bewegen. De exacte definitie is dat het aantal vrijheidsgraden gelijk is aan 
 het aantal parameters die je nodig hebt om een systeem te beschrijven. Als je bijvoorbeeld de positie van een deur wil beschrijven, heb je maar 1 parameter nodig: 
-De hoek tussen de deur en de muur. Door de scharnieren kan de deur namelijk maar beperkt bewegen. Hij kan niet zomaar een meter omhoog gaan bijvoorbeeld. Voor een vrijbewegend rigide object zijn er zijn 6 vrijheidsgraden: 
+De hoek tussen de deur en de muur. Door de scharnieren kan de deur namelijk maar beperkt bewegen. Hij kan niet zomaar een meter omhoog gaan bijvoorbeeld. Voor een vrijbewegend rigide object zijn er 6 vrijheidsgraden: 
 3 voor positie en 3 voor oriëntatie. Het kan qua positie van boven naar beneden bewegen, van achter naar voren en van links naar rechts. Om de vrijheidsgraden van rotatie 
 te begrijpen kan je je eigen hoofd gebruiken. Je kan namelijk op 3 manieren je hoofd draaien: je kan naar boven/beneden draaien, naar links/rechts draaien en je kan je hoofd schuinhouden!
 In figuur 4 kan je de vrijheidsgraden zien. Als de grijper van de arm een van de bewegingen uit de figuur kan doen heeft het die vrijheidsgraad. Hierbij 
