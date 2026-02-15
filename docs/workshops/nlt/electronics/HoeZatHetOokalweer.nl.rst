@@ -1,9 +1,9 @@
 :orphan:
 
-Elektronica - hoe zat het ookalweer? 
+Elektronica - hoe zat het ook alweer? 
 ########################
 
-Alle robots zijn uiteindelijk opgebouwd uit heel veel simpele bouwsteentjes. Zo'n samenstelling van elektrische onderdelen wordt een *circuit* genoemd.
+Alle robots zijn opgebouwd uit heel veel simpele bouwsteentjes. Zo'n samenstelling van elektrische onderdelen wordt een *circuit* genoemd.
 We gaan een aantal natuurkundige concepten bekijken en daarmee de onderdeeltjes begrijpen.
 Omdat elektriciteit een moeilijk onderwerp is, gaan we een analogie gebruiken om het makkelijker te maken over Elektronica na te denken:
 We gaan werken met vrachtwagens! Deze vrachtwagens vervoeren zand en rijden altijd met een constante snelheid. De vrachtwagens rijden door de stroomdraden heen en 
@@ -16,18 +16,19 @@ leveren zand waar nodig. Gaandeweg zal het steeds duidelijker worden wat deze wa
 Stroomdraad
 --------------
 De eerste bouwsteen is de stroomdraad. Dit is simpelweg een draadje dat stroom kan geleiden van de ene plek naar de andere.
-Deze vormen de basis van elk circuit. Deze draadjes zijn in de robotica vaak erg dun en gemaakt van koper. Dit zijn de "wegen" 
+Stroomdraden vormen de basis van elk circuit. Deze draadjes zijn in de robotica vaak erg dun en gemaakt van koper. Dit zijn de "wegen" 
 waar de vrachtwagens over rijden.
 
 **TODO?:FOTO VAN CIRCUIT MET ENKEL EEN DRAADJE EN DAN STEEDS EEN ASPECT TOEVOEGEN?**
 
 Serie schakelingen
 --------------------------
-Serie schakelingen zijn circuits waarbij de stroom nooit opslitst naar meerdere banen.
+Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere banen. De vrachtwagens blijven dus altijd op dezelfde rijbaan rijden.
+
 
 Parallel schakelingen
 --------------------------
-Parallel schakelingen zijn circuits waarbij de stroom wel opslitst naar meerdere banen.
+Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerdere banen. Uiteindelijk komen alle banen weer samen. Soms neemt een vrachtwagen hier dus een afslag.
 
 Elektronen
 ----------------
@@ -36,7 +37,8 @@ De energie die ze bij zich dragen is het zand.
 
 Elektriciteit
 -------------------------------------
-Om elektriciteit te karakteriseren heb je 3 concepten nodig: Spanning, stroomsterkte en lading. 
+Om elektriciteit te karakteriseren heb je 3 concepten nodig: lading, spanning en stroomsterkte.
+
 *Lading* is hetgeen wat de energie van A naar B vervoert. lading wordt uitgedrukt in de eenheid coulomb [C].
 Elektronen zijn deeltjes met een lading van :math: `-1,602 * 10^{-19}` coulomb. 
 Dit wordt de negatieve elementaire lading genoemd. Een vrachtwagen is dus ook zo'n deeltje met wat lading in onze analogie.
@@ -75,9 +77,9 @@ Het zand wordt dus afgeleverd aan de weerstanden die in het circuit zitten! Hoe 
 Een weerstand [R] wordt uitgedrukt in Ohm [:math:`\Omega`]. Eigenlijk is elk onderdeel een weerstand. Een stroomdraad heeft een hele lage weerstand (gebruikt weinig energie), terwijl een lampje een hoge weerstand heeft (gebruikt veel energie).
 De meeste weerstanden zijn Ohmse weerstanden. Dit betekent dat de weerstand gelijk is 
 aan de verhouding tussen het spanningsverschil tussen het begin van de weerstand en het eind van de weerstand en de stroomsterkte: :math:`R=\frac{U}{I}`. 
-Stel dat er bijvoorbeeld een gloeilamp is die 230 volt gebruikt bij een stroomsterkte van 0,1 ampere, dan is zijn weerstand :math:`\frac{220}{0,1} = 2200 \Omega`.
+Stel dat er bijvoorbeeld een gloeilamp is die 230 volt gebruikt bij een stroomsterkte van 0,1 ampere, dan is zijn weerstand :math:`\frac{230}{0,1} = 2300 \Omega`.
 De weerstand van een onderdeel is vaak constant. 
-De verhouding tussen spanning en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar 0,05 Ampere gaan stromen.
+De verhouding tussen spanning en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar de helft van de 0,1 Ampere gaan stromen.
 
 Als we weer terugduiken in onze analogie kan je weerstand zien als iets wat rijbanen afsluit. 
 Stel je voor dat de stroomdraad fungeert als een snelweg met 100 rijbanen.
@@ -101,25 +103,3 @@ Echter kunnen er prima een aantal vrachtwagens via rechts gaan over de ene rijba
 Spanning kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft. 
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
-
-
-
-Inhoud:
--BraitenBerg mirte lite  BEAM robotics
--waarheidstabellen
--Hoe zat het ook alweer? MET RIJBANEN
---switch
---weerstandje (lampje)
---volt 
---ampere
-->transistor
-->modules
--H-brug
--AD converter
--microcontroller
--PWM
-
-
-
-Hier eerst wat analoge electronica (vanuit natuurkunde) en dan overstappen op digitale
-electronica (bits, gates)
