@@ -70,7 +70,10 @@ En niet voor niets: het is een van de meest gebruikte onderdelen in talloze appa
 honderden miljarden transistors (dat is meer dan 100.000.000.000)!
 
 In de figuur hieronder is te zien hoe deze werkt. Er komt een draad E binnen. Wanneer er een spanning wordt gezet 
-op draad B komt er een verbinding tussen E en C en kunnen de elektronen verder stromen. 
+op draad B ontstaat er een verbinding tussen E en C en kunnen de elektronen verder stromen. Dit kan dus gebruikt worden om de stroom van E naar C uit te zetten, 
+maar het kan ook gebruikt worden om het signaal van B te versterken. B mag namelijk heel zwak zijn om de verbinding te laten ontstaan. Als je E aansluit op een sterke spanningsbron 
+kan je een sterk signaal door C laten gaan als er een zwak signaal via B binnenkomt. Als B geen signaal binnenbrengt blijft C ook spanningsloos. 
+Hiermee versterk je dus effectief het signaal van B.
 
 
 
@@ -119,23 +122,29 @@ om de stroomrichting te kiezen. We kunnen de draairichting van een motor hiermee
     :align: center
 
     Een H-brug (COPYRIGHT?)
-
-
-
-
-Een andere module die veel voorkomt is een *analog to digital converter* (AD converter). Dit is 
+Een andere module die veel voorkomt is een *analog to digital converter* (ADC). Dit is 
 een onderdeel die een analoog signaal kan vertalen naar een digitale binaire waarde. Er is namelijk een probleem 
 als je bijvoorbeeld een temperatuursensor wil aflezen met je computer. De sensor geeft een bepaalde spanning door via de verbindingskabel, die overeenkomt met een bepaalde temperatuur aan 
 de hand van een formule die bij de sensor hoort. De computer kan niet direct de spanning opslaan 
 om mee te rekenen. Het moet de spanning omzetten naar een binair getal die deze spanning uitdrukt in volt. 
-Het onderdeel die deze omzetting kan doen is dus de AD converter. Je hebt ook een *digital to analog converter*. Deze 
-doet dezelfde taak, maar dan andersom.
+Het onderdeel die deze omzetting kan doen is dus de AD converter. Je hebt ook een *digital to analog converter* (DAC). Deze 
+doet dezelfde taak, maar dan andersom. Dit wordt bijvoorbeeld gebruikt om de digitale muziek van je computer om te zetten naar een analoog signaal voor speakers.
+
+
+.. figure:: https://www.embedded.com/wp-content/uploads/sites/2/2025/01/Figure-1.png
+    :alt: Een AD en DA converter
+    :width: 300
+    :align: center
+
+    Een ADC en een DAC (COPYRIGHT?)
 
 De laatste module waar we naar gaan kijken is de *microcontroller*. Dit is een erg 
 veelzijdig onderdeel dat als het ware een kleine computer is. Je kan er programmeercode op zetten 
-om het allerlei andere onderdelen aan te sturen. Het heeft vaak zo'n 20 in/uitgangen voor stroomdraden. 
+om het allerlei andere onderdelen aan te sturen. Het heeft vaak zo'n 20 aansluitpunten voor stroomdraden. 
 Je zou bijvoorbeeld kunnen programmeren dat wanneer er spanning staat op stroomdraad 1 en 2, er ook spanning moet 
-worden gezet op stroomdraad 3. Je hebt nu een *en-poort* gemaakt! Een microcontroller kan nog veel complexere dingen dan dat.
+worden gezet op stroomdraad 3. Je hebt nu een *en-poort* gemaakt! Een microcontroller kan nog veel complexere taken uitvoeren dan dat. Het is niet een krachtige computer, 
+maar je komt al heel ver met wat simpele berekeningen als je een robot wil aansturen. Een microcontroller is compact en zuinig met energie.
 
+**Plaatje van pi pico?**
 
 **-PWM?**
