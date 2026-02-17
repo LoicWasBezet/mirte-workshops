@@ -13,30 +13,32 @@ leveren zand waar nodig. Gaandeweg zal het steeds duidelijker worden wat deze wa
 **TODO: Willen we doen alsof elektronen door de draad bewegen ipv lading doorstoten?**
 
 
-Stroomdraad
---------------
+**stroomdraad**
+
 De eerste bouwsteen is de stroomdraad. Dit is simpelweg een draadje dat stroom kan geleiden van de ene plek naar de andere.
 Stroomdraden vormen de basis van elk circuit. Deze draadjes zijn in de robotica vaak erg dun en gemaakt van koper. Dit zijn de "wegen" 
 waar de vrachtwagens over rijden.
 
 **TODO?:FOTO VAN CIRCUIT MET ENKEL EEN DRAADJE EN DAN STEEDS EEN ASPECT TOEVOEGEN?**
 
-Serie schakelingen
---------------------------
+**Serie schakelingen**
+
 Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere banen. De vrachtwagens blijven dus altijd op dezelfde rijbaan rijden.
 
 
-Parallel schakelingen
---------------------------
+**Parallel schakelingen**
+
 Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerdere banen. Uiteindelijk komen alle banen weer samen. Soms neemt een vrachtwagen hier dus een afslag.
 
-Elektronen
-----------------
+
+**Elektronen**
+
 Elektronen zijn de deeltjes die daadwerkelijk door de draad heen stromen. In onze analogie zijn dit de vrachtwagens! 
 De energie die ze bij zich dragen is het zand.
 
-Elektriciteit
--------------------------------------
+
+**Elektriciteit**
+
 Om elektriciteit te karakteriseren heb je 3 concepten nodig: lading, spanning en stroomsterkte.
 
 *Lading* is hetgeen wat de energie van A naar B vervoert. lading wordt uitgedrukt in de eenheid coulomb [C].
@@ -50,8 +52,7 @@ De eenheid is dus joule per coulomb [J/C]. Een andere naam hiervoor is volt [V].
 In werkelijkheid wordt deze eenheid Ampere genoemd [A] (1 A = 1 C/s).
 
 
-Spanningsbron
------------
+**Spanningsbron**
 
 Een stroomdraad gaat niet vanzelf stroom geleiden. Daarvoor moet er eerst spanning over de draad staan. Immers, hoe kan 
 er zand bezorgd worden als er geen zand in de vrachtwagens zit? Een spanningsbron is dus simpelweg een bron van energie (zand). Dit kan bijvoorbeeld een batterij of een accu zijn. Ook een stopcontact is een spanningsbron.
@@ -61,15 +62,15 @@ Bij een 9V batterij hebben alle elektronen die de bron uitkomen dus een spanning
 
 **TODO: Betere uitleg van waarom een circuit gesloten moet zijn? Is "beginnen en eindigen in een bron" wel algemeen genoeg?**
 
-Schakelaar
--------------------
+**Schakelaar**
+
 Als je een apparaat uit wil zetten kan je de spanningsbron weghalen. Om elke keer de batterijen uit je fietslampje te halen is echter veel gedoe.
 Daarom gebruik je vaak een *schakelaar*. Een schakelaar verbreekt de stroomkring door ergens in het circuit het fysieke contact met het draadje te verbreken. 
 In onze analogie kan je met een schakelaar dus de brug openzetten op de route zodat er niks meer kan rijden.
 
 
-Weerstand
----------------
+**Weerstand**
+
 Een weerstand is een onderdeel die het moeilijker maakt voor de elektronen om door een draad te stromen. 
 Wanneer elektronen door een weerstand stromen raken ze een deel van hun energie kwijt. 
 Wanneer elektronen een circuit doorlopen, raken ze dus bij elke weerstand een stuk van hun energie kwijt tot ze weer terug bij de spanningsbron zijn zonder energie. 
@@ -87,8 +88,8 @@ De gloeilamp sluit er dan misschien 30 af. Hierdoor kunnen er dus minder vrachtw
 Hoe meer open rijbanen er een gloeilamp binnengaan, hoe meer rijbanen het afsluit.
 
 
-Weerstand in parallelschakelingen
------------------------------------
+**Weerstand in parallelschakelingen**
+
 In een parallelschakeling splitsen de elektronen op, en komen wat later weer samen. 
 Een interessante vraag is wat er gebeurt met de stroomsterkte en de spanning bij een splitsing. 
 Met onze analogie is dit makkelijk te bedenken. 
@@ -103,3 +104,4 @@ Echter kunnen er prima een aantal vrachtwagens via rechts gaan over de ene rijba
 Spanning kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft. 
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
+
