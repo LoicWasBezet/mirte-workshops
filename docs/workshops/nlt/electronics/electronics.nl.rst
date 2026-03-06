@@ -24,41 +24,6 @@ In dit hoofdstuk gaan we kijken naar welke onderdelen veel voorkomen.
 Voor dit hoofdstuk is het erg handig wat voorkennis te hebben van elektriciteit. Komen de termen spanning, stroomsterkte, lading, schakelaren en weerstanden je niet helemaal bekend voor? 
 Lees dan vooral het stuk dat hier rechts staat! 
 
-
-Logische poorten en waarheidstabellen
------------------------------------------
-
-In de kern van alle elektronica zitten logische poorten. Deze poorten kunnen als het ware een logische denkstap uitvoeren. De poorten werken met twee waardes: waar en onwaar.
-Een voorbeeld is bijvoorbeeld de *en-poort* Deze poort krijgt twee waardes gegeven, en geeft dan de waarde *waar* terug als de eerste *en* de tweede waardes waar zijn, en anders onwaar. 
-De *of-poort* geeft "waar" terug als ten minste 1 van de 2 gegeven waardes waar is. De *exclusieve of-poort* geeft *waar* terug als enkel de eerste of enkel de tweede waarde waar is. 
-Om makkelijker te werken met deze poorten kan je waarheidstabellen gebruiken. In deze tabel staat er gegeven wat de poort teruggeeft bij alle verschillende mogelijke inputs. Hierbij wordt waar opgeschreven als 1 en onwaar als 0
-Hier is bijvoorbeeld de waarheidstabel van een *en-poort* en van een *exclusieve of-poort* (engels: xor-poort):
-
-**TODO OMSCHRIJVEN NAAR 0 en 1?**
-========  =======  ======= =========  =======  =======
-en-poort                   xor-poort                   
-========  =======  ======= =========  =======  ======= 
-A         B        A en B  A          B        A xor B  
-========  =======  ======= =========  =======  =======
-Onwaar    Onwaar   Onwaar  Onwaar     Onwaar   Onwaar  
-Waar      Onwaar   Onwaar  Waar       Onwaar   Waar  
-Onwaar    Waar     Onwaar  Onwaar     Waar     Waar
-Waar      Waar     Waar    Waar       Waar     Onwaar
-========  =======  ======= ========   =======  =======
-
-
-.. admonition:: info
-   :class: margin
-
-   Wil je weten hoe je deze poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <HoeZatHetOokalweer>`
-
-
-In de context van elektronica komen de waardes van waar en onwaar overeen met of er spanning op een kabel staat. 
-Hiermee kunnen we dus elektrische signalen krijgen op basis van andere elektrische signalen. Door deze systemen slim 
-aan elkaar te koppelen kan je complexe machines maken, zoals bijvoorbeeld de chip in jouw telefoon! Hoe we precies zo'n poort 
-maken hoef je niet te weten. Echter is het wel interessant om even kort te kijken hoe het eruit ziet dus lees vooral het stukje hier rechts!
-**TODO willen we 1 schakeling toch alvast tonen? moeilijk zonder transistor uit te leggen**
-
 Transistors
 -------------------
 
@@ -84,12 +49,16 @@ Hiermee versterk je dus effectief het signaal van B.
 
     Een transistor (COPYRIGHT?)
 
+
 Binaire getallen
 -------------------------
 
 Je hebt misschien al eens 
-gehoord dat computers werken met enkel binaire getallen. Dat betekent dat ze elk getal opschrijven als 
-een combinatie van 1 en 0. Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken.
+gehoord dat computers werken met enkel binaire getallen. Dat betekent dat ze elk getal opslaan als 
+een combinatie van eenen en nullen. Door middel van onze transistoren kunnen we deze losse getalletjes opslaan! Als de transistor aan staat, 
+heeft het een waarde van 1 en als het uit staat een waarde van 0. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
+Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken. Dit heet *base 10*. Wanner je enkel de getallen 
+0 en 1 gebruikt heet het *base 2* (binaire getallen).
 Bij ons is het meest rechter cijfer 1 waard en elk cijfer daar links van steeds 10 keer meer. Kijk bijvoorbeeld 
 naar 342. Het meest rechtercijfer voegt 1 * 2 = 2 aan het totaal toe. Het cijfer links daarvan (de 4) 
 voegt 4 * 10 toe aan het totaal. Het cijfer weer links daarvan (de 3) voegt 3 * 10 * 10 = 300 toe aan het totaal.
@@ -104,6 +73,93 @@ die transistors naast elkaar zet kan je een flink getal opslaan.
 Om elk cijfer tussen de 0 en 9 op te kunnen slaan zou je een veel ingewikkelder onderdeeltje nodig hebben. 
 In de praktijk is het makkelijker om een aantal transistoren te gebruiken 
 in plaats van zo'n complexer onderdeeltje.
+
+
+Logische poorten en waarheidstabellen
+-----------------------------------------
+
+Om een computer te maken moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
+
+1. Getallen opslaan.
+2. Simpele wiskundige berekeningen doen.
+
+Met deze twee acties kunnen we al veel bereiken! Door simpele wiskundige berekeningen aan elkaar te koppelen kunnen we ook complexe problemen oplossen.
+Om getallen op te slaan gebruiken we zoals in de vorige paragraaf vermeld transistoren. Deze transistoren slaan binaire getallen op. Hiermee voldoen we aan punt 1.
+Om aan punt 2 te voldoen heeft een computer bijvoorbeeld onderdelen die twee getallen kunnen optellen of vermenigvuldigen. Echter zijn deze onderdelen zelf gemaakt uit nog kleinere onderdelen: 
+hoofdzakelijk *logische poorten*. Deze poorten kunnen als het ware steeds 1 logische denkstap uitvoeren. De poorten werken met twee waardes: waar en onwaar (1 en 0).
+Een voorbeeld is bijvoorbeeld de *en-poort* Deze poort krijgt twee waardes gegeven, en geeft dan de waarde *waar* terug als de eerste *en* de tweede waardes waar zijn, en anders onwaar. 
+De *of-poort* geeft "waar" terug als ten minste 1 van de 2 gegeven waardes waar is. De *exclusieve of-poort* geeft *waar* terug als enkel de eerste of enkel de tweede waarde waar is. 
+Om makkelijker te werken met deze poorten kan je waarheidstabellen gebruiken. In deze tabel staat er gegeven wat de poort teruggeeft bij alle verschillende mogelijke inputs. Hierbij kan waar worden opgeschreven als 1 en onwaar als 0. 
+Hier is bijvoorbeeld de waarheidstabel van de *en-poort*, *of-poort*, *exclusieve of-poort* (engels: xor-poort) en de niet-poort:
+
+**TODO OMSCHRIJVEN NAAR 0 en 1?**
+========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
+en-poort                         of-poort                         xor-poort                        not-poort
+========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
+A          B          A en B     A          B          A of B     A          B          A xor B    A          niet A
+========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
+Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Waar    
+Waar       Onwaar     Onwaar     Waar       Onwaar     Waar       Waar       Onwaar     Waar       Waar       Onwaar    
+Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar                         
+Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar                       
+========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========  
+
+
+.. admonition:: info
+   :class: margin
+
+   Wil je weten hoe je deze poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <HoeZatHetOokalweer>`
+
+Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de poort te leveren. Door deze poorten aan elkaar te koppelen kunnen we 
+steeds complexere onderdelen maken. Stel dat je het resultaat van een en-poort ook nog door de niet-poort zou leiden: Je krijgt dan enkel Onwaar als beide inputs 
+Waar waren. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? 
+
+Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistoren die een 1 of 0 opslaat). 
+hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits.
+In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
+
+
+..topic:: Opdracht 1
+        
+    We willen bepalen welke poorten we nodig hebben om de som van 2 bits te berekenen. We hebben dus twee cijfers die ofwel 0 ofwel 1 gaan zijn 
+    en willen weten hoe we het resultaat kunnen berekenen. 
+
+    a. Wat zijn alle antwoorden die mogelijk zijn?
+
+        Tip: Een ervan is in ieder geval 0 + 0 = 0
+
+    b. Hoeveel bits heb je nodig zodat elk mogelijke antwoord opgeslagen kan worden?
+
+        Let op: het is er meer dan 1! 
+        Tip: Met 1 bit kan je alleen 0 en 1 opschrijven, terwijl je met 8 bits bijvoorbeeld al de getallen 0 tot en met 255 kan opslaan.
+
+    c. Reken de optelsom van elke mogelijke combinatie van 0 en 1 uit. Schrijf het antwoord steeds op als binair getal!
+
+    d. Maak een waarheidstabel die het effect van de twee inputs op de meest rechter bit van het resultaat weergeeft.
+
+        Tip: Maak drie kolommen: eentje voor de eerste input, eentje voor de tweede input en eentje voor de rechterbit van het resultaat.
+        Bij het binaire getal 10 (=2 als we weer met base-10 rekenen) heeft bijvoorbeeld als rechterbit 0.
+        Je mag zelf kiezen of je deze tabel invult met eenen en nullen of met Waar en Onwaar.
+
+    e. Deze waarheidstabel is als het goed is gelijk aan een van de bovenstaande tabellen van de bestaande poorten! Welke pooort is dat?
+
+        Dit betekent dat we het rechterbit kunnen berekenen door de twee getallen door die poort te halen!
+        Tip: Het kan zijn dat je je rijen op een andere volgorde hebt staan. Vergelijk of jouw tabel bij elke combinatie van inputs 
+        hetzelfde antwoord geeft als de tabel van de poort die je bekijkt!
+
+    f. Herhaal voor de tweede bit van rechts van het resultaat de stappen van vraag e. Door welke poort moeten we de twee getallen halen om die 2e bit te krijgen?
+
+    Als je weet hoe je de 4 basispoorten van hierboven moet bouwen, kan je nu dus ook een onderdeeltje bouwen die 2 bits kan optellen! Door dit 
+    soort systemen aan elkaar te koppelen op steeds grotere schaal kan je complexe machines maken!
+
+Hoe we precies zo'n poort 
+maken hoef je niet te weten. Echter is het wel interessant om even kort te kijken hoe het eruit ziet dus lees vooral het stukje hier rechts!
+**TODO willen we 1 schakeling toch alvast tonen? moeilijk zonder transistor uit te leggen**
+
+
+In de context van elektronica komen de waardes van waar en onwaar overeen met ofwel of er spanning op een kabel staat ofwel of er lading in een onderdeeltje zit.  
+
+
 
 Modules
 -----------------------------------------
