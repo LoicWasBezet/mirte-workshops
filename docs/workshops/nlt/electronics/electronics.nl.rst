@@ -100,8 +100,8 @@ A          B          A en B     A          B          A of B     A          B  
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
 Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Waar    
 Waar       Onwaar     Onwaar     Waar       Onwaar     Waar       Waar       Onwaar     Waar       Waar       Onwaar    
-Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar       nvt                  
-Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar     nvt                  
+Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar       nvt        nvt          
+Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar     nvt        nvt          
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========  
 
 
