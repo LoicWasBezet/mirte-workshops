@@ -95,13 +95,13 @@ Hier is bijvoorbeeld de waarheidstabel van de *en-poort*, *of-poort*, *exclusiev
 **TODO OMSCHRIJVEN NAAR 0 en 1?**
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
 en-poort                         of-poort                         xor-poort                        not-poort
-========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
+-------------------------------- -------------------------------- -------------------------------- ---------------------
 A          B          A en B     A          B          A of B     A          B          A xor B    A          niet A
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
 Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Waar    
 Waar       Onwaar     Onwaar     Waar       Onwaar     Waar       Waar       Onwaar     Waar       Waar       Onwaar    
-Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar                         
-Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar                       
+Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar       nvt                  
+Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar     nvt                  
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========  
 
 
@@ -119,7 +119,7 @@ hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische po
 In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
 
 
-..topic:: Opdracht 1
+    **Opdracht 1**
         
     We willen bepalen welke poorten we nodig hebben om de som van 2 bits te berekenen. We hebben dus twee cijfers die ofwel 0 ofwel 1 gaan zijn 
     en willen weten hoe we het resultaat kunnen berekenen. 
@@ -135,13 +135,14 @@ In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepa
 
     c. Reken de optelsom van elke mogelijke combinatie van 0 en 1 uit. Schrijf het antwoord steeds op als binair getal!
 
+
     d. Maak een waarheidstabel die het effect van de twee inputs op de meest rechter bit van het resultaat weergeeft.
 
         Tip: Maak drie kolommen: eentje voor de eerste input, eentje voor de tweede input en eentje voor de rechterbit van het resultaat.
         Bij het binaire getal 10 (=2 als we weer met base-10 rekenen) heeft bijvoorbeeld als rechterbit 0.
         Je mag zelf kiezen of je deze tabel invult met eenen en nullen of met Waar en Onwaar.
 
-    e. Deze waarheidstabel is als het goed is gelijk aan een van de bovenstaande tabellen van de bestaande poorten! Welke pooort is dat?
+    e. Deze waarheidstabel is als het goed is gelijk aan een van de bovenstaande tabellen van de bestaande poorten! Welke poort is dat?
 
         Dit betekent dat we het rechterbit kunnen berekenen door de twee getallen door die poort te halen!
         Tip: Het kan zijn dat je je rijen op een andere volgorde hebt staan. Vergelijk of jouw tabel bij elke combinatie van inputs 
@@ -154,6 +155,7 @@ In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepa
 
 Hoe we precies zo'n poort 
 maken hoef je niet te weten. Echter is het wel interessant om even kort te kijken hoe het eruit ziet dus lees vooral het stukje hier rechts!
+
 **TODO willen we 1 schakeling toch alvast tonen? moeilijk zonder transistor uit te leggen**
 
 
