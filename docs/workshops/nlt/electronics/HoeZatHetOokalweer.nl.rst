@@ -19,16 +19,11 @@ De eerste bouwsteen is de stroomdraad. Dit is simpelweg een draadje dat stroom k
 Stroomdraden vormen de basis van elk circuit. Deze draadjes zijn in de robotica vaak erg dun en gemaakt van koper. Dit zijn de "wegen" 
 waar de vrachtwagens over rijden.
 
-**TODO?:FOTO VAN CIRCUIT MET ENKEL EEN DRAADJE EN DAN STEEDS EEN ASPECT TOEVOEGEN?**
-
-**Serie schakelingen**
-
-Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere banen. De vrachtwagens blijven dus altijd op dezelfde rijbaan rijden.
-
-
-**Parallel schakelingen**
-
-Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerdere banen. Uiteindelijk komen alle banen weer samen. Soms neemt een vrachtwagen hier dus een afslag.
+.. image:: _media/Stroomdraad.png
+   :width: 300px
+   :alt: Stroomdraad
+   :align: center
+   Een stuk stroomdraad
 
 
 **Elektronen**
@@ -60,7 +55,39 @@ Als er alleen maar vrachtwagens de bron uit rijden, raken ze uiteraard op. Ze be
 Vandaar dat een circuit altijd begint en eindigt in een bron. Veel spanningsbronnen leveren een constant voltage wanneer de elektronen langskomen.
 Bij een 9V batterij hebben alle elektronen die de bron uitkomen dus een spanning van 9 volt.
 
+.. image:: _media/Spanningsbron.png
+   :width: 400px
+   :alt: Parallelschakeling
+   :align: center
+   Een simpele parallelschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
+
 **TODO: Betere uitleg van waarom een circuit gesloten moet zijn? Is "beginnen en eindigen in een bron" wel algemeen genoeg?**
+
+**Serie schakelingen**
+
+Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere banen. De vrachtwagens blijven dus altijd op dezelfde rijbaan rijden.
+
+.. image:: _media/SerieSchakeling.png
+   :width: 400px
+   :alt: Serieschakeling
+   :align: center
+   Een simpele serieschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
+**TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
+
+
+**Parallel schakelingen**
+
+Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerdere banen. Uiteindelijk komen alle banen weer samen. Soms neemt een vrachtwagen hier dus een afslag.
+
+.. image:: _media/ParallelSchakeling.png
+   :width: 400px
+   :alt: Parallelschakeling
+   :align: center
+   Een simpele parallelschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
+
+**TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
+
+   
 
 **Schakelaar**
 
@@ -68,6 +95,13 @@ Als je een apparaat uit wil zetten kan je de spanningsbron weghalen. Om elke kee
 Daarom gebruik je vaak een *schakelaar*. Een schakelaar verbreekt de stroomkring door ergens in het circuit het fysieke contact met het draadje te verbreken. 
 In onze analogie kan je met een schakelaar dus de brug openzetten op de route zodat er niks meer kan rijden.
 
+.. image:: _media/Schakelaar.png
+   :width: 400px
+   :alt: Schakelaar
+   :align: center
+   Een circuit met een schakelaar. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
+
+**TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
 
 **Weerstand**
 
@@ -82,10 +116,17 @@ Stel dat er bijvoorbeeld een gloeilamp is die 230 volt gebruikt bij een stroomst
 De weerstand van een onderdeel is vaak constant. 
 De verhouding tussen spanning en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar de helft van de 0,1 Ampere gaan stromen.
 
+.. image:: _media/Weerstand.png
+   :width: 400px
+   :alt: Weerstand
+   :align: center
+   Een circuit met een weerstand.
+
 Als we weer terugduiken in onze analogie kan je weerstand zien als iets wat rijbanen afsluit. 
 Stel je voor dat de stroomdraad fungeert als een snelweg met 100 rijbanen.
 De gloeilamp sluit er dan misschien 30 af. Hierdoor kunnen er dus minder vrachtwagens over de snelweg gaan. Als er een tweede gloeilamp is sluit deze nog een aantal rijbanen af. 
 Hoe meer open rijbanen er een gloeilamp binnengaan, hoe meer rijbanen het afsluit.
+
 
 
 **Weerstand in parallelschakelingen**
@@ -105,3 +146,8 @@ Spanning kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft.
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
 
+.. image:: _media/ParalleleWeerstand.png
+   :width: 400px
+   :alt: Weerstand in parallelschakeling
+   :align: center
+   Een parallelschakeling met weerstanden.

@@ -42,12 +42,12 @@ Hiermee versterk je dus effectief het signaal van B.
 
 
 
-.. figure:: https://media.geeksforgeeks.org/wp-content/uploads/20230903114109/Screenshot-2023-09-03-114044.jpg
+.. figure:: _media/Transistor.png
     :alt: Een transistor
-    :width: 300
+    :width: 400
     :align: center
 
-    Een transistor (COPYRIGHT?)
+    Een transistor
 
 
 Binaire getallen
@@ -92,7 +92,6 @@ De *of-poort* geeft "waar" terug als ten minste 1 van de 2 gegeven waardes waar 
 Om makkelijker te werken met deze poorten kan je waarheidstabellen gebruiken. In deze tabel staat er gegeven wat de poort teruggeeft bij alle verschillende mogelijke inputs. Hierbij kan waar worden opgeschreven als 1 en onwaar als 0. 
 Hier is bijvoorbeeld de waarheidstabel van de *en-poort*, *of-poort*, *exclusieve of-poort* (engels: xor-poort) en de niet-poort:
 
-**TODO OMSCHRIJVEN NAAR 0 en 1?**
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
 en-poort                         of-poort                         xor-poort                        not-poort
 -------------------------------- -------------------------------- -------------------------------- ---------------------
@@ -108,14 +107,28 @@ Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waa
 .. admonition:: info
    :class: margin
 
-   Wil je weten hoe je deze poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <HoeZatHetOokalweer>`
 
 Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de poort te leveren. Door deze poorten aan elkaar te koppelen kunnen we 
 steeds complexere onderdelen maken. Stel dat je het resultaat van een en-poort ook nog door de niet-poort zou leiden: Je krijgt dan enkel Onwaar als beide inputs 
-Waar waren. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? 
+Waar waren. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? De xor-poort kan zelf gemaakt worden door en-poorten, niet-poorten en een of-poort op de juiste manier aan elkaar te koppelen. 
 
-Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistoren die een 1 of 0 opslaat). 
-hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits.
+
+In de context van elektronica komen de waardes van waar en onwaar overeen met ofwel of er spanning op een kabel staat ofwel of er lading in een onderdeeltje zit.  
+Hieronder zie je hoe je bijvoorbeeld een en-poort maakt.
+Door spanning te zetten op draden A en B kan je stroom al dan niet laten lopen. Wanneer er spanning staat op zowel A als B, 
+zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad C door een niet-poort te halen kan je de poortcombinatie van hierboven nabouwen!
+
+Wil je weten hoe je de andere poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <LogicaPoorten>`
+
+
+.. image:: _media/EnPoort.jpg
+   :width: 500
+   :alt: En poort
+   :align: center
+   Voorbeeld van een elektronische en-poort.
+
+Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistor die een 1 of 0 opslaat). 
+Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits.
 In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
 
 
@@ -139,7 +152,7 @@ In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepa
     d. Maak een waarheidstabel die het effect van de twee inputs op de meest rechter bit van het resultaat weergeeft.
 
         Tip: Maak drie kolommen: eentje voor de eerste input, eentje voor de tweede input en eentje voor de rechterbit van het resultaat.
-        Bij het binaire getal 10 (=2 als we weer met base-10 rekenen) heeft bijvoorbeeld als rechterbit 0.
+        Het binaire getal 11 ( 11 (base 2)= 3 (base 10)) heeft bijvoorbeeld als rechterbit 0.
         Je mag zelf kiezen of je deze tabel invult met eenen en nullen of met Waar en Onwaar.
 
     e. Deze waarheidstabel is als het goed is gelijk aan een van de bovenstaande tabellen van de bestaande poorten! Welke poort is dat?
@@ -153,13 +166,8 @@ In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepa
     Als je weet hoe je de 4 basispoorten van hierboven moet bouwen, kan je nu dus ook een onderdeeltje bouwen die 2 bits kan optellen! Door dit 
     soort systemen aan elkaar te koppelen op steeds grotere schaal kan je complexe machines maken!
 
-Hoe we precies zo'n poort 
-maken hoef je niet te weten. Echter is het wel interessant om even kort te kijken hoe het eruit ziet dus lees vooral het stukje hier rechts!
-
-**TODO willen we 1 schakeling toch alvast tonen? moeilijk zonder transistor uit te leggen**
-
-
-In de context van elektronica komen de waardes van waar en onwaar overeen met ofwel of er spanning op een kabel staat ofwel of er lading in een onderdeeltje zit.  
+Hoe we precies zo'n poort maken hoef je niet te weten. 
+Echter is het wel interessant om even kort te kijken hoe het eruit ziet dus lees vooral het stukje hier rechts!
 
 
 
