@@ -19,7 +19,7 @@ De eerste bouwsteen is de stroomdraad. Dit is simpelweg een draadje dat stroom k
 Stroomdraden vormen de basis van elk circuit. Deze draadjes zijn in de robotica vaak erg dun en gemaakt van koper. Dit zijn de "wegen" 
 waar de vrachtwagens over rijden.
 
-.. image:: _media/Stroomdraad.png
+.. figure:: _media/Stroomdraad.png
    :width: 300px
    :alt: Stroomdraad
    :align: center
@@ -55,7 +55,7 @@ Als er alleen maar vrachtwagens de bron uit rijden, raken ze uiteraard op. Ze be
 Vandaar dat een circuit altijd begint en eindigt in een bron. Veel spanningsbronnen leveren een constant voltage wanneer de elektronen langskomen.
 Bij een 9V batterij hebben alle elektronen die de bron uitkomen dus een spanning van 9 volt.
 
-.. image:: _media/Spanningsbron.png
+.. figure:: _media/Spanningsbron.png
    :width: 400px
    :alt: Parallelschakeling
    :align: center
@@ -67,7 +67,7 @@ Bij een 9V batterij hebben alle elektronen die de bron uitkomen dus een spanning
 
 Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere banen. De vrachtwagens blijven dus altijd op dezelfde rijbaan rijden.
 
-.. image:: _media/SerieSchakeling.png
+.. figure:: _media/SerieSchakeling.png
    :width: 400px
    :alt: Serieschakeling
    :align: center
@@ -79,7 +79,7 @@ Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere
 
 Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerdere banen. Uiteindelijk komen alle banen weer samen. Soms neemt een vrachtwagen hier dus een afslag.
 
-.. image:: _media/ParallelSchakeling.png
+.. figure:: _media/ParallelSchakeling.png
    :width: 400px
    :alt: Parallelschakeling
    :align: center
@@ -95,7 +95,7 @@ Als je een apparaat uit wil zetten kan je de spanningsbron weghalen. Om elke kee
 Daarom gebruik je vaak een *schakelaar*. Een schakelaar verbreekt de stroomkring door ergens in het circuit het fysieke contact met het draadje te verbreken. 
 In onze analogie kan je met een schakelaar dus de brug openzetten op de route zodat er niks meer kan rijden.
 
-.. image:: _media/Schakelaar.png
+.. figure:: _media/Schakelaar.png
    :width: 400px
    :alt: Schakelaar
    :align: center
@@ -116,7 +116,7 @@ Stel dat er bijvoorbeeld een gloeilamp is die 230 volt gebruikt bij een stroomst
 De weerstand van een onderdeel is vaak constant. 
 De verhouding tussen spanning en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar de helft van de 0,1 Ampere gaan stromen.
 
-.. image:: _media/Weerstand.png
+.. figure:: _media/Weerstand.png
    :width: 400px
    :alt: Weerstand
    :align: center
@@ -146,7 +146,7 @@ Spanning kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft.
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
 
-.. image:: _media/ParalleleWeerstand.png
+.. figure:: _media/ParalleleWeerstand.png
    :width: 400px
    :alt: Weerstand in parallelschakeling
    :align: center

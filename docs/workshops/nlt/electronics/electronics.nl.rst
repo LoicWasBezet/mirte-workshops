@@ -59,13 +59,26 @@ een combinatie van eenen en nullen. Door middel van onze transistoren kunnen we 
 heeft het een waarde van 1 en als het uit staat een waarde van 0. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
 Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken. Dit heet *base 10*. Wanner je enkel de getallen 
 0 en 1 gebruikt heet het *base 2* (binaire getallen).
+
 Bij ons is het meest rechter cijfer 1 waard en elk cijfer daar links van steeds 10 keer meer. Kijk bijvoorbeeld 
 naar 342. Het meest rechtercijfer voegt 1 * 2 = 2 aan het totaal toe. Het cijfer links daarvan (de 4) 
 voegt 4 * 10 toe aan het totaal. Het cijfer weer links daarvan (de 3) voegt 3 * 10 * 10 = 300 toe aan het totaal.
+
 Bij binaire getallen is het meest rechter cijfer ook 1 waard. Elk cijfer links daarvan is echter 
 steeds 2 keer zoveel waard in plaats van 10. Kijk bijvoorbeeld naar 1011: het meest rechter cijfer voegt 1*1 = 1 toe aan het totaal. Het cijfer links daarvan 
 voegt 1 * 2 = 2 toe aan het totaal. Het cijfer links daarvan voegt 0 * 2 * 2 = 0 toe aan het totaal. 
 Het meest linker cijfer voegt 1 * 2 * 2 * 2 = 8 toe aan het totaal. 1 + 2 + 8 = 11 dus 11 als binair getal is 1011! 
+
+De hoeveelheid verschillende cijfers die je op een plekje toelaat heet een talstelsel (engels: base). Het talstelsel bepaalt 
+alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets hebt. Als je bijvoorbeeld 5 appels hebt, kan je 
+ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan het ook opschrijven als 101 in base 2. 
+101 in base 2 is exact hetzelfde als 5 in base 10.
+
+.. figure:: _media/Talsstelsels.jpeg
+   :width: 500
+   :alt: En poort
+   :align: center
+   13 opgeschreven in base 10 en base 2
 
 De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
 Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
@@ -93,7 +106,7 @@ Om makkelijker te werken met deze poorten kan je waarheidstabellen gebruiken. In
 Hier is bijvoorbeeld de waarheidstabel van de *en-poort*, *of-poort*, *exclusieve of-poort* (engels: xor-poort) en de niet-poort:
 
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
-en-poort                         of-poort                         xor-poort                        not-poort
+en-poort                         of-poort                         xor-poort                        niet-poort
 -------------------------------- -------------------------------- -------------------------------- ---------------------
 A          B          A en B     A          B          A of B     A          B          A xor B    A          niet A
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
@@ -106,7 +119,7 @@ Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waa
 
 .. admonition:: info
    :class: margin
-    Wil je weten hoe je de andere poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <LogicaPoorten>`
+   Wil je weten hoe je de andere poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <LogicaPoorten>`
 
 
 Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de poort te leveren. Door deze poorten aan elkaar te koppelen kunnen we 
@@ -121,7 +134,7 @@ zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad 
 
 
 
-.. image:: _media/EnPoort.jpg
+.. figure:: _media/EnPoort.jpg
    :width: 500
    :alt: En poort
    :align: center

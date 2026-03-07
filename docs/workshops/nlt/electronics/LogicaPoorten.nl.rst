@@ -11,7 +11,7 @@ In deze paragraaf gaan we kort kijken naar de elektronische variant van de volge
 Allereerst, de en-poort. Deze werkt door twee schakelaren in de vorm van transistoren in serie te zetten in een circuit. Enkel wanneer 
 beide transistoren geactiveerd zijn zal er stroom kunnen gaan lopen. Dit signaal kan doorlopen via een 3e draadje die het circuit verlaat.
 
-.. image:: _media/EnPoort.jpg
+.. figure:: _media/EnPoort.jpg
    :width: 500
    :alt: En poort
    :align: center
@@ -20,7 +20,7 @@ beide transistoren geactiveerd zijn zal er stroom kunnen gaan lopen. Dit signaal
 De of-poort lijkt erg op de en-poort, maar de transistoren worden nu in parallel gezet in plaats van in serie. Dit zorgt ervoor wanneer er ook maar 
 1 transistor is geactiveerd, het signaal al door wordt gegeven!
 
-.. image:: _media/OrPoort.png
+.. figure:: _media/OrPoort.png
    :width: 400px
    :alt: xor poort
    :align: center
@@ -30,7 +30,7 @@ De of-poort lijkt erg op de en-poort, maar de transistoren worden nu in parallel
 De niet poort heeft maar 1 transistor nodig! De niet poort sluit namelijk de spanningsbron aan op een transistor die wordt bestuurd door het 
 input signaal. **Oeps dit plaatje en uitleg is fout TODO fix dit**
 
-.. image:: _media/NietPoort.png
+.. figure:: _media/NietPoort.png
    :width: 400px
    :alt: niet poort
    :align: center
