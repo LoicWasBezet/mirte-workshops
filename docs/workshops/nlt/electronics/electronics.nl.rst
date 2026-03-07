@@ -76,6 +76,8 @@ Bij binaire getallen is het meest rechter cijfer ook 1 waard. Elk cijfer links d
 steeds 2 keer zoveel waard in plaats van 10. Kijk bijvoorbeeld naar 1011: het meest rechter cijfer voegt 1*1 = 1 toe aan het totaal. Het cijfer links daarvan 
 voegt 1 * 2 = 2 toe aan het totaal. Het cijfer links daarvan voegt 0 * 2 * 2 = 0 toe aan het totaal. 
 Het meest linker cijfer voegt 1 * 2 * 2 * 2 = 8 toe aan het totaal. 1 + 2 + 8 = 11 dus 11 als binair getal is 1011! 
+Een enkel binair cijfertje heet een bit. 1011 bestaat dus uit 4 bits. 8 bits worden samen ook wel een byte genoemd. 
+De opslag op je telefoon wordt bijvoorbeeld vaak uitgedrukt in gigabytes.
 
 De hoeveelheid verschillende cijfers die je op een plekje toelaat heet een talstelsel (engels: base). Het talstelsel bepaalt 
 alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets hebt. Als je bijvoorbeeld 5 appels hebt, kan je 
@@ -86,7 +88,18 @@ ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan h
     :width: 500
     :alt: En poort
     :align: center
+    
     13 opgeschreven in base 10 en base 2
+
+
+.. figure:: _media/Transistor.png
+    :alt: Een transistor
+    :width: 400
+    :align: center
+
+    Een transistor
+
+
 
 De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
 Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
@@ -227,12 +240,13 @@ doet dezelfde taak, maar dan andersom. Dit wordt bijvoorbeeld gebruikt om de dig
     Een ADC en een DAC (COPYRIGHT?)
 
 De laatste module waar we naar gaan kijken is de *microcontroller*. Dit is een erg 
-veelzijdig onderdeel dat als het ware een kleine computer is. Je kan er programmeercode op zetten 
-om het allerlei andere onderdelen aan te sturen. Het heeft vaak zo'n 20 aansluitpunten voor stroomdraden. 
-Je zou bijvoorbeeld kunnen programmeren dat wanneer er spanning staat op stroomdraad 1 en 2, er ook spanning moet 
-worden gezet op stroomdraad 3. Je hebt nu een *en-poort* gemaakt! Een microcontroller kan nog veel complexere taken uitvoeren dan dat. Het is niet een krachtige computer, 
+veelzijdig onderdeel dat als het ware een kleine computer is: het is het brein van je circuit! Je kan er programmeercode op zetten 
+om allerlei andere onderdelen aan te sturen via de code. 
+Je zou bijvoorbeeld kunnen programmeren dat wanneer er spanning staat op twee aangesloten stroomdraden, er ook spanning moet 
+worden gezet op een derde uitgaande stroomdraad. Je hebt nu een *en-poort* gemaakt! Een microcontroller kan nog veel complexere taken 
+uitvoeren dan dat. Het is niet een krachtige computer, 
 maar je komt al heel ver met wat simpele berekeningen als je een robot wil aansturen. Een microcontroller is compact en zuinig met energie.
 
-**Plaatje van pi pico?**
 
-**-PWM?**
+
+**TODO Paragraaf over PWM en misschien ROS toevoegen??**
