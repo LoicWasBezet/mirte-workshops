@@ -14,13 +14,21 @@ Inleiding
 Om een robot te maken hoef je niet per se een computertje in de robot te stoppen. 
 Door enkel de juiste onderdelen samen te voegen kan je al een robotje maken die rond kan rijden! 
 Je kan bijvoorbeeld twee lichtsensoren op de robot monteren die elektriciteit naar 
-de motoren als ze een lijn zien. Als je dit op de juiste manier aansluit kan het robotje een lijn volgen!
+de motoren sturen als ze een lijn zien. Als je dit op de juiste manier aansluit kan het robotje een lijn volgen!
 Dit worden Braitenbergmachines genoemd. Hieronder is zo'n robotje te zien.
 
-**TODO Plaatje van BEAM robotics of mirte light?**
+.. figure:: https://mirte.org/_nuxt/MIRTE_lite_obstacle_sensor_transparant.Bry8uo3S.png
+    :alt: Mirte lite
+    :width: 300
+    :align: center
 
+    Een MIRTE Lite.
 
-In dit hoofdstuk gaan we kijken naar welke onderdelen veel voorkomen.
+De belangrijkste les die je dit hoofdstuk gaat leren is de volgende: elk elektrische apparaat is uiteindelijk gemaakt 
+van veel simpele bouwstenen die op zeer ingenieuze manieren zijn samengevoegd. Zodra je de onderdelen genaamd stroomdraad, weerstandje en transistor 
+kent kan je al een gigantisch deel van een elektronisch onderdeel snappen!
+
+In dit hoofdstuk gaan we kijken naar veel voorkomende onderdelen.
 Voor dit hoofdstuk is het erg handig wat voorkennis te hebben van elektriciteit. Komen de termen spanning, stroomsterkte, lading, schakelaren en weerstanden je niet helemaal bekend voor? 
 Lees dan vooral het stuk dat hier rechts staat! 
 
@@ -75,10 +83,10 @@ ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan h
 101 in base 2 is exact hetzelfde als 5 in base 10.
 
 .. figure:: _media/Talsstelsels.jpeg
-   :width: 500
-   :alt: En poort
-   :align: center
-   13 opgeschreven in base 10 en base 2
+    :width: 500
+    :alt: En poort
+    :align: center
+    13 opgeschreven in base 10 en base 2
 
 De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
 Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
