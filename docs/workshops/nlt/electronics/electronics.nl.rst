@@ -134,11 +134,12 @@ zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad 
 
 
 
-.. figure:: _media/EnPoort.jpg
+.. image:: _media/EnPoort.jpg
    :width: 500
-   :alt: En poort
+   :alt: En-poort
    :align: center
-   Voorbeeld van een elektronische en-poort.
+
+**TODO dit als plaatje tekst ** Voorbeeld van een elektronische en-poort.
 
 Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistor die een 1 of 0 opslaat). 
 Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits.
