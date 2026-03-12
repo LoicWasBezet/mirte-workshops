@@ -63,10 +63,10 @@ Binaire getallen
 
 Je hebt misschien al eens 
 gehoord dat computers werken met enkel binaire getallen. Dat betekent dat ze elk getal opslaan als 
-een combinatie van eenen en nullen. Door middel van onze transistoren kunnen we deze losse getalletjes opslaan! Als de transistor aan staat, 
+een combinatie van eenen en nullen. Door middel van onze transistoren kunnen we deze losse cijfertjes opslaan! Als de transistor aan staat, 
 heeft het een waarde van 1 en als het uit staat een waarde van 0. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
-Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken. Dit heet *base 10*. Wanner je enkel de getallen 
-0 en 1 gebruikt heet het *base 2* (binaire getallen).
+Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken. Dit heet talstelsel 10. Wanner je enkel de getallen 
+0 en 1 gebruikt is dat talstelsel 2 (ook wel binaire getallen of base 2).
 
 Bij ons is het meest rechter cijfer 1 waard en elk cijfer daar links van steeds 10 keer meer. Kijk bijvoorbeeld 
 naar 342. Het meest rechtercijfer voegt 1 * 2 = 2 aan het totaal toe. Het cijfer links daarvan (de 4) 
@@ -79,27 +79,17 @@ Het meest linker cijfer voegt 1 * 2 * 2 * 2 = 8 toe aan het totaal. 1 + 2 + 8 = 
 Een enkel binair cijfertje heet een bit. 1011 bestaat dus uit 4 bits. 8 bits worden samen ook wel een byte genoemd. 
 De opslag op je telefoon wordt bijvoorbeeld vaak uitgedrukt in gigabytes.
 
-De hoeveelheid verschillende cijfers die je op een plekje toelaat heet een talstelsel (engels: base). Het talstelsel bepaalt 
+Het talstelsel bepaalt 
 alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets hebt. Als je bijvoorbeeld 5 appels hebt, kan je 
 ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan het ook opschrijven als 101 in base 2. 
 101 in base 2 is exact hetzelfde als 5 in base 10.
 
-.. figure:: _media/Talsstelsels.jpeg
+.. figure:: _media/Talstelsels.jpeg    
+    :alt: talstelsels
     :width: 500
-    :alt: En poort
     :align: center
-    
+
     13 opgeschreven in base 10 en base 2
-
-
-.. figure:: _media/Transistor.png
-    :alt: Een transistor
-    :width: 400
-    :align: center
-
-    Een transistor
-
-
 
 De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
 Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
@@ -133,8 +123,8 @@ A          B          A en B     A          B          A of B     A          B  
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== 
 Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Onwaar     Waar    
 Waar       Onwaar     Onwaar     Waar       Onwaar     Waar       Waar       Onwaar     Waar       Waar       Onwaar    
-Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar       nvt        nvt          
-Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar     nvt        nvt          
+Onwaar     Waar       Onwaar     Onwaar     Waar       Waar       Onwaar     Waar       Waar       .          .            
+Waar       Waar       Waar       Waar       Waar       Waar       Waar       Waar       Onwaar     .          .            
 ========== ========== ========== ========== ========== ========== ========== ========== ========== ========== ==========  
 
 
@@ -155,12 +145,14 @@ zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad 
 
 
 
-.. image:: _media/EnPoort.jpg
-   :width: 500
-   :alt: En-poort
-   :align: center
+.. figure:: _media/EnPoort.jpg    
+    :alt: En-poort
+    :width: 500
+    :align: center
 
-**TODO dit als plaatje tekst ** Voorbeeld van een elektronische en-poort.
+    Voorbeeld van een elektronische en-poort.
+
+
 
 Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistor die een 1 of 0 opslaat). 
 Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits.
