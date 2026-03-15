@@ -5,13 +5,8 @@ Ontwerpen
 Veelgebruikte robotsystemen
 --------------------------------------------------------
 
-.. admonition:: info
-   :class: margin
 
-   Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Welke soorten robotwielen zijn er? <types_of_wheels>`
-
-
-In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen, 
+In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen van robots, 
 zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten *mobile manipulators*. 
 Deze robots kunnen hoofdzakelijk twee dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
 De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
@@ -20,11 +15,16 @@ actie uit gaan voeren.
 
 **Hoe robots zich voortbewegen**
 
+.. admonition:: info
+   :class: margin
+
+   Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Welke soorten robotwielen zijn er? <types_of_wheels>`
 
 Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Afhankelijk van de omgeving waar een robot zich in gaat bevinden 
 wordt een beweegmethode gekozen voor een robot. Je kan immers moeilijk dezelfde beweegmethode gebruiken op de vlakke grond van een warenhuis en de ruige grond in een bos. 
 Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden wielen gebruikt.
-Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Hierbij is het relatief makkelijk om een robot te maken dat rechtdoor kan rijden, maar het moeilijke zit in de bochten. 
+Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Het is vrij simpel om een robot rechtdoor te laten rijden op wielen. Het blijkt echter moeilijk te zijn 
+om de robot ook bochten te laten maken.
 
 .. figure:: https://www.tec-science.com/wp-content/uploads/2021/03/en-differential-gear-from-to-05-pinion-bevel-gears.jpg
     :alt: differentieel
@@ -33,15 +33,16 @@ Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Hierbij is het relat
 
     **Figuur 1: Een differentieel** (COPYRIGHT?)
 
-In de bochten zijn er namelijk twee problemen: er is een snelheidsverschil tussen de wielen, en de wielen moeten 
+In de bochten zijn er namelijk twee problemen: er is dan een snelheidsverschil tussen de wielen, en de wielen moeten 
 allemaal net niet dezelfde richting op rollen. Bij een bocht zitten de helft
 van de wielen in de binnenbocht, en de andere helft in de buitenbocht. Zoals je waarschijnlijk wel weet is een binnenbocht altijd
-korter dan de buitenbocht. Dit betekent dat wanneer een karretje een bocht maakt, de ene helft van de wielen meer afstand moet 
-afleggen dan de ander. Dit veroorzaakt dus een snelheidsverschil. Dit verschil kan echter niet bestaan als de wielen direct aan 
-elkaar gekoppeld zitten via een draaiende as. In dat geval gaat er een wiel moeten slippen. 
+korter dan de buitenbocht. Dit betekent dat wanneer een karretje een bocht maakt, de buitenste wielen meer afstand moeten
+afleggen dan de binnenste wielen. Dit veroorzaakt dus een snelheidsverschil. Dit verschil kan echter niet bestaan als de wielen direct aan 
+elkaar gekoppeld zitten via een stijve as. Door zo'n as zouden de wielen namelijk ten alle tijden 
+even hard draaien en zal dus een van de twee moeten slippen. 
 Je moet dan dus een manier hebben om het ene wiel sneller te laten draaien dan het andere. Vaak wordt hier een
 *differentieel* voor gebruikt. Dit is een mechanisme dat bestaat uit een aantal tandwielen, zoals je kan zien in figuur 1. Met een differentieel kan je 2 wielen 
-tegelijk aandrijven, ook als ze een onderling snelheidsverschil hebben.
+tegelijk aandrijven, ook als ze niet precies even snel draaien.
 
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ackermann_turning.svg/1200px-Ackermann_turning.svg.png
@@ -53,16 +54,15 @@ tegelijk aandrijven, ook als ze een onderling snelheidsverschil hebben.
 
 
 Vervolgens hebben we een tweede probleem: Aangezien sommige wielen in de binnenbocht zitten en andere in de buitenbocht, 
-legt niet elk wiel dezelfde cirkelbaan af in een bocht. Het resultaat is dat een wiel in de binnenbocht sterker met bijsturen 
+legt niet elk wiel dezelfde cirkelbaan af in een bocht. Het resultaat is dat een wiel in de binnenbocht sterker moet bijsturen 
 dan een wiel in de buitenbocht. Om dit makkelijk te laten gebeuren wordt *Ackermann-sturing* gebruikt. Dit stangenmechanisme draait de 
 wielen precies zo dat de bocht perfect gemaakt kan worden. Effectief zorgt het ervoor dat de draaiassen van alle wielen door 1 snijpunt gaan. 
 Dat punt is dan precies het punt waar de auto omheen rijdt. Dit kan je zien in figuur 2.
 
-
 In plaats van wielen worden ook soms rupsbanden gebruikt. Deze zijn erg geschikt als de ondergrond wat ruiger is. 
-Om een bocht te maken laat je de ene rupsband expres harder draaien dan de ander. Hierdoor gaat de robot draaien. 
+Om een bocht te maken laat je de ene rupsband expres sneller draaien dan de ander. Hierdoor gaat de robot draaien. 
 Je kan met rupsbanden niet een bocht maken zonder dat een stuk van de rupsband slipt. Het voordeel is echter dat 
-rupsbanden veel meer grip hebben, dus kunnen ze zwaardere ladingen aan. 
+rupsbanden veel meer grip hebben, waardoor ze zwaardere ladingen aan kunnen. 
 
 .. figure:: https://flyingmag1.b-cdn.net/wp-content/uploads/sites/2/2024/12/travel-drones.jpg?resize=220,150&width=220&height=150
     :alt: Drone
@@ -97,15 +97,13 @@ zijn vrijheidsgraden, in het engels ook wel Degrees Of Freedom (DOF) genoemd. De
 zeggen iets over hoe vrij het mechanisme is om te bewegen. De exacte definitie is dat het aantal vrijheidsgraden gelijk is aan 
 het aantal parameters die je nodig hebt om een systeem te beschrijven. Als je bijvoorbeeld de positie van een deur wil beschrijven, heb je maar 1 parameter nodig: 
 De hoek tussen de deur en de muur. Door de scharnieren kan de deur namelijk maar beperkt bewegen. Hij kan niet zomaar een meter omhoog gaan bijvoorbeeld. Voor een vrijbewegend rigide object zijn er 6 vrijheidsgraden: 
-3 voor positie en 3 voor oriëntatie. Het kan qua positie van boven naar beneden bewegen, van achter naar voren en van links naar rechts. Om de vrijheidsgraden van rotatie 
+3 voor positie en 3 voor oriëntatie. Het kan qua positie van boven naar beneden bewegen, van achter naar voren en van links naar rechts. Om de vrijheidsgraden van oriëntatie 
 te begrijpen kan je je eigen hoofd gebruiken. Je kan namelijk op 3 manieren je hoofd draaien: je kan naar boven/beneden draaien, naar links/rechts draaien en je kan je hoofd schuinhouden!
 In figuur 4 kan je de vrijheidsgraden zien. Als de grijper van de arm een van de bewegingen uit de figuur kan doen heeft het die vrijheidsgraad. Hierbij 
-tellen 2 bewegingsrichtingen die op een lijn staan als 1 beweging/vrijheidsgraad (bijvoorbeeld naar voren en naar achteren).
-met 6 vrijheidsgraden kan de grijper dus elke beweging maken die je kan bedenken, terwijl je met 1 vrijheidsgraad bijvoorbeeld alleen naar voren of naar achteren zou kunnen 
-met de grijper. Met deze kennis kunnen we gaan kijken naar een aantal soorten robotarmen.
+tellen 2 bewegingsrichtingen die op een lijn staan als 1 beweging/vrijheidsgraad (Als je naar voren kan bewegen kan je automatisch ook naar achteren bewegen).
+Met 6 vrijheidsgraden kan de grijper dus elke beweging maken die je kan bedenken. Met deze kennis kunnen we gaan kijken naar een aantal soorten robotarmen.
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/0/09/SCARA_robot_2R.png
-
     :alt: SCARA robot 
     :width: 300
     :align: right
@@ -119,7 +117,6 @@ De staaf kan omhoog en omlaag bewegen om het object op te tillen. De onderarm, b
 een SCARA erg geschikt voor het in elkaar zetten van onderdelen.
 
 .. figure:: https://www.promation.be/storage/images/web/20221020-153409-1673348274.jpg
-
     :alt: delta robot
     :width: 300
     :align: right
@@ -135,7 +132,6 @@ Een deltarobot wordt vaak gebruikt om kleine dingen in een verpakking te stoppen
 TODO: HIER MOET NOG MEER BIJ, MISSCHIEN EEN STEWART PLATFORM OF MENSACHTIGE ARMEN?
 
 .. figure:: https://fbi.cults3d.com/uploaders/14176999/illustration-file/028fa537-e3a6-4b67-ad8c-e51c8f4112b7/GIF-Adaptive-Gripper.gif
-
     :alt: compliant gripper finger
     :width: 300
     :align: right
@@ -148,7 +144,7 @@ flexibele vingers die vanzelf om het object heen buigen. Dit is te zien in figuu
 op kunnen tillen. Ook gebruiken sommige robots een magneet als end-effector. Je hebt ook grijpers die de onderkant van de pootjes van een gekko nabootsen, 
 waardoor ze enorm goede grip hebben. Dit is een goed voorbeeld van *Bio-inspired design*, waarbij ontwerpideeën uit de natuur worden gehaald.
 
-ontwerpen met de toepassing en gebruiker in gedachten
+Ontwerpen met de toepassing en gebruiker in gedachten
 --------------------------------------------------------
 
 Een ontwerp begint altijd met een probleem dat we op willen lossen. 
@@ -156,30 +152,30 @@ Een ontwerp begint altijd met een probleem dat we op willen lossen.
 
 Ontwerpcyclus
 --------------------------------------------------------
+
 Een ontwerp maken is geen simpele opgave. Je kan niet in één keer een ontwerp op papier tekenen dat 
 zomaar zal werken en aan alle wensen zal voldoen; je moet een proces volgen. In deze paragraaf 
 gaan we kijken naar een veelgebruikte methode voor ontwerpen. Dit is geen lineair proces, maar een cyclus. Je maakt namelijk vaak
 een ontwerp waar uiteindelijk toch nog dingen aan verbeterd moeten worden. In dat geval ga je weer delen opnieuw ontwerpen,
-maar dan met alle kennis die je hebt verkregen uit het eerste ontwerp. We gaan nu kort door alle stappen heen.
-
+maar dan met alle kennis die je hebt verkregen uit het eerste ontwerp. We gaan nu kort door alle stappen heen. Om het duidelijk te maken, gebruiken we als voorbeeld het ontwerpen van een fiets.
 
 **Stap 1: probleem analyseren en beschrijven.** De eerste stap is om simpelweg na te denken over welk probleem 
 we op willen lossen. Je denkt na over eventuele ontwerpuitdagingen. Ook moet je hier nadenken 
-over wie de gebruikers gaan zijn. 
+over wie de gebruikers gaan zijn. Het probleem dat we willen oplossen kan bijvoorbeeld zijn dat er een vervoersmiddel nodig is 
+die handiger is voor korte ritten dan een auto, maar sneller is dan lopen. De gebruikers kunnen bijvoorbeeld mensen zijn die in een drukke stad wonen en niet veel ruimte hebben om een auto te parkeren.
 
 **Stap 2: programma van eisen opstellen.** De tweede stap is om alle eisen van het ontwerp heel specifiek 
 te beschrijven. Dit is een erg belangrijke stap; je kiest hier wat je belangrijk vindt in het ontwerp. 
-Vind je het belangrijk dat hij zo accuraat mogelijk of zo snel mogelijk is? Ook kan je onderwerpen zoals een maximaal budget specificeren.
+Vind je het belangrijk dat de fiets zo licht mogelijk of zo stevig mogelijk is? Ook kan je onderwerpen zoals een maximaal budget specificeren. 
 
 **Stap 3: (deel)uitwerkingen bedenken.** Nu kan je gaan beginnen met delen van het ontwerp uit te werken. 
 Het doel is om het ontwerp op te splitsen in een aantal delen en dan die delen uit te werken. Met uitwerken wordt bedoeld 
-dat je nadenkt over de opties die je hebt. Je zou voor de voortbeweging van een robotje bijvoorbeeld
-kunnen kiezen voor wielen of voor rupsbanden. Je kan niet in een keer een hele auto ontwerpen, maar misschien wel 
-twintig makkelijkere delen zoals de zijspiegels, het stuur en het airco-systeem.
+dat je nadenkt over de opties die je hebt. Het is onhandig om in een keer een heel ontwerp voor de fiets te maken, maar je kan 
+al wel mogelijke ontwerpen voor de trappers, de handrem en het stuur bedenken. Je kan ook al gaan nadenken over de materialen die je zou kunnen gebruiken voor het frame van de fiets.
 
 **Stap 4: concepten maken voor het ontwerp.** Nu kan je de deeluitwerkingen combineren om concepten (ook wel
-totaaloplossingen genoemd) te bedenken. Je zou nu bijvoorbeeld kunnen kijken naar een fiets met handrem, 
-eentje met terugtraprem en eentje waar je met je voet op de grond moet gaan schrapen om te remmen. 
+totaaloplossingen genoemd) te bedenken. Je zou nu bijvoorbeeld kunnen kijken naar een fiets met handrem en een stuur waar de handrem op past, 
+eentje met terugtraprem en een simpel stuur en ten slotte eentje waar je met je voet over de grond moet gaan schrapen om te remmen. 
 
 **Stap 5: ontwerp realiseren.** In deze stap kiezen we één van de concepten uit stap 4. We zien dan misschien dat 
 die derde optie van de fietsen niet zo handig is. Zodra we hebben gekozen tussen de versie met de handrem en 
@@ -189,7 +185,7 @@ om de fiets snel tot stilstand te brengen? Hoe lang moeten de stangen van de tra
 
 **Stap 6: ontwerp testen en evalueren.** Nu is het tijd om het ontwerp te fabriceren en te testen! We
 kunnen hier allerlei eigenschappen gaan opmeten en daarmee controleren of onze berekeningen en voorspellingen
-correct waren. We evalueren hiermee of aan ons programma van eisen is voldaan.
+correct waren. We evalueren hiermee of aan ons programma van eisen is voldaan. 
 
 **Stap 7: itereren.** Nu kijken we terug op onze evaluatie: voldoet ons ontwerp, of moet er nog wat veranderd worden? 
 Als je nog niet tevreden bent met het ontwerp, kan je gewoon weer naar stap 1 gaan. Vaak is het niet nodig om
@@ -213,11 +209,14 @@ Niet meer, niet minder.
 
 Kinematica van een robotsubsysteem
 --------------------------------------------------------
+
 Bij het ontwerpen van een robot ga je op een gegeven moment de subsystemen van de robot moeten 
 gaan uitwerken. Hier komen vaak berekeningen bij kijken. 
 In de natuurkunde bestaat beweging uit 2 delen: kinematica en kinetica. Kinematica 
-kijkt naar hoe een object beweegt, zonder te kijken waarom het beweegt. 
+kijkt naar hoe een object beweegt, zonder te kijken naar waarom het beweegt. 
 Kinetica kijkt juist naar waarom een object beweegt. 
+Met hoe het object beweegt bedoelen we dat we kijken naar de positie, snelheid en versnelling van het object en 
+met waarom een object beweegt bedoelen we dat we kijken naar de krachten die op het object werken.
 Kinematica gebruik je bijvoorbeeld als je wil weten hoe een robotarm moet bewegen om een 
 bepaald voorwerp op te pakken. Als je weet hoe de armen moeten bewegen kan je nog niet
 altijd de arm die beweging laten doen. Daarvoor moeten we namelijk eerst weten hoeveel kracht 
@@ -228,14 +227,15 @@ de motoren moeten leveren om de arm de beweging te laten doen. Hiervoor gebruike
    :alt: Description of the SVG
    :align: center
    
-Sommigen van jullie zullen bij natuurkunde al zowel kinematica als kinetica hebben gehad. 
+Sommigen van jullie zullen bij natuurkunde al zowel kinematica als kinetica hebben gehad, ookal zijn deze termen misschien 
+nieuw. 
 Wij gaan nu leren hoe we kinematica kunnen toepassen op een robotarm. De robotarm
 waar we naar gaan kijken bestaat uit een bovenarm, een onderarm en een *end-effector* (een hand).
 De arm is te zien in de figuur hiernaast.
 De vraag die we willen beantwoorden luidt als volgt: Als we de stand van de boven- en onderarm
 kennen, wat is dan de positie van de *end-effector*? Aangezien we enkel kinematica gaan 
 bekijken, hoeven we ons geen zorgen te maken over de krachten die op de arm werken.
-We krijgen dan eigenlijk gewoon een geometrieprobleem die we met alleen wiskundekennis
+We krijgen dan eigenlijk gewoon een geometrieprobleem die we met enkel wiskundekennis
 al kunnen oplossen. 
 
 De lengtes van de robotarm staan over het algemeen vast. Dat betekent dat
@@ -276,6 +276,6 @@ Nu hebben we de coördinaten van de end-effector!
     x=\cos(\alpha) * L_{1} + \cos(\beta) * L_{2} \\
     y=\sin(\alpha) * L_{1} + \sin(\beta) * L_{2}
      
-Deze formule geldt voor alle hoeken alpha en beta, ook als ze groter zijn dan 90°. 
+Deze formule geldt voor alle hoeken alpha en beta, ook als ze groter zijn dan 90° of negatief zijn. 
 Een soortgelijke berekening kan gedaan worden voor armen die bestaan uit een andere hoeveelheid
-onderdelen.
+armdelen.

@@ -27,7 +27,7 @@ Hierbij treedt er wel slip op.
 
 
 **Omni-wheels** zijn wielen die tangentieel langs het oppervlakte extra rollers hebben. Dit zie je in figuur 1 (**TODO afbeeldingen bij elk
-wieltype zetten**). Door de rollers kunnen deze wielen loodrecht op hun rijrichting alsnog bewegen, wat bij normale wielen 
+wieltype zetten**). Door de rollers kunnen deze wielen loodrecht op hun standaard rijrichting alsnog bewegen, wat bij normale wielen 
 helemaal niet de bedoeling is. Door 3 van deze wielen om je robot te plaatsen zoals in figuur 2 kan de robot bewegen in elke richting en draaien  
 door enkel de 3 wielen aan te drijven. Ook kan je 4 of meer omni-wielen in een soortgelijke cirkel plaatsen. Een auto met normale wielen kan bijvoorbeeld niet een rondje draaien terwijl hij op zijn plek 
 blijft omdat het een grote draaicirkel heeft. Een auto moet steeds een beetje naar voren en naar achteren rijden om op zijn plek te keren. Met omni-wheels kan je gewoon op je plek blijven terwijl je draait.
