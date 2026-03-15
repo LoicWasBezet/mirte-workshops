@@ -102,7 +102,7 @@ in plaats van zo'n complexer onderdeeltje. Je zou bijvoorbeeld zo'n complex deel
 door er 4 transistoren in te stoppen die samen de 16 mogelijke combinaties van 4 bits kunnen opslaan.
 Hiermee kan je dus elk cijfer tussen de 0 en 9 opslaan, maar je hebt dan ook nog 6 combinaties over die niet gebruikt worden. 
 Binaire getallen zijn dus een stuk efficiënter om op te slaan met transistoren dan getallen in base 10.
-
+**TODO tabel kleuren zoals later hieronder** 
 
 .. figure:: _media/Base10Optellen.jpg    
     :alt: 17+29
@@ -157,6 +157,7 @@ b. Reken de som uit van 4 + 7 uit in base 2. Gebruik onderstaand diagram als bas
     :width: 400
     :align: center
 
+**TODO groene rij 1 langer maken dan de rode rijen**
 c. Reken de som van 3 + 6 uit. Gebruik bovenstaand diagram.
 
     
