@@ -166,6 +166,7 @@ c. Reken de som van 3 + 6 uit. Gebruik bovenstaand diagram.
 Logische poorten en waarheidstabellen
 -----------------------------------------
 
+**Ik heb hier veel getekend, maar ik denk dat ik alles nog ga veranderen want ben nog steeds niet blij. De opmaak is ook een ramp**
 Om een computer te maken moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
 
 1. Getallen opslaan.
@@ -266,7 +267,7 @@ Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische po
     :width: 500
     :align: center
 
-    Optelmachine voor 2 bits 
+    Optelmachine voor 2 bits  **TODO de simpele versie bovenop zetten**
 
 Hierbij zijn de twee vraagtekens logische poorten. Nu moeten we enkel nog uitzoeken welke dan precies.
 In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
@@ -293,7 +294,7 @@ a. Wat zijn alle antwoorden die mogelijk zijn?
 b. Hoeveel bits heb je nodig zodat elk mogelijke antwoord opgeslagen kan worden?
     Tip: Met 1 bit kan je alleen 0 en 1 opschrijven, terwijl je met 8 bits bijvoorbeeld al de getallen 0 tot en met 255 kan opslaan.
 
-d. Maak de waarheidstabellen hieronder af die het effect van de twee inputs op de optelsom tonen.
+d. Vul in de eerste tabel hieronder de som in van elke combinatie van 1 en 0. Vul vervolgens de juiste waardes in in de twee waarheidstabellen die overeenkomen met de twee vraagtekens.
 
 .. figure:: _media/TweeBitOptelTemplate2.jpg    
     :alt: opteltemplate
