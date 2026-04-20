@@ -1,7 +1,7 @@
 :orphan:
 
 Wetenschappelijke Methode
-########################
+#########################
 
 Het ontwerpen van robots is ingewikkeld en complex. Hierover leer je meer in de laatste week van deze module. 1 van de methoden die in robotontwerp veel gebruikt wordt is de Scientific Approach. Deze methode is veel breder inzetbaar dan bij robotica, maar komt bij robotica wel erg goed van pas. Aangezien robotica een complexe samenwerking van hardware en software betreft, is het vaak lastig om problemen tijdens de ontwikkeling op te sporen. Een probleem waarbij een robot niet het gewenste gedrag vertoont, kan veel verschillende oorzaken hebben. Het is dan ook nodig om systematisch dit probleem te onderzoeken, de oorzaak op te sporen en de beste oplossing te vinden. Dit wordt gedaan met de Scientific Approach.
 

@@ -14,6 +14,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import glob, subprocess, sys, time, os, json
+from docutils import nodes
+from docutils.parsers.rst import Directive
 
 # Get git information
 try:
@@ -130,7 +132,9 @@ html_title = "Mirte Workshops"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_js_files = ['js/custom.js']
+html_js_files = ['js/custom.js', 
+                 'js/svg.min.js',
+                 'js/loader.js']
 
 html_css_files = [
       "css/custom.css",
@@ -182,8 +186,16 @@ def remove_copied_files(app, exception):
     for file in app.articles:
         os.remove("./" + file + ".rst")
 
+class DiagramDirective(Directive):
+    required_arguments = 1
+
+    def run(self):
+        name = self.arguments[0]
+        html = f'<div data-diagram="{name}"></div>'
+        return [nodes.raw('', html, format='html')]
 
 def setup(app):
+    app.add_directive("diagram", DiagramDirective)
     app.articles = getArticles()
     copyArticles(app.articles)
     app.connect('build-finished', remove_copied_files)
