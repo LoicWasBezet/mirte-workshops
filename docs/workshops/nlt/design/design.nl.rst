@@ -223,9 +223,9 @@ altijd de arm die beweging laten doen. Daarvoor moeten we namelijk eerst weten h
 de motoren moeten leveren om de arm de beweging te laten doen. Hiervoor gebruiken we kinetica. 
 
 .. image:: _media/RobotarmV4.svg
-   :width: 400px
-   :alt: Description of the SVG
-   :align: center
+   :width: 300
+   :alt: Robotarm diagram
+   :align: right
    
 Sommigen van jullie zullen bij natuurkunde al zowel kinematica als kinetica hebben gehad, ookal zijn deze termen misschien 
 nieuw. 

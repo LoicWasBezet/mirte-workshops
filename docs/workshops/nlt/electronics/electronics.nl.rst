@@ -64,9 +64,8 @@ Binaire getallen
 
 Je hebt misschien al eens 
 gehoord dat computers werken met enkel binaire getallen. Dat betekent dat ze elk getal opslaan als 
-een combinatie van eenen en nullen. Door middel van onze transistoren kunnen we deze losse cijfertjes opslaan! Als de transistor aan staat, 
-heeft het een waarde van 1 en als het uit staat een waarde van 0. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
-Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de getallen van 0 tot 9 gebruiken. Dit heet talstelsel 10. Wanner je enkel de getallen 
+een combinatie van eenen en nullen. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
+Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de cijfers van 0 tot 9 gebruiken. Dit heet talstelsel 10. Wanner je enkel de getallen 
 0 en 1 gebruikt is dat talstelsel 2 (ook wel binaire getallen of base 2). We noemen het meest insignificante cijfer (het meest rechtercijfer) het nulde cijfer, het cijfer links daarvan het eerste cijfer, enzovoort.
 
 .. figure:: _media/TalstelselVergelijking.jpg    
