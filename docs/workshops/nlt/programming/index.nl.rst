@@ -18,6 +18,13 @@ Algemene introductie over waarom je niet een robot kan zeggen: ruim mijn kamer o
 kan niet nadenken en dus niet zelf invullen wat det betekent. Zodoende zal je de computer 
 exact moeten vertellen wat deze moet doen. Programmeren is hele exacte instructies geven aan een computer. 
 
+.. diagram:: circle
+
+.. button-link:: #
+   :class: button-change-color
+ 
+   Verander kleur
+
 .. note::
 
    Maar ik kan tegenwoordig wel gewoon met mijn computer praten (bv chatGPT). Waarom begrijp de
