@@ -6,6 +6,10 @@ Programmeren
 Introductie
 -----------
 
+.. raw:: html
+
+    <div data-diagram="circle"></div>
+
 Algemene introductie over waarom je niet een robot kan zeggen: ruim mijn kamer op. Je computer 
 kan niet nadenken en dus niet zelf invullen wat det betekent. Zodoende zal je de computer 
 exact moeten vertellen wat deze moet doen. Programmeren is hele exacte instructies geven aan een computer. 
@@ -95,7 +99,7 @@ componist - programmeur (bedenker)
 bladmuziek - code (taal die orkest bergijpt)
 orkest - cpu (uitvoerder)
 
-      (compiler)
+(compiler)
 assembly -> machinecode -> cpu
 
 
@@ -145,7 +149,7 @@ lossen zijn er programmeertalen ontwikkeld. Dit worden ook wel hoger-level (high
 Voorbeelden hiervan zijn Fortran, C, C++ en Rust. Om van je code in een higher-level taal naar assembly te komen heb je 
 een compiler nodig. Die vertaalt bv de C-code naar assembly voor jouw specifieke processor/instructieset.
 
-  (compileer)                   (compiler)       (start)
+(compileer)                   (compiler)       (start)
 C     ->      compiler -> assembly -> machinecode   ->   processor
 
 Dat betekent ook dat je code niet meteen naar de processor gestuurd wordt. De compiler maakt van je code een nieuw
@@ -163,7 +167,7 @@ zal je zien dat er een heel ander soort instrcuties komt te staan. Dat is nog ni
 Dit komt omdat niet elke taal een compiler gebruikt om tot machinecode te komen. Er zijn ook programmeertalen die direct
 machinecode maken en deze meteen naar de processor sturen. Dit worden interpreted talen genoemd. 
 
-       (start)
+(start)
 Python   ->    machinecode  ->  processor
 
 Nou lijkt het interpreted talen sneller kunnen zijn omdat ze minder stappen hoeven te doen. Het klopt dat je programma
