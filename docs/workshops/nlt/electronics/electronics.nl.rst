@@ -110,6 +110,13 @@ Binaire getallen zijn dus een stuk efficiënter om op te slaan met transistoren 
 
     17 + 29 optellen in base 10 **mist blauwe lijn**
 
+.. diagram:: BitAdditionMachine
+
+.. button-link:: #
+   :class: button-change-color
+ 
+   Verander kleur
+
 .. figure:: _media/BinairOptellen.jpg    
     :alt: 5+3
     :width: 300
