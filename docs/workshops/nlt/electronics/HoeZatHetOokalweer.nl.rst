@@ -34,7 +34,7 @@ De energie die ze bij zich dragen is het zand.
 
 **Elektriciteit**
 
-Om elektriciteit te karakteriseren heb je 3 concepten nodig: lading, spanning en stroomsterkte.
+Om elektriciteit te karakteriseren heb je 3 concepten nodig: lading, spanning (V) en stroomsterkte (A).
 
 *Lading* is hetgeen wat de energie van A naar B vervoert. lading wordt uitgedrukt in de eenheid coulomb [C].
 Elektronen zijn deeltjes met een lading van :math: `-1,602 * 10^{-19}` coulomb. 
@@ -43,13 +43,13 @@ Dit wordt de negatieve elementaire lading genoemd. Een vrachtwagen is dus ook zo
 *Spanning* [U] is een maat voor de hoeveelheid energie die zich in een stuk lading bevindt. Dit komt in onze analogie overeen met de hoeveelheid zand die in een vrachtwagen zit.
 De eenheid is dus joule per coulomb [J/C]. Een andere naam hiervoor is volt [V]. 
 
-*Stroomsterkte* [I] is de hoeveelheid lading die per tijdseenheid door de draad stroomt. De vrachtwagens rijden altijd met een constante snelheid, dus de stroomsterkte bepaalt hoeveel rijbanen er zijn voor de vrachtwagens om overheen te rijden. Hoe meer rijbanen er zijn, hoe meer vrachtwagens er per seconde over een stuk weg kunnen bewegen. De eenheid is dus coulomb per seconde [C/s]. 
+*Stroomsterkte* [I] is de hoeveelheid lading die per tijdseenheid door de draad stroomt. De vrachtwagens rijden altijd met een constante snelheid, dus de stroomsterkte (A) bepaalt hoeveel rijbanen er zijn voor de vrachtwagens om overheen te rijden. Hoe meer rijbanen er zijn, hoe meer vrachtwagens er per seconde over een stuk weg kunnen bewegen. De eenheid is dus coulomb per seconde [C/s]. 
 In werkelijkheid wordt deze eenheid Ampere genoemd [A] (1 A = 1 C/s).
 
 
 **Spanningsbron**
 
-Een stroomdraad gaat niet vanzelf stroom geleiden. Daarvoor moet er eerst spanning over de draad staan. Immers, hoe kan 
+Een stroomdraad gaat niet vanzelf stroom geleiden. Daarvoor moet er eerst spanning (V) over de draad staan. Immers, hoe kan 
 er zand bezorgd worden als er geen zand in de vrachtwagens zit? Een spanningsbron is dus simpelweg een bron van energie (zand). Dit kan bijvoorbeeld een batterij of een accu zijn. Ook een stopcontact is een spanningsbron.
 Als er alleen maar vrachtwagens de bron uit rijden, raken ze uiteraard op. Ze beginnen dus pas te rijden als ze ook terug kunnen komen.
 Vandaar dat een circuit altijd begint en eindigt in een bron. Veel spanningsbronnen leveren een constant voltage wanneer de elektronen langskomen.
@@ -111,10 +111,10 @@ Wanneer elektronen een circuit doorlopen, raken ze dus bij elke weerstand een st
 Het zand wordt dus afgeleverd aan de weerstanden die in het circuit zitten! Hoe groter de weerstand, hoe meer zand het wil hebben.
 Een weerstand [R] wordt uitgedrukt in Ohm [:math:`\Omega`]. Eigenlijk is elk onderdeel een weerstand. Een stroomdraad heeft een hele lage weerstand (gebruikt weinig energie), terwijl een lampje een hoge weerstand heeft (gebruikt veel energie).
 De meeste weerstanden zijn Ohmse weerstanden. Dit betekent dat de weerstand gelijk is 
-aan de verhouding tussen het spanningsverschil tussen het begin van de weerstand en het eind van de weerstand en de stroomsterkte: :math:`R=\frac{U}{I}`. 
+aan de verhouding tussen het spanningsverschil tussen het begin van de weerstand en het eind van de weerstand en de stroomsterkte (A): :math:`R=\frac{U}{I}`. 
 Stel dat er bijvoorbeeld een gloeilamp is die 230 volt gebruikt bij een stroomsterkte van 0,1 ampere, dan is zijn weerstand :math:`\frac{230}{0,1} = 2300 \Omega`.
 De weerstand van een onderdeel is vaak constant. 
-De verhouding tussen spanning en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar de helft van de 0,1 Ampere gaan stromen.
+De verhouding tussen spanning (V) en stroomsterkte is dan dus ook constant. Als we de gloeilamp maar de helft van de 230V zouden geven, zou er dus ook maar de helft van de 0,1 Ampere gaan stromen.
 
 .. figure:: _media/Weerstand.png
    :width: 400px
@@ -132,7 +132,7 @@ Hoe meer open rijbanen er een gloeilamp binnengaan, hoe meer rijbanen het afslui
 **Weerstand in parallelschakelingen**
 
 In een parallelschakeling splitsen de elektronen op, en komen wat later weer samen. 
-Een interessante vraag is wat er gebeurt met de stroomsterkte en de spanning bij een splitsing. 
+Een interessante vraag is wat er gebeurt met de stroomsterkte (A) en de spanning (V) bij een splitsing. 
 Met onze analogie is dit makkelijk te bedenken. 
 
 De vrachtwagens verdelen zich over de 2 paden, maar er komen in totaal even veel vrachtwagens langs de 2 paden als voor de splitsing. 
@@ -141,8 +141,8 @@ Elke vrachtwagen kiest de rustigste rijbaan bij een splitsing.
 Als veel vrachtwagens naar links gaan, zal een volgende eerder naar rechts gaan. 
 Als er een hele hoge weerstand op het rechterpad zit, zullen er die kant op maar weinig rijbanen zijn. 
 Het overgrote deel van de vrachtwagens zal dan dus naar links gaan. 
-Echter kunnen er prima een aantal vrachtwagens via rechts gaan over de ene rijbaan. De stroomsterkte is op het linkerpad dan het hoogst.
-Spanning kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft. 
+Echter kunnen er prima een aantal vrachtwagens via rechts gaan over de ene rijbaan. De stroomsterkte (A) is op het linkerpad dan het hoogst.
+Spanning (V) kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft. 
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
 

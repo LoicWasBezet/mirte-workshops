@@ -30,7 +30,7 @@ van veel simpele bouwstenen die op zeer ingenieuze manieren zijn samengevoegd. Z
 kent kan je al een gigantisch deel van een elektronisch onderdeel snappen!
 
 In dit hoofdstuk gaan we kijken naar veel voorkomende onderdelen.
-Voor dit hoofdstuk is het erg handig wat voorkennis te hebben van elektriciteit. Komen de termen spanning, stroomsterkte, lading, schakelaren en weerstanden je niet helemaal bekend voor? 
+Voor dit hoofdstuk is het erg handig wat voorkennis te hebben van elektriciteit. Komen de termen spanning (V), stroomsterkte (A), lading, schakelaren en weerstanden je niet helemaal bekend voor? 
 Lees dan vooral het stuk dat hier rechts staat! 
 
 Transistors
@@ -43,7 +43,7 @@ Dit wordt een transistor genoemd. Transistoren staan bekend als een van de beste
 En niet voor niets: het is een van de meest gebruikte onderdelen in talloze apparaten. Jouw smartphone alleen al heeft 
 honderden miljarden transistors (dat is meer dan 100.000.000.000)!
 
-In de figuur hieronder is te zien hoe deze werkt. Er komtvanaf links een draad binnen. Wanneer er een spanning wordt gezet 
+In de figuur hieronder is te zien hoe deze werkt. Er komtvanaf links een draad binnen. Wanneer er een spanning (V) wordt gezet 
 op draad A ontstaat er een verbinding tussen het linker- en rechterdeel en kunnen de elektronen verder stromen. Dit kan dus gebruikt worden om de stroom uit te zetten, 
 maar het kan ook gebruikt worden om het signaal van A te versterken. A mag namelijk heel zwak zijn om de verbinding te laten ontstaan. Als je de linkerdraad aansluit op een sterke spanningsbron 
 kan je een sterk signaal aan de rechterkant laten ontstaan als er een zwak signaal via A binnenkomt. Als A geen signaal binnenbrengt blijft de rechterdraad spanningsloos. 
@@ -117,6 +117,10 @@ Binaire getallen zijn dus een stuk efficiënter om op te slaan met transistoren 
  
    Verander kleur
 
+Machine met 2 binaire getallen van 2 bits. Als je op een cijfer klikt switcht deze tussen 0 en 1.
+Je hebt een knop die de volgende stap van de berekening uitvoert.
+
+
 .. figure:: _media/BinairOptellen.jpg    
     :alt: 5+3
     :width: 300
@@ -170,69 +174,16 @@ c. Reken de som van 3 + 6 uit. Gebruik bovenstaand diagram.
 
 
 
-Logische poorten en waarheidstabellen
+Logische machines en waarheidstabellen
 -----------------------------------------
 
-**Ik heb hier veel getekend, maar ik denk dat ik alles nog ga veranderen want ben nog steeds niet blij. De opmaak is ook een ramp**
-Om een computer te maken moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
-
-1. Getallen opslaan.
-2. Simpele wiskundige berekeningen doen.
-
-Met deze twee acties kunnen we al veel bereiken! Door simpele wiskundige berekeningen aan elkaar te koppelen kunnen we ook complexe problemen oplossen.
-Om getallen op te slaan gebruiken we zoals in de vorige paragraaf vermeld transistoren. Deze transistoren slaan binaire getallen op. Hiermee voldoen we aan punt 1.
-
-Om aan punt 2 te voldoen heeft een computer bijvoorbeeld onderdelen die twee getallen kunnen optellen of vermenigvuldigen. Echter zijn deze onderdelen zelf gemaakt uit nog kleinere onderdelen: 
-hoofdzakelijk logische poorten. Deze poorten kunnen als het ware steeds 1 logische denkstap uitvoeren. 
-De poorten werken met twee waardes: waar en onwaar (1 en 0). We gaan nu kort kijken naar 4 verschillende poorten die allemaal een andere logische denkstap uitvoeren.
-
-
-We beginnen met een en-poort Deze poort krijgt twee waardes gegeven, en geeft dan de waarde waar terug als de eerste en
-de tweede waardes waar zijn, en anders onwaar. De waarheidstabel van deze poort is als volgt:
-
-========== ========== ==========
-en-poort                        
---------------------------------
-A          B          A en B    
-========== ========== ==========
-Onwaar     Onwaar     Onwaar    
-Onwaar     Waar       Onwaar    
-Waar       Onwaar     Onwaar    
-Waar       Waar       Waar      
-========== ========== ==========
-
-De of-poort geeft "waar" terug als ten minste 1 van de 2 gegeven waardes waar is. Daar hoort de volgende waarheidstabel bij:
-
-========== ========== ==========
-of-poort                        
---------------------------------
-A          B          A of B    
-========== ========== ==========
-Onwaar     Onwaar     Onwaar    
-Onwaar     Waar       Waar      
-Waar       Onwaar     Waar      
-Waar       Waar       Waar      
-========== ========== ==========
-
-De exclusieve of-poort geeft waar terug als enkel de eerste of enkel de tweede waarde waar is. Wanneer beide waardes waar zijn is het resultaat dus onwaar. 
-In het engels wordt deze poort ook wel de xor-poort genoemd. De waarheidstabel van deze poort is als volgt:
-
-========== ========== ==========
-xor-poort                       
---------------------------------
-A          B          A xor B   
-========== ========== ==========
-Onwaar     Onwaar     Onwaar    
-Onwaar     Waar       Waar      
-Waar       Onwaar     Waar      
-Waar       Waar       Onwaar    
-========== ========== ==========
-
-
-Ten slotte heb je ook nog de niet-poort. Deze poort krijgt 1 waarde binnen en geeft het tegenovergestelde terug. De waarheidstabel van deze poort is als volgt:
+Om te kunnen rekenen met binaire getallen hebben we machines nodig die bepaalde bewerkingen kunnen uitvoeren.
+De meest simpele machines zijn de en-machine, of-machine en niet-machine. Deze machines krijgen 1 of 2 binaire getallen binnen, en geven een binaire waarde terug die afhankelijk is van de input.
+Deze machines kunnen dus als het ware steeds 1 logische denkstap uitvoeren. 
+De machines werken met twee waardes: waar en onwaar (1 en 0). We gaan eerst kijken naar de niet-machine. Deze machine krijgt 1 waarde binnen en geeft het tegenovergestelde terug. De waarheidstabel van deze machine is als volgt:
 
 =========== =========== 
-niet-poort
+niet-machine
 -----------------------
 A           niet A
 =========== =========== 
@@ -240,20 +191,89 @@ Onwaar      Waar
 Waar        Onwaar     
 =========== =========== 
 
-.. admonition:: info
-   :class: margin
+In een waarheidstabel staan alle mogelijke inputs onder elkaar en de bijbehorende output ernaast. In de waarheidstabel van de niet-machine zie je dat wanneer A "onwaar" is, de output "waar" is, en wanneer A "waar" is, de output "onwaar" is.
+In een waarheidstabel staan op elke rij (horizontaal) waardes die allemaal tegelijk kunnen voorkomen. Je komt dus nooit een rij tegen waar A "waar" is en "niet A" ook waar is!
 
-   Wil je weten hoe je de andere poorten daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? TODO daadwerkelijk schrijven <LogicaPoorten>`
+De tweede machine waar we naar gaan kijken is de en-machine. Deze krijgt twee waardes gegeven, en geeft dan de waarde "waar" terug als de eerste en
+de tweede waardes "waar" zijn, en anders "onwaar". De waarheidstabel van deze machine is als volgt:
+
+=========== =========== ===========
+en-machine                        
+--------------------------------
+A           B           A en B    
+=========== =========== ===========
+Onwaar      Onwaar      Onwaar    
+Onwaar      Waar        Onwaar    
+Waar        Onwaar      Onwaar    
+Waar        Waar        Waar      
+=========== =========== ===========
+
+De derde machine kijken we naar de of-machine. Deze geeft "waar" terug als ten minste 1 van de 2 gegeven waardes "waar" is. Daar hoort de volgende waarheidstabel bij:
+
+=========== =========== ===========
+of-machine                        
+--------------------------------
+A           B           A of B    
+=========== =========== ===========
+Onwaar      Onwaar      Onwaar    
+Onwaar      Waar        Waar      
+Waar        Onwaar      Waar      
+Waar        Waar        Waar      
+=========== =========== ===========
+
+We hebben nu de 3 basismachines gezien.
 
 
-Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de poort te leveren. Door deze poorten aan elkaar te koppelen kunnen we 
-steeds complexere onderdelen maken. Stel dat je het resultaat van een en-poort ook nog door de niet-poort zou leiden: Je krijgt dan enkel Onwaar als beide inputs 
-Waar waren. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? De xor-poort kan zelf gemaakt worden door en-poorten, niet-poorten en een of-poort op de juiste manier aan elkaar te koppelen. 
+Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de machine te leveren. Door deze machines aan elkaar te koppelen kunnen we 
+steeds complexere onderdelen maken. Stel dat je het resultaat van een en-machine ook nog door de niet-machine zou leiden: Je krijgt dan enkel "onwaar" als output wanneer beide inputs 
+"waar" zijn. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? Let op: dit is niet gelijk aan de vraag "Zijn beide inputs niet waar?". Dit kan je nagaan door de waarheidstabel van beide vragen op te stellen. 
+Door de outputs van een van deze machines als inputs te gebruiken als input voor een andere van deze machines kunnen we dus complexere machines maken. 
+De meest gebruikte variant hiervan is misschien wel de exclusieve-of-machine.
+Deze geeft "waar" terug als enkel de eerste of enkel de tweede waarde "waar" is. Wanneer beide waardes "waar" zijn is het resultaat dus "onwaar". 
+In het engels wordt in plaats van de term "exclusieve of" de term "xor" (spreek uit ex-or) gebruikt. De waarheidstabel van deze machine is als volgt:
+
+============ ============ ============
+xor-machine                       
+--------------------------------
+A            B            A xor B   
+============ ============ ============
+Onwaar       Onwaar       Onwaar    
+Onwaar       Waar         Waar      
+Waar         Onwaar       Waar      
+Waar         Waar         Onwaar    
+============ ============ ============
 
 
-In de context van elektronica komen de waardes van waar en onwaar overeen met ofwel of er spanning op een kabel staat ofwel of er lading in een onderdeeltje zit.  
-Hieronder zie je hoe je bijvoorbeeld een en-poort maakt.
-Door spanning te zetten op draden A en B kan je stroom al dan niet laten lopen. Wanneer er spanning staat op zowel A als B, 
+
+In de context van elektronica komen de waardes van "waar" en "onwaar" overeen met of er spanning (V) op een kabeltje staat.
+We kunnen bijvoorbeeld zeggen dat "waar" overeenkomt met 5V en "onwaar" overeenkomt met 0V. Nou is het echter zo dat in de 
+werkelijkheid spanning altijd een beetje fluctueert. Daarom is het handiger om te zeggen dat "waar" overeenkomt met een spanning van 2.5 volt of hoger, en "onwaar" overeenkomt met een spanning van lager dan 2,5 volt.  
+In de figuur hieronder zie je een signaal die van "waar" (1) naar "onwaar" (0) gaat en weer terug. 
+
+.. figure:: _media/ElektronischeBit.png    
+    :alt: signaal
+    :width: 400
+    :align: center
+
+    Signaal dat van "waar" naar "onwaar" gaat en weer terug.
+
+Met de logicamachines en deze definitie van een bit in de wereld van elektronica kunnen we een computer maken!
+Om een computer te maken moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
+
+1. Getallen opslaan.
+2. Simpele logische stappen zetten.
+
+Met deze twee acties kunnen we al veel bereiken! Door simpele logiscjhe machines aan elkaar te koppelen kunnen we ook complexe problemen oplossen.
+
+Om aan punt 1 te voldoen kunnen we een getal opslaan door een aantal bits naast elkaar te zetten. Elk bit kan 0 of 1 zijn, dus door meerdere bits naast elkaar te zetten kunnen we grote getallen opslaan. 
+Zo'n bit bestaat dan uit een draadje waar ofwel spanning op staat (1) ofwel geen spanning (0). Door meerdere van deze draadjes naast elkaar te zetten kunnen we grote getallen opslaan.
+
+Om aan punt 2 te voldoen heeft een computer bijvoorbeeld onderdelen die twee getallen kunnen optellen of vermenigvuldigen. 
+Deze zijn vaak gemaakt door meerdere logische machines zoals hierboven aan elkaar te koppelen. Nu is de vraag echter: 
+hoe maak je een logiche poort met elektronische onderdelen? We gaan kijken naar circuits met een aantal input draden die we al dan niet op spanning kunnen zetten en een output draadje. Hieronder zie je hoe je bijvoorbeeld een en-poort maakt. Het circuit maakt gebruik van een serieschakeling. Zoals je weet, 
+loopt er bij een serieschakeling geen stroom als er een schakelaar open staat. Omdat de input waardes beiden een schakelaar openzetten
+(transistor uitzetten) wanneer ze "onwaar" zijn, zal er alleen stroom lopen als beide inputs "waar" zijn.
+Door spanning te zetten op draden A en B kan je stroom laten lopen. Wanneer er spanning staat op zowel A als B, 
 zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad C door een niet-poort te halen kan je de poortcombinatie van hierboven nabouwen!
 
 .. figure:: _media/EnPoort.jpg    
@@ -264,9 +284,26 @@ zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad 
     Voorbeeld van een elektronische en-poort.
 
 
+De of-poort lijkt erg op de en-poort, maar de transistoren worden nu in parallel gezet in plaats van in serie. Dit zorgt ervoor wanneer er ook maar 
+1 transistor is geactiveerd, het signaal al door wordt gegeven!
+
+.. figure:: _media/OrPoort.png    
+    :alt: xor poort
+    :width: 400px
+    :align: center
+
+    Voorbeeld van een elektronische of-poort.
 
 
-Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (1 transistor die een 1 of 0 opslaat). 
+
+.. admonition:: info
+   :class: margin
+
+   Wil je weten hoe je de niet-machine en xor-machine daadwerkelijk maakt als circuit? Lees dan dit stukje:   :doc:`Hoe maak je poorten? <LogicaPoorten>`
+
+**TODO propositielogica toevoegen?**
+
+Stel nu dat we twee getallen hebben opgeslagen, beide met 1 bit (dus gelijk aan 0 of 1). 
 Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische poort(en) te gebruiken op de bits. De optelmachine zou er als volgt uitzien:
 
 .. figure:: _media/TweeBitsOptelMachine.jpg    
@@ -342,7 +379,7 @@ om de stroomrichting te kiezen. We kunnen de draairichting van een motor hiermee
 
 Een andere module die veel voorkomt is een *analog to digital converter* (ADC). Dit is 
 een onderdeel die een analoog signaal kan vertalen naar een digitale binaire waarde. Er is namelijk een probleem 
-als je bijvoorbeeld een temperatuursensor wil aflezen met je computer. De sensor geeft een bepaalde spanning door via de verbindingskabel, die overeenkomt met een bepaalde temperatuur aan 
+als je bijvoorbeeld een temperatuursensor wil aflezen met je computer. De sensor geeft een bepaalde spanning (V) door via de verbindingskabel, die overeenkomt met een bepaalde temperatuur aan 
 de hand van een formule die bij de sensor hoort. De computer kan niet direct de spanning opslaan 
 om mee te rekenen. Het moet de spanning omzetten naar een binair getal die deze spanning uitdrukt in volt. 
 Het onderdeel die deze omzetting kan doen is dus de AD converter. Je hebt ook een *digital to analog converter* (DAC). Deze 
@@ -375,11 +412,13 @@ om de berekening uit te voeren. Hierdoor is het sneller dan een *CPU* of *GPU*, 
 
     Een microcontroller (COPYRIGHT?)
 
-Voor een robotje is al deze rekenkracht echter vaak niet zo belangrijk. Belangrijker is dat de robot zo snel mogelijk kan reageren op zijn omgeving. Je wil bijvoorbeeld dat de robot meteen een bocht maakt als hij een muur ziet, in plaats van dat hij eerst een programma op een grote CPU moet draaien om te bepalen of hij een bocht moet maken.
-Om deze reden wordt meestal een *microcontroller* gebruikt in een robot. Deze is veel minder krachtig dan een CPU, maar is wel erg snel en zuinig met energie. Daarnaast zijn ze vaak 
-ook erg goedkoop.
+Het is voor een robot erg belangrijk om snel te kunnen reageren op gebeurtenissen. Je wil bijvoorbeeld dat de robot meteen een bocht maakt als hij een muur ziet.
+Voor deze reden wordt meestal een *microcontroller* gebruikt in een robot. Deze is minder krachtig dan een CPU, maar is wel erg snel en zuinig met energie. Daarnaast zijn ze vaak 
+ook erg goedkoop. Een microcontroller is heel nauw verbonden met de hardware van een robot. Dit zorgt voor een hele lage vertraging tussen het moment dat er een sensor een signaal geeft en het moment dat de microcontroller hierop reageert.
 Je kan er programmeercode op zetten om allerlei andere onderdelen aan te sturen. 
-Je zou bijvoorbeeld kunnen programmeren dat wanneer er spanning staat op twee aangesloten stroomdraden, er ook spanning moet 
-worden gezet op een derde uitgaande stroomdraad. Je hebt nu een *en-poort* gemaakt! Een microcontroller kan nog veel complexere taken 
-uitvoeren dan dat. Het is niet een krachtige computer, 
-maar je komt al heel ver met wat simpele berekeningen als je een robot wil aansturen. 
+Je zou bijvoorbeeld kunnen programmeren dat wanneer er spanning (V) staat op twee aangesloten stroomdraden, er ook spanning moet 
+worden gezet op een derde uitgaande stroomdraad. Je hebt dan een *en-poort* gemaakt! Een microcontroller kan nog veel complexere taken 
+uitvoeren dan dat. 
+
+**TODO CPU ENZO BETER UITLEGGEN, TABEL TOEVOEGEN**
+

@@ -144,6 +144,14 @@ flexibele vingers die vanzelf om het object heen buigen. Dit is te zien in figuu
 op kunnen tillen. Ook gebruiken sommige robots een magneet als end-effector. Je hebt ook grijpers die de onderkant van de pootjes van een gekko nabootsen, 
 waardoor ze enorm goede grip hebben. Dit is een goed voorbeeld van *Bio-inspired design*, waarbij ontwerpideeën uit de natuur worden gehaald.
 
+
+OPDRACHT 1 a. Wat is het voordeel van een deltarobot ten opzichte van een SCARA? En wat is het nadeel?
+
+    Welke van de twee robots zou jij kiezen voor het in elkaar zetten van een auto? En welke zou je kiezen voor het inpakken van snoepjes in een doos? Leg je antwoord uit.
+
+    Hoeveel vrijheidsgraden heeft een lift? Leg je antwoord uit. Let op: vaak kan je verschillende aantallen beargumenteren. Het gaat er vooral om dat je bewust kiest wat je een vrijheidsgraad noemt en wat niet!
+
+
 Ontwerpen met de toepassing en gebruiker in gedachten
 --------------------------------------------------------
 
@@ -279,3 +287,14 @@ Nu hebben we de coördinaten van de end-effector!
 Deze formule geldt voor alle hoeken alpha en beta, ook als ze groter zijn dan 90° of negatief zijn. 
 Een soortgelijke berekening kan gedaan worden voor armen die bestaan uit een andere hoeveelheid
 armdelen.
+
+
+OPDRACHT 2
+a. Bereken de positie van de end-effector als :math:`\alpha = {30}^{\circ }`, :math:`\beta = {60}^{\circ }`, :math:`L_{1} = 10 cm` en :math:`L_{2} = 5 cm`. 
+
+b.  Maak een schets zoals in figuur 6, maar dan met een extra armdeel die als pols fungeert. De lengte van de pols is :math:`L_{3}`
+    en de hoek die bij de pols hoort is :math:`\gamma`. Let op: dit zijn twee onbekende variabelen, dus om de pols te tekenen mag je willekeurige waardes voor :math:`L_{3}` en :math:`gamma` kiezen. 
+    
+c.  Bereken de formule voor de positie van de end-effector in het geval van een arm met 3 armdelen. Je kan hiervoor dezelfde methode gebruiken als hierboven, maar dan met 3 delen in plaats van 2.
+
+d.  Bereken de positie van de end-effector als :math:`\alpha = {40}^{\circ }`, :math:`\beta = {10}^{\circ }`, :math:`\gamma = {-20}^{\circ }`, :math:`L_{1} = 15 cm`, :math:`L_{2} = 10 cm` en :math:`L_{3} = 4 cm`. 
