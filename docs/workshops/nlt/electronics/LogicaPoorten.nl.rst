@@ -44,7 +44,7 @@ Dan gaan we nu kijken naar de xor-machine. De waarheidstabel van een xor-machine
 
 ============ ============ ============
 xor-machine                       
---------------------------------
+--------------------------------------
 A            B            A xor B   
 ============ ============ ============
 Onwaar       Onwaar       Onwaar    

@@ -199,7 +199,7 @@ de tweede waardes "waar" zijn, en anders "onwaar". De waarheidstabel van deze ma
 
 =========== =========== ===========
 en-machine                        
---------------------------------
+-----------------------------------
 A           B           A en B    
 =========== =========== ===========
 Onwaar      Onwaar      Onwaar    
@@ -212,7 +212,7 @@ De derde machine kijken we naar de of-machine. Deze geeft "waar" terug als ten m
 
 =========== =========== ===========
 of-machine                        
---------------------------------
+-----------------------------------
 A           B           A of B    
 =========== =========== ===========
 Onwaar      Onwaar      Onwaar    
@@ -234,7 +234,7 @@ In het engels wordt in plaats van de term "exclusieve of" de term "xor" (spreek 
 
 ============ ============ ============
 xor-machine                       
---------------------------------
+--------------------------------------
 A            B            A xor B   
 ============ ============ ============
 Onwaar       Onwaar       Onwaar    

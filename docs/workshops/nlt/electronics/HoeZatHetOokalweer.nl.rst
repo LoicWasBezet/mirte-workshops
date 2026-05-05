@@ -1,7 +1,7 @@
 :orphan:
 
 Elektronica - hoe zat het ook alweer? 
-########################
+###########################################
 
 Alle robots zijn opgebouwd uit heel veel simpele bouwsteentjes. Zo'n samenstelling van elektrische onderdelen wordt een *circuit* genoemd.
 We gaan een aantal natuurkundige concepten bekijken en daarmee de onderdeeltjes begrijpen.
