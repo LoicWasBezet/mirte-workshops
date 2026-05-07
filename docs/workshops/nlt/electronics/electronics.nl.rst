@@ -12,6 +12,13 @@ Inleiding
    Vind je het concept elektriciteit nog vaag? Lees dit dan even door:   :doc:`Elektrische schakelingen, hoe zat het ook alweer? <HoeZatHetOokalweer>`
 
 
+.. diagram:: BitAdditionMachine
+
+.. button-link:: #
+   :class: button-change-color2
+ 
+   Verander kleur
+
 Om een robot te maken hoef je niet per se een computertje in de robot te stoppen. 
 Door enkel de juiste onderdelen samen te voegen kan je al een robotje maken die rond kan rijden! 
 Je kan bijvoorbeeld twee lichtsensoren op de robot monteren die elektriciteit naar 
@@ -110,12 +117,6 @@ Binaire getallen zijn dus een stuk efficiënter om op te slaan met transistoren 
 
     17 + 29 optellen in base 10 **mist blauwe lijn**
 
-.. diagram:: BitAdditionMachine
-
-.. button-link:: #
-   :class: button-change-color
- 
-   Verander kleur
 
 Machine met 2 binaire getallen van 2 bits. Als je op een cijfer klikt switcht deze tussen 0 en 1.
 Je hebt een knop die de volgende stap van de berekening uitvoert.
