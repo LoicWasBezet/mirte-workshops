@@ -66,7 +66,9 @@ function Box(inhoud, row, column, buttonFunction, display)
     
     group.style('cursor', 'pointer');
 
-    group.click(function() { buttonFunction(display); });
+    group.click(function() { 
+      buttonFunction(display); 
+    });
     group.mouseover(function() {
       insideRect.timeline().finish();
       insideRect.animate(300).attr({ fill: blue });

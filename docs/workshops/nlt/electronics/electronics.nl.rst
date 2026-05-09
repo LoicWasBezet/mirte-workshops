@@ -91,9 +91,24 @@ ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan h
 heeft dus geen effect op de onderliggende hoeveelheid. Je zou dus ook 5 kunnen opschrijven als "V" in romeinse cijfers.
 101 in base 2 is exact hetzelfde als 5 in base 10 en ook als 5 in romeinse cijfers. 
 
-
+|
+|
 .. diagram:: BitAdditionMachine
 
+|
+|
+
+.. diagram:: BitCounterMachine
+    
+|
+.. raw:: html
+
+   <div class="controls">
+       <button id="showButton" > update </button> 
+   </div>   
+
+|
+| 
 .. .. raw:: html
 
 ..    <div class="controls">
