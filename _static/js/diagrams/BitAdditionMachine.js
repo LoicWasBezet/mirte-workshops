@@ -18,6 +18,7 @@ let number = 6;
 let draw = null;
 let plusButton = null;
 let minusButton = null;
+let screenWidth = squareWidth * (7) + borderWidth * (7) + boundingBoxWidth*2;
 
 
 function GetRomanNumeral(num)
@@ -53,7 +54,7 @@ function Box(inhoud, row, column, buttonFunction, display)
 
 
   var text = draw.text(String(inhoud));
-  let fontSize = (squareWidth - (2 * borderWidth)) * 0.9;
+  let fontSize = (squareWidth - (2 * borderWidth)) * 0.8;
   text.font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize })
   .center(borderWidth/2 +squareWidth/2+ column * (borderWidth + squareWidth), borderWidth/2 +squareWidth/2+  row * (borderWidth*3  + squareWidth))
   .attr({ 'user-select': 'none' });;
@@ -83,7 +84,7 @@ function Box(inhoud, row, column, buttonFunction, display)
 };
 function Line(row, display, color)
 {
-  const borderRect = draw.rect(squareWidth * 7 + borderWidth * 5+ 2*boundingBoxWidth,borderWidth).fill(color);
+  const borderRect = draw.rect(screenWidth,borderWidth).fill(color);
   borderRect.move(-boundingBoxWidth, borderWidth/2 +  row * (borderWidth*3 + squareWidth)-borderWidth*2);
   return borderRect;
 }
@@ -112,7 +113,7 @@ function Write(inhoud, row, naam, display)
 function Background(row, color){
   let topRound = row == 0;
   let bottomRound = row == 3;
-  const background = draw.rect(squareWidth*7 + borderWidth * 5+boundingBoxWidth*2, squareWidth + borderWidth * 3 + boundingBoxWidth * 2 * (topRound || bottomRound)).fill(color);
+  const background = draw.rect(screenWidth, squareWidth + borderWidth * 3 + boundingBoxWidth * 2 * (topRound || bottomRound)).fill(color);
   background.move(-boundingBoxWidth,  row * (borderWidth*3 + squareWidth) -boundingBoxWidth * (topRound + bottomRound) - borderWidth * (!topRound+bottomRound));
   if (topRound || bottomRound){
     background.radius(boundingBoxWidth+2*borderWidth);
@@ -164,7 +165,7 @@ function UpdateDisplay(display)
 export function render(el)
 {
     el.style.userSelect = 'none';
-    draw = SVG().addTo(el).size(squareWidth * 7 + borderWidth * 5 + boundingBoxWidth*2,squareWidth * 4 + borderWidth * 10 + boundingBoxWidth*2);
+    draw = SVG().addTo(el).size(screenWidth,squareWidth * 4 + borderWidth * 10 + boundingBoxWidth*2);
     let display = draw.group()
     
     plusButton = Box('+',3,3, PlusPress, display);
