@@ -10,11 +10,15 @@ let darkGray = '#A6A6A6';
 let white = '#FFFFFF';
 let black = '#000000';
 
-let borderWidth = 12;
+let borderWidth = 8;
 let squareWidth = 100;
+let boundingBoxWidth = 20;
 
 let number = 6;
 let draw = null;
+let plusButton = null;
+let minusButton = null;
+
 
 function GetRomanNumeral(num)
 {
@@ -22,79 +26,104 @@ function GetRomanNumeral(num)
   return values[num];
 }
 
-function PlusPress()
+function PlusPress(display)
 {
-  number = Math.min(15,number+1);  
-  UpdateDisplay();
+  number += 1;
+  if (number > 15){number = 0;}
+  UpdateDisplay(display);
 };
-function MinusPress()
+function MinusPress(display)
 {
-  number = Math.max(0,number-1);  
-  UpdateDisplay();
+  number -= 1;  
+  if (number < 0){number = 15;}
+  UpdateDisplay(display);
 };
 
-function Box(inhoud, row, column, buttonFunction)
+function Box(inhoud, row, column, buttonFunction, display)
 {
   let isButton =(buttonFunction != 0 && buttonFunction != null);
-
-  let primary =  darkBlue
-  let secondary = isButton ? yellow : lightBlue
+  let isEmpty = (inhoud == ' ' || inhoud == '' || inhoud == null);
+  let primary =  isButton || isEmpty ? darkBlue : darkBlue;
+  let secondary = isEmpty ? blue : lightBlue;
   let group = draw.group();
   const borderRect = draw.rect(squareWidth,squareWidth).fill(primary).radius(2*borderWidth);
   const insideRect = draw.rect(squareWidth-2*borderWidth,squareWidth-2*borderWidth).fill(secondary).radius(borderWidth);
-  borderRect.move(borderWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 +  row * (borderWidth + squareWidth));
-  insideRect.move(borderWidth*3/2 + column * (borderWidth + squareWidth), borderWidth*3/2 +  row * (borderWidth + squareWidth));
+  borderRect.move(borderWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 +  row * (borderWidth*3 + squareWidth));
+  insideRect.move(borderWidth*3/2 + column * (borderWidth + squareWidth), borderWidth*3/2 +  row * (borderWidth*3 + squareWidth));
 
 
   var text = draw.text(String(inhoud));
   let fontSize = (squareWidth - (2 * borderWidth)) * 0.9;
-  text.font({ fill: primary, family: 'monospace', weight: 700, size: fontSize }).center(0,0).move(borderWidth/2 +squareWidth/2+ column * (borderWidth + squareWidth), borderWidth/2 +squareWidth/2+  row * (borderWidth + squareWidth));
-//   group.add(borderRect.center(0,0));
-//   group.add(insideRect.center(0,0));
-//   group.add(text.center(0,0));
+  text.font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize })
+  .center(borderWidth/2 +squareWidth/2+ column * (borderWidth + squareWidth), borderWidth/2 +squareWidth/2+  row * (borderWidth*3  + squareWidth))
+  .attr({ 'user-select': 'none' });;
+   group.add(borderRect);
+   group.add(insideRect);
+   group.add(text);
 //   group.center(borderWidth/2 + squareWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 + squareWidth/2 +  row * (borderWidth + squareWidth));
   if (isButton)
   {
     
-    borderRect.style('cursor', 'pointer');
+    group.style('cursor', 'pointer');
 
-    borderRect.click(PlusPress);
-    borderRect.mouseover(function() {
-      insideRect.timeline().finish()
+    group.click(function() { buttonFunction(display); });
+    group.mouseover(function() {
+      insideRect.timeline().finish();
       insideRect.animate(300).attr({ fill: blue });
-      PlusPress();
     });
 
-    borderRect.mouseout(function() {
-      insideRect.timeline().finish()
+    group.mouseout(function() {
+      insideRect.timeline().finish();
       insideRect.animate(300).attr({ fill: secondary });
     });
   }
-  return;
+  return group;
 };
+function Line(row, display, color)
+{
+  const borderRect = draw.rect(squareWidth * 7 + borderWidth * 5+ 2*boundingBoxWidth,borderWidth).fill(color);
+  borderRect.move(-boundingBoxWidth, borderWidth/2 +  row * (borderWidth*3 + squareWidth)-borderWidth*2);
+  return borderRect;
+}
 
-function Write(inhoud, row, naam)
+function Write(inhoud, row, naam, display)
 {
   let group = draw.group();
   for (let i = 0; i < inhoud.length; i++) 
   {
-    group.add(Box(inhoud[i],row+1,i));
+    group.add(Box(inhoud[i],row,i, null,  display));
   };
   
   var text = draw.text(naam);
   let fontSize = (squareWidth - (2 * borderWidth)) * 0.8;
   
-  text.font({ fill: yellow, family: 'monospace', weight: 700, size: fontSize });
+  text.font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize});
 
-  let textWidth = text.bbox().width;
-  let textHeight = text.bbox().height;
 
-  text.move(borderWidth + inhoud.length * (borderWidth + squareWidth) + textHeight, 100 + borderWidth/2 + squareWidth/2 +  row * (borderWidth + squareWidth));
-
+  text.move(borderWidth/2 * 2 + inhoud.length * (borderWidth + squareWidth), borderWidth/2 + squareWidth/2 +  row * (borderWidth*3  + squareWidth));
+  text.cy( borderWidth/2 + squareWidth/2 +  row * (borderWidth*3  + squareWidth));
+  text.attr({ 'user-select': 'none' });
   group.add(text);
 
   return group;
 };
+function Background(row, color){
+  let topRound = row == 0;
+  let bottomRound = row == 3;
+  const background = draw.rect(squareWidth*7 + borderWidth * 5+boundingBoxWidth*2, squareWidth + borderWidth * 3 + boundingBoxWidth * 2 * (topRound || bottomRound)).fill(color);
+  background.move(-boundingBoxWidth,  row * (borderWidth*3 + squareWidth) -boundingBoxWidth * (topRound + bottomRound) - borderWidth * (!topRound+bottomRound));
+  if (topRound || bottomRound){
+    background.radius(boundingBoxWidth+2*borderWidth);
+  }
+  return background;
+}
+function Backdrop(row, column, display){
+  
+  const borderRect = draw.rect(squareWidth,squareWidth).fill(blue).radius(2*borderWidth);
+  borderRect.move(borderWidth/2 + column * (borderWidth + squareWidth), borderWidth*4/2 +  row * (borderWidth*3 + squareWidth));
+
+return borderRect;
+}
 
 function UpdateDisplay(display)
 {
@@ -102,20 +131,58 @@ function UpdateDisplay(display)
   let num2 = number.toString(2).padStart(4, ' ')
   let romanNumeral = GetRomanNumeral(number).padStart(4, ' ');
   display.clear();
-  display.add(Write(num10,0, "BASE 10"));
-  display.add(Write(num2,1, "BASE 2"));
-  display.add(Write(romanNumeral,2, "ROMEINS"));
+
+  display.add(Background(0,blue));
+  display.add(Background(3,yellow));
+  display.add(Background(1,lightBlue));
+  display.add(Background(2,blue));
+
+  display.add(Write(num10,0, "BASE 10", display));
+  display.add(Write(num2,1, "BASE  2", display));
+  display.add(Write(romanNumeral,2, "ROMEINS", display));
+  display.add(Line(1,display, darkBlue));
+  display.add(Line(2,display, darkBlue));
+  display.add(Line(3,display, darkBlue));
+  plusButton.clear();
+  minusButton.clear();
+  display.add(Backdrop(3,2,display));
+  display.add(Backdrop(3,3,display));
+  
+  plusButton = Box('+',3,3, PlusPress, display);
+  minusButton = Box('-',3,2, MinusPress, display);
+  display.add(plusButton);
+  display.add(minusButton);
+  display.move(0,0);
+  
+  
+
+
+ 
 }
 export function render(el)
 {
-        
-    draw = SVG().addTo(el).size(squareWidth * 8 + borderWidth * 9,squareWidth * 4 + borderWidth * 5);
-
+    el.style.userSelect = 'none';
+    draw = SVG().addTo(el).size(squareWidth * 7 + borderWidth * 5 + boundingBoxWidth*2,squareWidth * 4 + borderWidth * 10 + boundingBoxWidth*2);
     let display = draw.group()
+    
+    plusButton = Box('+',3,3, PlusPress, display);
+    minusButton = Box('-',3,2, MinusPress, display);
     UpdateDisplay(display)
-    let plusButton = Box('+',3,3, PlusPress);
-    let minusButton = Box('-',3,2, MinusPress);
-  
+
+
+    const btnPlus = document.getElementById('plusKnop');
+    const btnMin = document.getElementById('minKnop');
+
+    if (btnPlus) {
+        btnPlus.onclick = () => {
+            PlusPress(display);
+        };
+    }
+    if (btnMin) {
+        btnMin.onclick = () => {
+            MinusPress(display);
+        };
+    }
 }
 
 

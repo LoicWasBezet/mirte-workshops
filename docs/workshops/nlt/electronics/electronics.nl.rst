@@ -11,14 +11,6 @@ Inleiding
 
    Vind je het concept elektriciteit nog vaag? Lees dit dan even door:   :doc:`Elektrische schakelingen, hoe zat het ook alweer? <HoeZatHetOokalweer>`
 
-
-.. diagram:: BitAdditionMachine
-
-.. button-link:: #
-   :class: button-change-color2
- 
-   Verander kleur
-
 Om een robot te maken hoef je niet per se een computertje in de robot te stoppen. 
 Door enkel de juiste onderdelen samen te voegen kan je al een robotje maken die rond kan rijden! 
 Je kan bijvoorbeeld twee lichtsensoren op de robot monteren die elektriciteit naar 
@@ -98,6 +90,17 @@ alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets
 ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan het ook opschrijven als 101 in base 2. De schrijfwijze 
 heeft dus geen effect op de onderliggende hoeveelheid. Je zou dus ook 5 kunnen opschrijven als "V" in romeinse cijfers.
 101 in base 2 is exact hetzelfde als 5 in base 10 en ook als 5 in romeinse cijfers. 
+
+
+.. diagram:: BitAdditionMachine
+
+.. .. raw:: html
+
+..    <div class="controls">
+..        <button id="plusKnop" > +1 </button> 
+..        <button id="minKnop" > -1 </button>
+..    </div>
+
 
 De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
 Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
