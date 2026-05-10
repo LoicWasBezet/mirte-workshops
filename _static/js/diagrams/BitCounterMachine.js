@@ -49,6 +49,7 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
     // @ts-ignore
     content = String(bits[column]);
   }
+  let tile = display.group();
   if (drawExponent){
     borderRect = draw.rect(exponantialWidth,exponantialWidth).fill(yellow).radius(exponantialWidth/2);
     //insideRect= draw.rect(exponantialWidth-2*borderWidth,exponantialWidth-2*borderWidth).fill(yellow).radius(borderWidth);
@@ -78,7 +79,9 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
       bottomRect.move(borderWidth+ column * (borderWidth + squareWidth), borderWidth +  row * (borderWidth*3 + squareWidth));
 
     }
-    
+    tile.add(borderRect);
+    tile.add(insideRect);
+    tile.add(text);
 
     
   }
@@ -94,6 +97,7 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
   }
   
   group.add(text);
+  
 //   group.center(borderWidth/2 + squareWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 + squareWidth/2 +  row * (borderWidth + squareWidth));
   if (isButton && contentString == "")
   {
@@ -102,14 +106,16 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
 
     group.click(function() { 
         bits[column] = bits[column] === 0 ? 1 : 0;
-        group.timeline().finish();
+        if (!drawExponent){
+          tile.timeline().finish();
 
-        group.animate(20).dy(borderWidth/2).dx(borderWidth/2)   
-            .animate(40).dy(-borderWidth/2).dx(-borderWidth/2)   ;
-
+          tile.animate(20).dy(borderWidth/2).dx(borderWidth/2)   
+            .animate(40).dy(-borderWidth/2).dx(-borderWidth/2)   ;        
+        }
         setTimeout(function() { 
           UpdateDisplay(display);
         }, 60);
+        
     });
     if (!drawExponent){
         group.mouseover(function() {
