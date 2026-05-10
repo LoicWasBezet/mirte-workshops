@@ -64,6 +64,8 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
     text.font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize })
     .center(column * (borderWidth + squareWidth) +exponantialWidth*0.53-borderWidth/4, row * (borderWidth + squareWidth)+exponantialWidth/2-borderWidth/4)
     .attr({ 'user-select': 'none' });
+    tile.add(borderRect);
+    tile.add(text);
   } else {
     borderRect = draw.rect(squareWidth,squareWidth).fill(primary).radius(2*borderWidth);
     insideRect= draw.rect(squareWidth-2*borderWidth,squareWidth-2*borderWidth).fill(secondary).radius(borderWidth);
@@ -91,12 +93,7 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
       group.add(bottomRect);
   }
   
-  group.add(borderRect);
-  if (!drawExponent){
-    group.add(insideRect);
-  }
-  
-  group.add(text);
+  group.add(tile);
   
 //   group.center(borderWidth/2 + squareWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 + squareWidth/2 +  row * (borderWidth + squareWidth));
   if (isButton && contentString == "")
