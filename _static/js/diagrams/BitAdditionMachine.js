@@ -13,6 +13,9 @@ let black = '#000000';
 let borderWidth = 8;
 let squareWidth = 100;
 let boundingBoxWidth = 20;
+let exponantialWidth = 36;
+
+let exponentials = ["⁰", "¹", "²", "³", "⁴", "⁵", "⁶"];
 
 let number = 6;
 let draw = null;
@@ -39,7 +42,33 @@ function MinusPress(display)
   if (number < 0){number = 15;}
   UpdateDisplay(display);
 };
+function Exponent(row, column, display, bitCount, base, hidden = false)
+{
+  let isButton = true;
+  let primary = darkBlue;
+  let secondary = hidden ? darkBlue : yellow;
+  let group = draw.group();
+  let borderRect; 
+  let insideRect; 
+  let text;
+  borderRect = draw.rect(exponantialWidth,exponantialWidth).fill(secondary).radius(exponantialWidth/2);
+  borderRect.move(column * (borderWidth + squareWidth)-borderWidth*3/4, row * (borderWidth * 3 + squareWidth)-borderWidth*3/4 );
+  text = draw.text(function(add) {
+      add.tspan(String(base));
 
+      add.tspan(exponentials[bitCount-1-column]).dx("-0.16em"); 
+  });
+  let fontSize = (exponantialWidth) * (base == 2 ? 0.65 : 0.55);//0.9
+  text.font({ fill: primary, family: 'monospace', weight: 700, size: fontSize })
+  .center(column * (borderWidth + squareWidth) +exponantialWidth*0.53-borderWidth/4, row * (borderWidth*3 + squareWidth)+exponantialWidth/2-borderWidth/4)
+  .attr({ 'user-select': 'none' });
+ 
+  
+  group.add(borderRect);
+  
+  group.add(text);
+  return group;
+};
 function Box(inhoud, row, column, buttonFunction, display)
 {
   let isButton =(buttonFunction != 0 && buttonFunction != null);
@@ -89,12 +118,15 @@ function Line(row, display, color)
   return borderRect;
 }
 
-function Write(inhoud, row, naam, display)
+function Write(inhoud, row, naam, display, base)
 {
   let group = draw.group();
   for (let i = 0; i < inhoud.length; i++) 
   {
     group.add(Box(inhoud[i],row,i, null,  display));
+    if (base != null){
+      group.add(Exponent(row,i,display,4,base, inhoud[i] == " "))
+    }
   };
   
   var text = draw.text(naam);
@@ -140,9 +172,9 @@ function UpdateDisplay(display)
   display.add(Background(1,lightBlue));
   display.add(Background(2,blue));
 
-  display.add(Write(num10,0, "BASE 10", display));
-  display.add(Write(num2,1, "BASE  2", display));
-  display.add(Write(romanNumeral,2, "ROMEINS", display));
+  display.add(Write(num10,0, "BASE 10", display, 10));
+  display.add(Write(num2,1, "BASE  2", display, 2));
+  display.add(Write(romanNumeral,2, "ROMEINS", display,  null));
   display.add(Line(1,display, darkBlue));
   display.add(Line(2,display, darkBlue));
   display.add(Line(3,display, darkBlue));
