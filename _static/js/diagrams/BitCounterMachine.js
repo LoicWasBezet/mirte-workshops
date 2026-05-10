@@ -49,7 +49,7 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
     // @ts-ignore
     content = String(bits[column]);
   }
-  let tile = display.group();
+  let tile = draw.group();
   if (drawExponent){
     borderRect = draw.rect(exponantialWidth,exponantialWidth).fill(yellow).radius(exponantialWidth/2);
     //insideRect= draw.rect(exponantialWidth-2*borderWidth,exponantialWidth-2*borderWidth).fill(yellow).radius(borderWidth);
@@ -106,8 +106,8 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
         if (!drawExponent){
           tile.timeline().finish();
 
-          tile.animate(20).dy(borderWidth/2).dx(borderWidth/2)   
-            .animate(40).dy(-borderWidth/2).dx(-borderWidth/2)   ;        
+          tile.animate(20).dmove(borderWidth/2, borderWidth/2)   
+            .animate(40).dmove(-borderWidth/2, -borderWidth/2)   ;        
         }
         setTimeout(function() { 
           UpdateDisplay(display);
