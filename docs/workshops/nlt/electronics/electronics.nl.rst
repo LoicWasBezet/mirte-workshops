@@ -101,6 +101,9 @@ heeft dus geen effect op de onderliggende hoeveelheid. Je zou dus ook 5 kunnen o
 .. diagram:: BitCounterMachine
     
 |
+|
+|
+|
 .. raw:: html
 
    <div class="controls">

@@ -46,7 +46,7 @@ function Exponent(row, column, display, bitCount, base, hidden = false)
 {
   let isButton = true;
   let primary = hidden ? blue : darkBlue;
-  let secondary = hidden ? darkBlue : yellow;
+  let secondary = hidden ? yellow : yellow;
   let group = draw.group();
   let borderRect; 
   let insideRect; 
