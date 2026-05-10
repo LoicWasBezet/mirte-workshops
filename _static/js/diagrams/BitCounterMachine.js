@@ -1,4 +1,5 @@
 // initialize SVG.js
+
 // @ts-check
 let exponentials = ["⁰","¹","²", "³", "⁴", "⁵"]
 
@@ -101,7 +102,14 @@ function Box(row, column, display, bitCount, base, drawExponent = false, content
 
     group.click(function() { 
         bits[column] = bits[column] === 0 ? 1 : 0;
-      UpdateDisplay(display);
+        group.timeline().finish();
+
+        group.animate(20).dy(borderWidth/2).dx(borderWidth/2)   
+            .animate(40).dy(-borderWidth/2).dx(-borderWidth/2)   ;
+
+        setTimeout(function() { 
+          UpdateDisplay(display);
+        }, 60);
     });
     if (!drawExponent){
         group.mouseover(function() {
@@ -156,7 +164,7 @@ function Write(row, display)
   resultGroup.add(Box(0,0,display,2,10, true));
   resultGroup.add(Box(0,1,display,2,10,  false, String(GetResult()).padStart(2, '0')[1]));
   resultGroup.add(Box(0,1,display,2,10, true));
-  resultGroup.move(borderWidth/2 + (bitCount+1) * (borderWidth + squareWidth));
+  resultGroup.move(borderWidth/2 + (bitCount+1) * (borderWidth + squareWidth),borderWidth/2);
   group.add(resultGroup);
   return group;
 };
@@ -202,14 +210,14 @@ export function render(el)
     
     UpdateDisplay(display)
 
-    const showButton = document.getElementById('showButton');
+    //const showButton = document.getElementById('showButton');
 
-    if (showButton) {
-        showButton.onclick = () => {
-            UpdateDisplay(display);
-            //draw.rect(100,100).fill("#fff").move(10,10);
-        };
-    }
+    // if (showButton) {
+    //     showButton.onclick = () => {
+    //         UpdateDisplay(display);
+    //         //draw.rect(100,100).fill("#fff").move(10,10);
+    //     };
+    // }
 
 }
 

@@ -1,4 +1,5 @@
 // initialize SVG.js
+// @ts-check
 
 
 let blue = '#6089BA';
@@ -46,7 +47,7 @@ function Exponent(row, column, display, bitCount, base, hidden = false)
 {
   let isButton = true;
   let primary = hidden ? blue : darkBlue;
-  let secondary = hidden ? yellow : yellow;
+  let secondary = hidden ? darkBlue : yellow;
   let group = draw.group();
   let borderRect; 
   let insideRect; 
@@ -212,20 +213,6 @@ export function render(el)
     
     UpdateDisplay(display)
 
-
-    const btnPlus = document.getElementById('plusKnop');
-    const btnMin = document.getElementById('minKnop');
-
-    if (btnPlus) {
-        btnPlus.onclick = () => {
-            PlusPress(display);
-        };
-    }
-    if (btnMin) {
-        btnMin.onclick = () => {
-            MinusPress(display);
-        };
-    }
 }
 
 
