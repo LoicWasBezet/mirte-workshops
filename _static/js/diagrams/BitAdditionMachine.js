@@ -45,14 +45,14 @@ function MinusPress(display)
 function Exponent(row, column, display, bitCount, base, hidden = false)
 {
   let isButton = true;
-  let primary = darkBlue;
+  let primary = hidden ? blue : darkBlue;
   let secondary = hidden ? darkBlue : yellow;
   let group = draw.group();
   let borderRect; 
   let insideRect; 
   let text;
   borderRect = draw.rect(exponantialWidth,exponantialWidth).fill(secondary).radius(exponantialWidth/2);
-  borderRect.move(column * (borderWidth + squareWidth)-borderWidth*3/4, row * (borderWidth * 3 + squareWidth)-borderWidth*3/4 );
+  borderRect.move(column * (borderWidth + squareWidth)-borderWidth*1/4, row * (borderWidth * 3 + squareWidth)-borderWidth*1/4 );
   text = draw.text(function(add) {
       add.tspan(String(base));
 
@@ -69,36 +69,41 @@ function Exponent(row, column, display, bitCount, base, hidden = false)
   group.add(text);
   return group;
 };
-function Box(inhoud, row, column, buttonFunction, display)
-{
-  let isButton =(buttonFunction != 0 && buttonFunction != null);
+function Box(inhoud, row, column, buttonFunction, display) {
+  let isButton = (buttonFunction != 0 && buttonFunction != null);
   let isEmpty = (inhoud == ' ' || inhoud == '' || inhoud == null);
-  let primary =  isButton || isEmpty ? darkBlue : darkBlue;
+  let primary = isButton || isEmpty ? darkBlue : darkBlue;
   let secondary = isEmpty ? blue : lightBlue;
+  
   let group = draw.group();
-  const borderRect = draw.rect(squareWidth,squareWidth).fill(primary).radius(2*borderWidth);
-  const insideRect = draw.rect(squareWidth-2*borderWidth,squareWidth-2*borderWidth).fill(secondary).radius(borderWidth);
+  
+  const borderRect = group.rect(squareWidth, squareWidth).fill(primary).radius(2*borderWidth);
+  const insideRect = group.rect(squareWidth-2*borderWidth, squareWidth-2*borderWidth).fill(secondary).radius(borderWidth);
+  
   borderRect.move(borderWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 +  row * (borderWidth*3 + squareWidth));
   insideRect.move(borderWidth*3/2 + column * (borderWidth + squareWidth), borderWidth*3/2 +  row * (borderWidth*3 + squareWidth));
 
-
-  var text = draw.text(String(inhoud));
   let fontSize = (squareWidth - (2 * borderWidth)) * 0.8;
-  text.font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize })
-  .center(borderWidth/2 +squareWidth/2+ column * (borderWidth + squareWidth), borderWidth/2 +squareWidth/2+  row * (borderWidth*3  + squareWidth))
-  .attr({ 'user-select': 'none' });;
-   group.add(borderRect);
-   group.add(insideRect);
-   group.add(text);
-//   group.center(borderWidth/2 + squareWidth/2 + column * (borderWidth + squareWidth), borderWidth/2 + squareWidth/2 +  row * (borderWidth + squareWidth));
-  if (isButton)
-  {
-    
+  
+  var text = group.text(String(inhoud))
+    .font({ fill: darkBlue, family: 'monospace', weight: 700, size: fontSize })
+    .center(borderWidth/2 +squareWidth/2+ column * (borderWidth + squareWidth), borderWidth/2 +squareWidth/2+  row * (borderWidth*3  + squareWidth))
+    .attr({ 'user-select': 'none' });
+
+  if (isButton) {
     group.style('cursor', 'pointer');
 
     group.click(function() { 
-      buttonFunction(display); 
+      group.timeline().finish();
+
+      group.animate(20).dy(borderWidth * 2)   
+           .animate(40).dy(-borderWidth * 2);
+
+      setTimeout(function() {
+          buttonFunction(display); 
+      }, 60);
     });
+    
     group.mouseover(function() {
       insideRect.timeline().finish();
       insideRect.animate(300).attr({ fill: blue });
@@ -110,7 +115,7 @@ function Box(inhoud, row, column, buttonFunction, display)
     });
   }
   return group;
-};
+}
 function Line(row, display, color)
 {
   const borderRect = draw.rect(screenWidth,borderWidth).fill(color);
@@ -178,13 +183,18 @@ function UpdateDisplay(display)
   display.add(Line(1,display, darkBlue));
   display.add(Line(2,display, darkBlue));
   display.add(Line(3,display, darkBlue));
-  plusButton.clear();
-  minusButton.clear();
-  display.add(Backdrop(3,2,display));
-  display.add(Backdrop(3,3,display));
+  //plusButton.clear();
+  //minusButton.clear();
+  display.add(Backdrop(3,4,display));
+  display.add(Backdrop(3,6,display));
   
-  plusButton = Box('+',3,3, PlusPress, display);
-  minusButton = Box('-',3,2, MinusPress, display);
+  //plusButton = Box('+',3,3, PlusPress, display);
+  //minusButton = Box('-',3,1, MinusPress, display);
+  let counter = Box(String(number),3,5,null,display);
+  plusButton = Box('+', 3, 6, PlusPress, display);
+  minusButton = Box('-', 3, 4, MinusPress, display);
+  
+  display.add(counter);
   display.add(plusButton);
   display.add(minusButton);
   display.move(0,0);
@@ -200,8 +210,6 @@ export function render(el)
     draw = SVG().addTo(el).size(screenWidth,squareWidth * 4 + borderWidth * 10 + boundingBoxWidth*2);
     let display = draw.group()
     
-    plusButton = Box('+',3,3, PlusPress, display);
-    minusButton = Box('-',3,2, MinusPress, display);
     UpdateDisplay(display)
 
 
