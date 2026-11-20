@@ -21,7 +21,7 @@ Hoe robots zich voortbewegen
 Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Afhankelijk van de omgeving waar een robot zich in gaat bevinden wordt een beweegmethode gekozen voor een robot. Je kan immers moeilijk dezelfde beweegmethode gebruiken op de vlakke grond van een warenhuis en de ruige grond in een bos. Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden wielen gebruikt. Deze zijn namelijk erg geschikt voor vlakke ondergronden. Het is daarbij vrij simpel om een robot rechtdoor te laten rijden. Het blijkt echter moeilijk te zijn 
 om de robot ook bochten te laten maken.
 
-.. figure:: media/Differentiaal.jpg
+.. figure:: _media/Differentiaal.jpg
     :alt: differentieel
     :width: 300
     :align: right
@@ -41,7 +41,7 @@ Je moet dan dus een manier hebben om het ene wiel sneller te laten draaien dan h
 tegelijk aandrijven, ook als ze niet precies even snel draaien.
 
 
-.. figure::  media/Ackermann_turningCOPYRIGHT.svg
+.. figure:: _media/Ackermann_turningCOPYRIGHT.svg
     :alt: Ackermann-sturing
     :width: 300
     :align: right
@@ -81,7 +81,7 @@ Hiermee kan de robot elke denkbare beweging onderwater uitvoeren.
 
 **Hoe robots hun omgeving kunnen manipuleren**
 
-.. figure:: 6DOF.svg
+.. figure:: _media/6DOF.svg
     :alt: Degrees of freedom
     :width: 300
     :align: right
@@ -101,11 +101,12 @@ In figuur 4 kan je de vrijheidsgraden zien. Als de grijper van de arm een van de
 tellen 2 bewegingsrichtingen die op een lijn staan als 1 beweging/vrijheidsgraad (Als je naar voren kan bewegen kan je automatisch ook naar achteren bewegen).
 Met 6 vrijheidsgraden kan de grijper dus elke beweging maken die je kan bedenken. Met deze kennis kunnen we gaan kijken naar een aantal soorten robotarmen.
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/0/09/SCARA_robot_2R.png
+.. figure:: _media/SCARA_robot_2R.png
     :alt: SCARA robot 
     :width: 300
     :align: right
 
+    https://upload.wikimedia.org/wikipedia/commons/0/09/SCARA_robot_2R.png
     **Figuur 4: Een SCARA** (COPYRIGHT?)
 
 Een *SCARA* (Selective Compliance Assembly Robot Arm) is een arm die wordt gebruikt voor zogeheten *pick and place* bewegingen. Het kan op een punt 

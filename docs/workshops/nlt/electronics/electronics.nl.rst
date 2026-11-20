@@ -1,6 +1,6 @@
 :orphan:
 
-Elektronica
+Elektronica TEST
 ########################
 
 Inleiding
@@ -352,11 +352,12 @@ om te kunnen keren. In het plaatje hieronder zie je een motor M met daaromheen d
 we kiezen aan welke kant de stroom binnenkomt en aan welke kant de stroom weggaat: We kunnen schakelaars s1 en s4 OF schakelaars s2 en s3 tegelijk sluiten 
 om de stroomrichting te kiezen. We kunnen de draairichting van een motor hiermee omdraaien! 
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/H_bridge.svg/960px-H_bridge.svg.png
+.. figure:: _media/H_bridge.png
     :alt: Een H-brug
     :width: 300
     :align: center
 
+    https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/H_bridge.svg/960px-H_bridge.svg.png
     Een H-brug (COPYRIGHT?)
 
 Een andere module die veel voorkomt is een *analog to digital converter* (ADC). Dit is 
