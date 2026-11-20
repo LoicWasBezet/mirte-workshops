@@ -30,3 +30,8 @@ with output_path.open("w") as f:
 shutil.copyfile('scripts/sw.js', '_build/html/sw.js')
 shutil.copyfile('scripts/manifest.webmanifest', '_build/html/manifest.webmanifest')
 #shutil.copytree('_static/icons', '_build/html/_static/icons')
+
+# The file is sometimes needed/expected in this location:
+import glob
+for d in glob.glob('_build/html/*/workshops'):
+    shutil.copyfile('scripts/manifest.webmanifest', f'{d}/manifest.webmanifest')
