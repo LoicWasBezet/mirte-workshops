@@ -11,7 +11,7 @@ De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek w
 
 
 Hoe robots zich voortbewegen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 .. admonition:: info
    :class: margin
