@@ -6,32 +6,28 @@ Veelgebruikte robotsystemen
 --------------------------------------------------------
 
 
-In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen van robots, 
-zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten *mobile manipulators*. 
-Deze robots kunnen hoofdzakelijk twee dingen: zichzelf verplaatsen en de wereld om hen heen beïnvloeden.
-De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een
-actie uit gaan voeren.
+In dit hoofdstuk gaan we het hebben over ontwerpen. Om je een idee te geven waar je aan zou kunnen denken bij het ontwerpen van robots, zullen we eerst even kijken naar veelgebruikte robotsystemen. De robotsystemen die we gaan bekijken heten *mobile manipulators*. Deze robots kunnen hoofdzakelijk twee dingen: zichzelf verplaatsen en de wereld om hen heen manipuleren.
+De robot zit dus niet vast op een bepaalde plek, maar kan bewegen naar de plek waar hij nodig is. Vervolgens kan de robot daar een actie uit gaan voeren.
 
 
-**Hoe robots zich voortbewegen**
+Hoe robots zich voortbewegen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: info
    :class: margin
 
    Benieuwd naar welke wieltypes er zijn voor robots? Dat is hier te lezen:   :doc:`Welke soorten robotwielen zijn er? <types_of_wheels>`
 
-Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Afhankelijk van de omgeving waar een robot zich in gaat bevinden 
-wordt een beweegmethode gekozen voor een robot. Je kan immers moeilijk dezelfde beweegmethode gebruiken op de vlakke grond van een warenhuis en de ruige grond in een bos. 
-Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden wielen gebruikt.
-Wielen zijn namelijk erg geschikt voor vlakke ondergronden. Het is vrij simpel om een robot rechtdoor te laten rijden op wielen. Het blijkt echter moeilijk te zijn 
+Er zijn veel verschillende manieren om een robot manoeuvreerbaar te maken. Afhankelijk van de omgeving waar een robot zich in gaat bevinden wordt een beweegmethode gekozen voor een robot. Je kan immers moeilijk dezelfde beweegmethode gebruiken op de vlakke grond van een warenhuis en de ruige grond in een bos. Ook kan  het zijn dat je robot in de lucht moet bewegen, of juist onder water. Voor al deze omgevingen heb je andere onderdelen. Vaak worden wielen gebruikt. Deze zijn namelijk erg geschikt voor vlakke ondergronden. Het is daarbij vrij simpel om een robot rechtdoor te laten rijden. Het blijkt echter moeilijk te zijn 
 om de robot ook bochten te laten maken.
 
-.. figure:: https://www.tec-science.com/wp-content/uploads/2021/03/en-differential-gear-from-to-05-pinion-bevel-gears.jpg
+.. figure:: media/Differentiaal.jpg
     :alt: differentieel
     :width: 300
     :align: right
 
     **Figuur 1: Een differentieel** (COPYRIGHT?)
+    https://www.tec-science.com/mechanical-power-transmission/planetary-gear/how-does-a-differential-gear-work/
 
 In de bochten zijn er namelijk twee problemen: er is dan een snelheidsverschil tussen de wielen, en de wielen moeten 
 allemaal net niet dezelfde richting op rollen. Bij een bocht zitten de helft
@@ -45,12 +41,13 @@ Je moet dan dus een manier hebben om het ene wiel sneller te laten draaien dan h
 tegelijk aandrijven, ook als ze niet precies even snel draaien.
 
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ackermann_turning.svg/1200px-Ackermann_turning.svg.png
+.. figure::  media/Ackermann_turningCOPYRIGHT.svg
     :alt: Ackermann-sturing
     :width: 300
     :align: right
 
     **Figuur 2: Ackermann-sturing** (COPYRIGHT?)
+    https://en.wikipedia.org/wiki/Ackermann_steering_geometry
 
 
 Vervolgens hebben we een tweede probleem: Aangezien sommige wielen in de binnenbocht zitten en andere in de buitenbocht, 
@@ -84,12 +81,13 @@ Hiermee kan de robot elke denkbare beweging onderwater uitvoeren.
 
 **Hoe robots hun omgeving kunnen manipuleren**
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/2/2a/6DOF.svg
+.. figure:: 6DOF.svg
     :alt: Degrees of freedom
     :width: 300
     :align: right
 
     **Figuur 3: Alle mogelijke vrijheidsgraden** (COPYRIGHT?)
+    https://upload.wikimedia.org/wikipedia/commons/2/2a/6DOF.svg
 
 Een *mobile-manipulator* moet objecten om hem heen kunnen bewegen. Er zijn veel manieren om dit te doen. 
 In de praktijk hebben de meeste robots een bepaalde vorm van een arm. Een belangrijk concept bij deze *manipulators* 
