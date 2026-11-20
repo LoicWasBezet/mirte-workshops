@@ -6,6 +6,9 @@ Elektronica
 Inleiding
 -----------------
 
+UPDATE **TODO WEGHALEN**
+
+
 .. admonition:: info
    :class: margin
 
@@ -60,164 +63,119 @@ Hiermee versterk je dus effectief het signaal van A.
 
 Binaire getallen
 -------------------------
+Je hebt misschien al eens gehoord dat computers werken met binaire getallen. Dat betekent dat ze elk getal opslaan als een combinatie van eenen en nullen. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven! Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij naast de 1 en 0 ook de cijfers van 2 tot en met 9 gebruiken. Dit heet talstelsel 10. Wanneer je enkel de getallen 0 en 1 gebruikt heet het talstelsel 2 (ook wel binaire getallen of base 2). Een binair cijfer wordt een bit genoemd. 8 bits samen worden een byte genoemd. Een bit is dus 1 of 0, en een byte zou bijvoorbeeld 10110100 kunnen zijn. Computers slaan bits op met behulp van transistoren. Zoals in de vorige paragraaf is uitgelegd kan een transistor een stroom doorlaten of juist niet. Wanneer er een stroom door de transistor loopt noemen we dat een 1, en wanneer er geen stroom doorloopt noemen we dat een 0. Door meerdere van deze transistoren naast elkaar te zetten kunnen we dus grote getallen opslaan!
 
-Je hebt misschien al eens 
-gehoord dat computers werken met enkel binaire getallen. Dat betekent dat ze elk getal opslaan als 
-een combinatie van eenen en nullen. Door meerdere van deze naast elkaar te zetten kunnen we grote getallen opschrijven!
-Het lijkt eigenlijk best wel op onze manier van getallen schrijven, behalve dat wij de cijfers van 0 tot 9 gebruiken. Dit heet talstelsel 10. Wanner je enkel de getallen 
-0 en 1 gebruikt is dat talstelsel 2 (ook wel binaire getallen of base 2). We noemen het meest insignificante cijfer (het meest rechtercijfer) het nulde cijfer, het cijfer links daarvan het eerste cijfer, enzovoort.
+In het blok hieronder zie je hoe een bepaalde hoeveelheid geschreven kan worden op meerdere manieren. Wij gebruiken dus talstelsel (base) 10, maar je kan ook talstelsel 2 of bijvoorbeeld romeinse cijfers gebruiken! Je hebt dus meerdere manieren om hetzelfde getal te schrijven! Het talstelsel bepaalt alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets hebt.
 
 .. figure:: _media/TalstelselVergelijking.jpg    
     :alt: talstelsels
     :width: 300
     :align: right
 
-    Manieren om 13 te schrijven
+    Manieren om 13 te schrijven TODO SVG erin zetten
 
-Bij ons is het nulde cijfer 1 waard en elk cijfer daar links van steeds 10 keer meer. Kijk bijvoorbeeld 
-naar 342. Het nulde cijfer voegt 1 * 2 = 2 aan het totaal toe. Het eerste cijfer (de 4) 
-voegt 4 * 10 toe aan het totaal. Het tweede cijfer voegt 3 * 10 * 10 = 300 toe aan het totaal.
+In het blok hierboven zie je dat elk getal in de talstelsels een geel bolletje in de linkerbovenhoek heeft. Dit hebben we erbij gezet om het makkelijk te maken om te zien hoeveel elk cijfer waard is. We noemen het meest insignificante cijfer (het meest rechter cijfer) het nulde cijfer, het cijfer links daarvan het eerste cijfer, enzovoort. Bij base 10 is het nulde cijfer 1 waard en elk cijfer daar links van steeds 10 keer meer. Kijk bijvoorbeeld naar 342. Het nulde cijfer voegt :math:`2 \cdot 10^0 = 2 \cdot 1 = 2` aan het totaal toe. Het eerste cijfer (de 4) voegt :math:`4 \cdot 10` toe aan het totaal. Het tweede cijfer voegt :math:`3 \cdot 10 \cdot 10 = 300` toe aan het totaal. 
 
-Bij binaire getallen is het nulde cijfer ook 1 waard. Elk cijfer links daarvan is echter 
-steeds 2 keer zoveel waard in plaats van 10. Kijk bijvoorbeeld naar 1011: het nulde cijfer voegt 1*1 = 1 toe aan het totaal. Het eerste cijfer links daarvan 
-voegt 1 * 2 = 2 toe aan het totaal. Het tweede cijfer voegt 0 * 2 * 2 = 0 toe aan het totaal. 
-Het derde cijfer voegt 1 * 2 * 2 * 2 = 8 toe aan het totaal. 1 + 2 + 8 = 11 dus 11 als binair getal is 1011! 
-Een enkel binair cijfertje heet een bit. 1011 bestaat dus uit 4 bits. 8 bits worden samen ook wel een byte genoemd. 
-De opslag op je telefoon wordt bijvoorbeeld vaak uitgedrukt in gigabytes.
+Bij binaire getallen is het nulde cijfer ook 1 waard. Elk cijfer links daarvan is echter steeds 2 keer zoveel waard in plaats van 10. Kijk bijvoorbeeld naar 1011: het nulde cijfer voegt :math:`1 \cdot 2^0 = 1 \cdot 1 = 1` toe aan het totaal. Het eerste cijfer links daarvan voegt :math:` \cdot 1 \cdot 2^1 = 2` toe aan het totaal. Het tweede cijfer voegt :math:`0 \cdot 2^2 = 0` toe aan het totaal. Het derde cijfer voegt :math:`1 \cdot 2^3 = 8` toe aan het totaal. 1 + 2 + 0 + 8 = 11 dus 11 als binair getal is 1011! 
 
-Het talstelsel bepaalt 
-alleen maar hoe je een bepaalde hoeveelheid opschrijft, niet hoeveel je van iets hebt. Als je bijvoorbeeld 5 appels hebt, kan je 
-ervoor kiezen dat op te schrijven als "5" als je base 10 wil gebruiken. Je kan het ook opschrijven als 101 in base 2. De schrijfwijze 
-heeft dus geen effect op de onderliggende hoeveelheid. Je zou dus ook 5 kunnen opschrijven als "V" in romeinse cijfers.
-101 in base 2 is exact hetzelfde als 5 in base 10 en ook als 5 in romeinse cijfers. 
-
-|
-|
-.. diagram:: BitAdditionMachine
+In het blok hieronder kan je zelf een binair getal maken door op de bits te klikken. Probeer eens om het binaire getal 0101 te maken! Welk hoeveelheid is dat in base 10? Je kan ook proberen om het binaire getal 1111 te maken, dat is het grootste getal dat je met 4 bits kan maken!
 
 |
 |
 
-.. diagram:: BitCounterMachine
-    
-|
-|
-|
-|
-.. raw:: html
-
-   <div class="controls">
-       <button id="showButton" > update </button> 
-   </div>   
+TODO : Bit flipper SVG neerzetten
 
 |
 | 
-.. .. raw:: html
-
-..    <div class="controls">
-..        <button id="plusKnop" > +1 </button> 
-..        <button id="minKnop" > -1 </button>
-..    </div>
+OPDRACHT: Maak de getallen 1 tot en met 15 in het blok hierboven.
 
 
-De reden dat een computer met binaire getallen werkt is omdat ze erg simpel zijn om op te slaan. 
-Je hoeft alleen maar een transistor te activeren om een 1 weer te geven of uit te laten voor een 0. Als je 32 van 
-die transistors naast elkaar zet kan je een flink getal opslaan. 
-Om elk cijfer tussen de 0 en 9 op te kunnen slaan zou je een veel ingewikkelder onderdeeltje nodig hebben. 
-In de praktijk is het makkelijker om een aantal transistoren te gebruiken 
-in plaats van zo'n complexer onderdeeltje. Je zou bijvoorbeeld zo'n complex deeltje kunnen maken 
-door er 4 transistoren in te stoppen die samen de 16 mogelijke combinaties van 4 bits kunnen opslaan.
-Hiermee kan je dus elk cijfer tussen de 0 en 9 opslaan, maar je hebt dan ook nog 6 combinaties over die niet gebruikt worden. 
-Binaire getallen zijn dus een stuk efficiënter om op te slaan met transistoren dan getallen in base 10.
-**TODO tabel kleuren zoals later hieronder** 
+
+Binair optellen
+-------------------------
+
+Binaire getallen optellen is niet moeilijker dan getallen vanuit base 10. We gaan kort kijken naar de manier die je in de basisschool geleerd hebt om getallen op te tellen, en passen die dan toe op binaire getallen. Onthoud voor het volgende deel dat het meest rechter cijfer het nulde cijfer genoemd wordt, het cijfer links daarvan het eerste, enzovoort.
+
+Wanneer je bijvoorbeeld de getallen 17 en 29 wil optellen (in base 10) kan je eerst met de nulde getallen berekenen dat 7 + 9 gelijk is aan 16. Je schrijft de 6 op als nulde cijfer van het antwoord en onthoudt de 1. Om het eerste cijfer uit te rekenen doe je 1 + 2 (van 17 en 29) + 1 (die je onthield) = 4. Je schrijft de 4 op als eerste cijfer en je hebt het antwoord: 46. Dit is uiteraard kinderspel. In het blok hieronder kan je nog een keer kijken hoe de stappen eruit zien voor bijvoorbeeld 517 + 845.
 
 .. figure:: _media/Base10Optellen.jpg    
     :alt: 17+29
     :width: 300
     :align: right
 
-    17 + 29 optellen in base 10 **mist blauwe lijn**
+    17 + 29 optellen in base 10 TODO SVG ERIN ZETTEN
 
-
-Machine met 2 binaire getallen van 2 bits. Als je op een cijfer klikt switcht deze tussen 0 en 1.
-Je hebt een knop die de volgende stap van de berekening uitvoert.
-
-
+Zoals hierboven gezegd, kan optellen bij binaire getallen met exact dezelfde stappen gedaan worden. Kijk maar naar de stappen in het blok hieronder:
 .. figure:: _media/BinairOptellen.jpg    
     :alt: 5+3
     :width: 300
     :align: right
 
-    5 + 3 optellen in base 2
+    5 + 3 optellen in base 2 TODO SVG ERIN ZETTEN
 
-Binaire getallen optellen is niet moeilijker dan getallen vanuit base 10. Wanneer je 17 en 29 wil optellen (in base 10) kan je 
-eerst 7+9 = 16 uitrekenen. Je schrijft de 6 op als nulde cijfer en onthoudt de 1. Onthoud dat het meest rechter 
-cijfer het nulde cijfer genoemd wordt, het cijfer links daarvan het eerste, enzovoort. Om het eerste cijfer uit te rekenen doe je 1 + 2 (van 17 en 29) + 1 (die je onthield) = 4. Je schrijft de 4 op als eerste cijfer en je hebt het antwoord: 46.
-Om hetzelfde te doen bij binaire getallen voer je exact dezelfde stappen uit. 
 
-We willen 101 en 11 optellen. Eerst tellen we de 
-twee nulde cijfers op: 1 + 1 = 10 (in base 2). We schrijven de 0 op als nulde getal en onthouden de 1. Dan gaan we het 
-eerste cijfer uitrekenen: we tellen de eerste cijfers van 101 en 11 op en tellen daar de 1 die we onthouden bij op: 0+1+1 = 10. We schrijven de 0 op 
-als eerste cijfer en onthouden de 1. Nu tellen we de tweede cijfers van 101 en 11 en tellen daar nog de onthouden 1 bij op (Let op:
-Het tweede cijfer van 11 is 0: 11 is namelijk gelijk aan 011). Dan krijgen we: 1 + 0 + 1 = 10. We schrijven de 0 op en onthouden de 1. Zowel 101 als 11 hebben 
-als derde cijfer 0, dus schrijven we onze onthouden 1 op als derde cijfer. Het antwoord is dan 1000! Dit kunnen we narekenen:
-101 (5 in base 10) + 11 (3 in base 10) = 1000 (8 in base 10)!
+OPDRACHT 2
 
-In de de rest van het hoofdstuk gaan we kijken naar hoe we kunnen rekenen met binaire getallen. In de context van elektronica is het 
-handig om wiskundige bewerkingen te zien als machines. Je noteert dan de getallen die je als ingangsignaal wil geven aan de linkerkant, 
-en het antwoord dat eruit komt aan de rechterkant. Een optelmachine zou er als volgt uit kunnen zien:
+In deze opdracht gaan we oefenen met het omschrijven van getallen tussen base 2 en base 10, en het optellen van binaire getallen.
+
+a) Schrijf de volgende getallen op in base 2: 0, 1, 2, 3, 5, 6, 11, 16.
+
+b) Reken de som van 10 en 111 (base 2) uit in base 2. Volg voor deze vraag dezelfde stappen als in het blok hierboven.
+
+c) Zet de getallen 10 en 111 (base 2) om naar base 10.
+
+d) Tel deze getallen bij elkaar op in base 10 en zet het antwoord weer om naar base 2. Is het antwoord hetzelfde als bij vraag b?
+
+d) Reken de som van 1011 en 1001 (base 2) uit in base 2 en zet het om antwoord om naar base 10.
+
+
+
+
+
+Logica
+-----------------------------------------
+
+Je kan nu dus binaire getallen opslaan en optellen. Maar hoe kan je een computer nu zelfstandig laten rekenen met deze getallen? Zouden we zelf door de juiste onderdelen aan elkaar te koppelen zelf een optelmachine kunnen maken? Dat is zeker mogelijk! We gaan kijken naar hoe we dit kunnen doen met behulp van wiskundige machines.
+
+Wiskundige machines zijn onderdelen die een bepaalde wiskundige bewerking uitvoeren. Er is een ingangssignaal dat de machine binnenkomt, en een uitgangssignaal dat de machine teruggeeft. Zo'n signaal kan bijvoorbeeld een bit (1 of 0) zijn. Een optelmachine zou er als volgt uit kunnen zien:
 
 .. figure:: _media/Optelmachine.jpg    
     :alt: optelmachine
     :width: 500
     :align: center
 
-    Optelmachine
+    Optelmachine TODO SVG ERIN ZETTEN (base 2 variant)
 
+Als deze machine met elektronica zou bestaan, zou het ingangssignaal een draadje zijn waar eventueel spanning op staat. Als er spanning op staat, leest de machine het als een '1', anders als een '0'. Het is echter nog maar de vraag hoe je de binnenkant zou moeten maken. Een optelmachine doet namelijk al best een complexe taak. Om dit soort complexe machines te maken gebruik je vaak een aantal kleinere machines die aan elkaar verbonden zijn. Deze gedragen zich als geheel dan zoals een optelmachine. 
 
-**Opdracht 1**
+Een belangrijke group van die kleinere machines zijn de logische poorten (*logic gates*). Dit zijn machines die 1 simpele logische denkstap kunnen uitvoeren. De meest simpele poorten zijn de en-machine, of-machine en niet-machine. Deze machines krijgen 1 of 2 binaire getallen binnen, en geven een binaire waarde terug die afhankelijk is van de input. Om het gedrag van zo'n poort weer te geven, worden waarheidstabellen gebruikt. Dit zijn tabellen die op elke rij een mogelijk inputsignaal en het bijbehorende outputsignaal hebben staan.
 
-In deze opdracht gaan we oefenen met het omschrijven van getallen tussen base 2 en base 10, en het optellen van binaire getallen.
+Laten we dit bekijken met een voorbeeld: de niet-machine. Deze machine krijgt 1 waarde binnen (deze noemen we A) en geeft het tegenovergestelde terug (niet A). De waarheidstabel van deze machine is als volgt:
 
-
-a. Schrijf de volgende getallen op in base 2: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
-
-b. Reken de som uit van 4 + 7 uit in base 2. Gebruik onderstaand diagram als basis.  
-
-.. figure:: _media/OptelTemplate.jpg    
-    :alt: opteltemplate
-    :width: 400
-    :align: center
-
-**TODO groene rij 1 langer maken dan de rode rijen**
-c. Reken de som van 3 + 6 uit. Gebruik bovenstaand diagram.
-
-    
-
-
-
-Logische machines en waarheidstabellen
------------------------------------------
-
-Om te kunnen rekenen met binaire getallen hebben we machines nodig die bepaalde bewerkingen kunnen uitvoeren.
-De meest simpele machines zijn de en-machine, of-machine en niet-machine. Deze machines krijgen 1 of 2 binaire getallen binnen, en geven een binaire waarde terug die afhankelijk is van de input.
-Deze machines kunnen dus als het ware steeds 1 logische denkstap uitvoeren. 
-De machines werken met twee waardes: waar en onwaar (1 en 0). We gaan eerst kijken naar de niet-machine. Deze machine krijgt 1 waarde binnen en geeft het tegenovergestelde terug. De waarheidstabel van deze machine is als volgt:
-
-=========== =========== 
+============= =================
 niet-machine
------------------------
-A           niet A
-=========== =========== 
-Onwaar      Waar       
-Waar        Onwaar     
-=========== =========== 
+-------------------------------
+A (ingang)    niet A (uitgang)
+============= =================
+0             1       
+1             0     
+============= =================
 
-In een waarheidstabel staan alle mogelijke inputs onder elkaar en de bijbehorende output ernaast. In de waarheidstabel van de niet-machine zie je dat wanneer A "onwaar" is, de output "waar" is, en wanneer A "waar" is, de output "onwaar" is.
+De reden dat een waarheidstabel zo heet is omdat de 1 en 0 geïnterpreteerd kunnen worden als 'waar' en 'onwaar'. Je kan de tabel ook met deze woorden maken.
+
+============= =================
+niet-machine
+-------------------------------
+A (ingang)    niet A (uitgang)
+============= =================
+Onwaar        Waar       
+Waar          Onwaar  
+============= =================
+
+In de waarheidstabel van de niet-machine zie je dat wanneer A "onwaar" is, de output "waar" is, en wanneer A "waar" is, de output "onwaar" is.
 In een waarheidstabel staan op elke rij (horizontaal) waardes die allemaal tegelijk kunnen voorkomen. Je komt dus nooit een rij tegen waar A "waar" is en "niet A" ook waar is!
 
-De tweede machine waar we naar gaan kijken is de en-machine. Deze krijgt twee waardes gegeven, en geeft dan de waarde "waar" terug als de eerste en
-de tweede waardes "waar" zijn, en anders "onwaar". De waarheidstabel van deze machine is als volgt:
+De tweede machine waar we naar gaan kijken is de en-machine. Deze krijgt twee waardes gegeven (A en B), en de vraag 'Zijn A en B waar' geeft. Het geeft dus de waarde "waar" terug als A en B "waar" zijn, en anders "onwaar". De waarheidstabel van deze machine is als volgt:
 
 =========== =========== ===========
 en-machine                        
@@ -230,7 +188,8 @@ Waar        Onwaar      Onwaar
 Waar        Waar        Waar      
 =========== =========== ===========
 
-De derde machine kijken we naar de of-machine. Deze geeft "waar" terug als ten minste 1 van de 2 gegeven waardes "waar" is. Daar hoort de volgende waarheidstabel bij:
+
+Ten slotte kijken we naar de of-machine. Deze machine geeft antwoord op de vraag "Is A of B waar?" Deze geeft "waar" terug als ten minste 1 van de 2 gegeven waardes "waar" is (dus ook als beide waardes waar zijn). Daar hoort de volgende waarheidstabel bij:
 
 =========== =========== ===========
 of-machine                        
@@ -248,11 +207,21 @@ We hebben nu de 3 basismachines gezien.
 
 Hiermee kunnen we dus een bit (een 1 of een 0) krijgen door een of twee bits aan de machine te leveren. Door deze machines aan elkaar te koppelen kunnen we 
 steeds complexere onderdelen maken. Stel dat je het resultaat van een en-machine ook nog door de niet-machine zou leiden: Je krijgt dan enkel "onwaar" als output wanneer beide inputs 
-"waar" zijn. Het geeft dan dus antwoord op de vraag: Zijn niet beide inputs Waar? Let op: dit is niet gelijk aan de vraag "Zijn beide inputs niet waar?". Dit kan je nagaan door de waarheidstabel van beide vragen op te stellen. 
+"waar" zijn. Het geeft dan dus antwoord op de vraag "Zijn niet beide inputs Waar?". Let op: dit is niet gelijk aan de vraag "Zijn beide inputs niet waar?". Dit kan je nagaan door de waarheidstabel van beide vragen op te stellen. 
+
+=========== =========== =========== ===========
+A           B           Niet beide  Beide niet        
+=========== =========== =========== ===========
+Onwaar      Onwaar      Waar        Waar    
+Onwaar      Waar        Waar        Onwaar      
+Waar        Onwaar      Waar        Onwaar      
+Waar        Waar        Onwaar      Onwaar      
+=========== =========== =========== ===========
+
 Door de outputs van een van deze machines als inputs te gebruiken als input voor een andere van deze machines kunnen we dus complexere machines maken. 
 De meest gebruikte variant hiervan is misschien wel de exclusieve-of-machine.
 Deze geeft "waar" terug als enkel de eerste of enkel de tweede waarde "waar" is. Wanneer beide waardes "waar" zijn is het resultaat dus "onwaar". 
-In het engels wordt in plaats van de term "exclusieve of" de term "xor" (spreek uit ex-or) gebruikt. De waarheidstabel van deze machine is als volgt:
+In het engels wordt in plaats van de term "exclusieve of" de term "xor" gebruikt. De waarheidstabel van deze machine is als volgt:
 
 ============ ============ ============
 xor-machine                       
@@ -266,7 +235,6 @@ Waar         Waar         Onwaar
 ============ ============ ============
 
 
-
 In de context van elektronica komen de waardes van "waar" en "onwaar" overeen met of er spanning (V) op een kabeltje staat.
 We kunnen bijvoorbeeld zeggen dat "waar" overeenkomt met 5V en "onwaar" overeenkomt met 0V. Nou is het echter zo dat in de 
 werkelijkheid spanning altijd een beetje fluctueert. Daarom is het handiger om te zeggen dat "waar" overeenkomt met een spanning van 2.5 volt of hoger, en "onwaar" overeenkomt met een spanning van lager dan 2,5 volt.  
@@ -277,26 +245,24 @@ In de figuur hieronder zie je een signaal die van "waar" (1) naar "onwaar" (0) g
     :width: 400
     :align: center
 
-    Signaal dat van "waar" naar "onwaar" gaat en weer terug.
+    Signaal dat van "waar" naar "onwaar" gaat en weer terug. TODO SVG BOUWEN?
 
-Met de logicamachines en deze definitie van een bit in de wereld van elektronica kunnen we een computer maken!
-Om een computer te maken moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
+
+Wiskundige machines bouwen
+---------------------------
+Om een computer te maken die kan rekenen moeten we een samenstelling van onderdeeltjes vinden die in de basis de volgende twee dingen kan: 
 
 1. Getallen opslaan.
 2. Simpele logische stappen zetten.
 
-Met deze twee acties kunnen we al veel bereiken! Door simpele logiscjhe machines aan elkaar te koppelen kunnen we ook complexe problemen oplossen.
+Met deze twee acties kunnen we al veel bereiken! Door simpele logische machines aan elkaar te koppelen kunnen we ook complexe problemen oplossen.
 
 Om aan punt 1 te voldoen kunnen we een getal opslaan door een aantal bits naast elkaar te zetten. Elk bit kan 0 of 1 zijn, dus door meerdere bits naast elkaar te zetten kunnen we grote getallen opslaan. 
-Zo'n bit bestaat dan uit een draadje waar ofwel spanning op staat (1) ofwel geen spanning (0). Door meerdere van deze draadjes naast elkaar te zetten kunnen we grote getallen opslaan.
+Zoals eerder gezegd, bestaat zo'n bit uit een draadje waar ofwel spanning op staat (1) ofwel geen spanning (0). Door meerdere van deze draadjes naast elkaar te zetten kunnen we grote getallen opslaan.
 
-Om aan punt 2 te voldoen heeft een computer bijvoorbeeld onderdelen die twee getallen kunnen optellen of vermenigvuldigen. 
-Deze zijn vaak gemaakt door meerdere logische machines zoals hierboven aan elkaar te koppelen. Nu is de vraag echter: 
-hoe maak je een logiche poort met elektronische onderdelen? We gaan kijken naar circuits met een aantal input draden die we al dan niet op spanning kunnen zetten en een output draadje. Hieronder zie je hoe je bijvoorbeeld een en-poort maakt. Het circuit maakt gebruik van een serieschakeling. Zoals je weet, 
-loopt er bij een serieschakeling geen stroom als er een schakelaar open staat. Omdat de input waardes beiden een schakelaar openzetten
-(transistor uitzetten) wanneer ze "onwaar" zijn, zal er alleen stroom lopen als beide inputs "waar" zijn.
-Door spanning te zetten op draden A en B kan je stroom laten lopen. Wanneer er spanning staat op zowel A als B, 
-zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad C door een niet-poort te halen kan je de poortcombinatie van hierboven nabouwen!
+Om aan punt 2 te voldoen heeft een computer bijvoorbeeld onderdelen nodig die twee getallen kunnen optellen of vermenigvuldigen. Deze zijn vaak gemaakt door meerdere logische machines zoals hierboven aan elkaar te koppelen. Nu is de vraag echter: hoe maak je een logiche poort met elektronische onderdelen? We gaan kijken naar circuits die als wiskundige machines werken. 
+
+Hieronder zie je hoe je bijvoorbeeld een en-poort maakt. Het circuit maakt gebruik van een serieschakeling. Zoals je weet, loopt er bij een serieschakeling geen stroom als er een schakelaar open staat. Omdat de input waardes beiden een schakelaar openzetten (transistor uitzetten) wanneer ze "onwaar" zijn, zal er alleen stroom lopen als beide inputs "waar" zijn. Door spanning te zetten op draden A en B kan je stroom laten lopen. Wanneer er spanning staat op zowel A als B, zal het lampje gaan branden en komt er spanning te staan op draad C. 
 
 .. figure:: _media/EnPoort.jpg    
     :alt: En-poort
@@ -307,7 +273,7 @@ zal het lampje gaan branden en komt er spanning te staan op draad C. Door draad 
 
 
 De of-poort lijkt erg op de en-poort, maar de transistoren worden nu in parallel gezet in plaats van in serie. Dit zorgt ervoor wanneer er ook maar 
-1 transistor is geactiveerd, het signaal al door wordt gegeven!
+1 transistor is geactiveerd, het signaal al door wordt gegeven! Als beide inputs 'waar' zijn wordt het signaal ook doorgegeven.
 
 .. figure:: _media/OrPoort.png    
     :alt: xor poort
@@ -339,7 +305,7 @@ Hierbij zijn de twee vraagtekens logische poorten. Nu moeten we enkel nog uitzoe
 In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
 
 
-**Opdracht 1**
+**Opdracht 3**
     
 We willen bepalen welke poorten we nodig hebben om de som van 2 bits te berekenen. We hebben dus twee cijfers die ofwel 0 ofwel 1 gaan zijn 
 en willen weten hoe we het resultaat kunnen berekenen. 
