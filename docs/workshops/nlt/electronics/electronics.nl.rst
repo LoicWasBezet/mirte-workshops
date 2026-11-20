@@ -6,9 +6,6 @@ Elektronica
 Inleiding
 -----------------
 
-UPDATE **TODO WEGHALEN**
-
-
 .. admonition:: info
    :class: margin
 
@@ -50,7 +47,6 @@ op draad A ontstaat er een verbinding tussen het linker- en rechterdeel en kunne
 maar het kan ook gebruikt worden om het signaal van A te versterken. A mag namelijk heel zwak zijn om de verbinding te laten ontstaan. Als je de linkerdraad aansluit op een sterke spanningsbron 
 kan je een sterk signaal aan de rechterkant laten ontstaan als er een zwak signaal via A binnenkomt. Als A geen signaal binnenbrengt blijft de rechterdraad spanningsloos. 
 Hiermee versterk je dus effectief het signaal van A.
-
 
 
 .. figure:: _media/Transistor.png
@@ -245,8 +241,7 @@ In de figuur hieronder zie je een signaal die van "waar" (1) naar "onwaar" (0) g
     :width: 400
     :align: center
 
-    Signaal dat van "waar" naar "onwaar" gaat en weer terug. TODO SVG BOUWEN?
-
+    Signaal dat van "waar" naar "onwaar" gaat en weer terug.
 
 Wiskundige machines bouwen
 ---------------------------
@@ -301,11 +296,10 @@ Hoe kunnen we dan deze getallen optellen? Dit doen we door de juiste logische po
 
     Optelmachine voor 2 bits  **TODO de simpele versie bovenop zetten**
 
-Hierbij zijn de twee vraagtekens logische poorten. Nu moeten we enkel nog uitzoeken welke dan precies.
-In de volgende opdracht gaan we ontdekken welke logische poorten we moeten toepassen om dit uit te rekenen.
+Hierbij zijn de twee vraagtekens logische poorten. Nu moeten we enkel nog uitzoeken welke dan precies. Dit ga je in de komende opdracht doen!
 
 
-**Opdracht 3**
+**Opdracht 1**
     
 We willen bepalen welke poorten we nodig hebben om de som van 2 bits te berekenen. We hebben dus twee cijfers die ofwel 0 ofwel 1 gaan zijn 
 en willen weten hoe we het resultaat kunnen berekenen. 
@@ -409,4 +403,3 @@ worden gezet op een derde uitgaande stroomdraad. Je hebt dan een *en-poort* gema
 uitvoeren dan dat. 
 
 **TODO CPU ENZO BETER UITLEGGEN, TABEL TOEVOEGEN**
-
