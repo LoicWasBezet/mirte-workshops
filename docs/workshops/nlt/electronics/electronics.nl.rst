@@ -1,6 +1,6 @@
 :orphan:
 
-Elektronica TEST
+Elektronica
 ########################
 
 Inleiding
