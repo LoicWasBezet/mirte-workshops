@@ -23,6 +23,7 @@ waar de vrachtwagens over rijden.
    :width: 300px
    :alt: Stroomdraad
    :align: center
+
    Een stuk stroomdraad
 
 
@@ -59,6 +60,7 @@ Bij een 9V batterij hebben alle elektronen die de bron uitkomen dus een spanning
    :width: 400px
    :alt: Parallelschakeling
    :align: center
+
    Een simpele parallelschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
 
 **TODO: Betere uitleg van waarom een circuit gesloten moet zijn? Is "beginnen en eindigen in een bron" wel algemeen genoeg?**
@@ -71,7 +73,9 @@ Serie schakelingen zijn circuits waarbij de stroom nooit opsplitst naar meerdere
    :width: 400px
    :alt: Serieschakeling
    :align: center
+
    Een simpele serieschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
+
 **TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
 
 
@@ -83,6 +87,7 @@ Parallel schakelingen zijn circuits waarbij de stroom wel opsplitst naar meerder
    :width: 400px
    :alt: Parallelschakeling
    :align: center
+
    Een simpele parallelschakeling. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
 
 **TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
@@ -99,6 +104,7 @@ In onze analogie kan je met een schakelaar dus de brug openzetten op de route zo
    :width: 400px
    :alt: Schakelaar
    :align: center
+
    Een circuit met een schakelaar. (in het echt wil je nooit een leeg circuit hebben, dan krijg je kortsluiting)
 
 **TODO  de (tekst) weghalen bij plaatje beschrijving en plaatje fixen met onderdeeltje erin ofzo**
@@ -120,6 +126,7 @@ De verhouding tussen spanning (V) en stroomsterkte is dan dus ook constant. Als 
    :width: 400px
    :alt: Weerstand
    :align: center
+
    Een circuit met een weerstand.
 
 Als we weer terugduiken in onze analogie kan je weerstand zien als iets wat rijbanen afsluit. 
@@ -146,8 +153,9 @@ Spanning (V) kwam overeen met de hoeveelheid zand die een vrachtwagen meeheeft.
 Welke kant een vrachtwagen oprijdt heeft uiteraard geen effect op de hoeveelheid zand die hij bij zich heeft. 
 De beide paden hebben dus dezelfde spanning als de draad voor de splitsing.
 
-.. figure:: _media/ParalleleWeerstand.png
+.. figure:: _media/ParallelSchakeling.png
    :width: 400px
    :alt: Weerstand in parallelschakeling
    :align: center
+   
    Een parallelschakeling met weerstanden.

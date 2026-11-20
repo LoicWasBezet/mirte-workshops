@@ -1,3 +1,11 @@
 _build/
 _modules/
 docs-env/
+env-docs/
+venv/
+.venv/
+docs/modules/*/*.rst
+!docs/modules/*/*.en.rst
+!docs/modules/*/*.nl.rst
+docs/**/index/index.rst
+docs/workshops/ros2_intro/[0-9]_*.rst

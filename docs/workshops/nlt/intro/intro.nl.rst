@@ -31,7 +31,7 @@ Bij het gebruik van de Scientific Approach, worden elke keer dezelfde stappen do
 
 *-> Opdracht met scientific approach helemaal los van robotica.*
 *-> Of opdracht met scientific approach met pro/con gebruik robots en limitaties van robots*
-	*-> kunnen beide aanbieden*
+*-> kunnen beide aanbieden*
 
 *-> Closed & Open loop -> vanaf sensoren worden we closed*
 

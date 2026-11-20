@@ -1,3 +1,6 @@
+:orphan:
+
+
 Elektronische logicamachines
 -------------------------------------
 
@@ -21,6 +24,7 @@ De niet-machine is wat lastiger te begrijpen dan de en- en of-machines. het bela
 geen spanningsverschil veroorzaakt tussen zijn begin en eind wanneer er geen stroom doorheen loopt. Kijk maar naar de
 formule:
 .. math::
+
     R=\frac{U}{I}
     U = I * R
 

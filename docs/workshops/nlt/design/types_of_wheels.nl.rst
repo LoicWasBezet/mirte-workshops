@@ -1,5 +1,7 @@
+:orphan:
+
 Welke soorten robotwielen kan je gebruiken?
-=============
+===================================================
 
 
 Veel robots gebruiken wielen om voort te bewegen. Echter zijn deze wielen vaak een stukje complexer dan de wielen die 

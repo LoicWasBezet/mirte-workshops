@@ -40,8 +40,7 @@ In de module 'Sensoren' is behandeld hoe de ultrasoon sensor werkt. Zorg dat je 
 	3. Bereken de error en sla deze op in een nieuwe variabele 'error'
 	4. Maak een nieuwe variabele, Kp, aan en sla de waarde 1 hierin op
 	5. Bereken de output waarde en sla deze op in een nieuwe variabele 'output'
-	6. Gebruik de output waarde om de motoren aan te sturen
-	Nu worden alle bovenstaande stappen eenmalig uitgevoerd, maar dit moet eigenlijk vaker gebeuren.
+	6. Gebruik de output waarde om de motoren aan te sturen. Nu worden alle bovenstaande stappen eenmalig uitgevoerd, maar dit moet eigenlijk vaker gebeuren.
 	7. Gebruik een loop-structuur om alle bovenstaande stappen meerdere malen uit te voeren. Maak een weloverwogen keuze om de for- of while-loop structuur te gebruiken.
 
 
